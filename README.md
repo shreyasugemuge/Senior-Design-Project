@@ -6,13 +6,11 @@
 | Shiru hou | shou2015@my.fit.edu |
 
 
-## Faculty Sponsor 
+|Faculty Sponsor |[Dr. Philip Chan](http://cs.fit.edu/~pkc/)|
 
-[Dr. Philip Chan](http://cs.fit.edu/~pkc/) <br>
 
-## Project Plan
-[Plan]() <br>
-[Presentation]() <br>
+## First Semester
+|Project Plan |[Plan](), [Presentation]() |
 
 
 
