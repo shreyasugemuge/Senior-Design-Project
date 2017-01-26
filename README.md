@@ -9,8 +9,9 @@
 
 ## First Semester
 Spring 2017 <br>
-|---|---|
+
 |Project Plan |[Plan](), [Presentation]() |
+|---|---|
 |Milestone 1| |
 |Milestone 2| |
 
