@@ -10,7 +10,7 @@
 ## First Semester
 Spring 2017 <br>
 
-|Project Plan |[Plan](), [Presentation]() |
+|Project Plan |[Plan](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Project%20Plan.pdf), [Presentation]() |
 |---|---|
 |Milestone 1| |
 |Milestone 2| |
