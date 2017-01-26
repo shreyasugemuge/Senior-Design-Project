@@ -1,31 +1,17 @@
-## Contact Info
-
+## Group Members
+```markdown
 Shreyas Ugemuge : sugemuge2014@my.fit.edu
 Mohammed AlHabsi : malhabsi2013@my.fit.edu
 Yaqeen Alkathiri : yalkathiri2013@my.fit.edu
 Shiru hou : shou2015@my.fit.edu
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Faculty Sponsor : [Dr. Philip Chan](https://cs.fit.edu/~pkc)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Project Plan
+```markdown
+[Plan]()
+[Presentation]()
+```
+
+
 
