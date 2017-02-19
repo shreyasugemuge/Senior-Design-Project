@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Progress of current Milestone}{2}
+\contentsline {subsection}{\numberline {1.1}Discussion of each task}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Select Collaboration Tools}{2}
+\contentsline {subsubsection}{\numberline {1.1.2}Investigate packages, languages and tools}{2}
+\contentsline {subsection}{\numberline {1.2}Discussion of team member contribution}{3}
+\contentsline {section}{\numberline {2}Plan for the next milestone}{3}
+\contentsline {subsection}{\numberline {2.1}Discussion of each task}{3}
+\contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{3}
+\contentsline {section}{\numberline {4}Appendices}{4}
+\contentsline {subsection}{\numberline {4.1}Yaqeen's tool research report}{4}
+\contentsline {section}{\numberline {5}Sponsor Evaluation}{5}
