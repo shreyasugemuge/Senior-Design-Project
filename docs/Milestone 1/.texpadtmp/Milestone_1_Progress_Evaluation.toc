@@ -19,14 +19,14 @@
 \contentsline {subsubsection}{\numberline {2.1.5}Provide report explaining behaviours and corresponding data mining methods}{6}{subsubsection.2.1.5}
 \contentsline {subsubsection}{\numberline {2.1.6}Implement and extract data for 2 behaviors}{6}{subsubsection.2.1.6}
 \contentsline {subsubsection}{\numberline {2.1.7}Update Requirement document}{6}{subsubsection.2.1.7}
-\contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{6}{section.3}
-\contentsline {section}{\numberline {4}Appendices}{7}{section.4}
-\contentsline {subsection}{\numberline {4.1}Shreyas' Tool research report}{7}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Advanced Miner}{7}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Ghost Miner}{7}{subsubsection.4.1.2}
-\contentsline {subsection}{\numberline {4.2}Shiru's Tool research report}{7}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Mohammed's tool research report}{7}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}ESTARD}{7}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}WEKA}{8}{subsubsection.4.3.2}
-\contentsline {subsection}{\numberline {4.4}Yaqeen's tool research report}{8}{subsection.4.4}
-\contentsline {section}{\numberline {5}Sponsor Evaluation}{10}{section.5}
+\contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{7}{section.3}
+\contentsline {section}{\numberline {4}Appendices}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Shreyas' Tool research report}{8}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Advanced Miner}{8}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Ghost Miner}{8}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Shiru's Tool research report}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Mohammed's tool research report}{8}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}ESTARD}{8}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}WEKA}{9}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}Yaqeen's tool research report}{9}{subsection.4.4}
+\contentsline {section}{\numberline {5}Sponsor Evaluation}{11}{section.5}
