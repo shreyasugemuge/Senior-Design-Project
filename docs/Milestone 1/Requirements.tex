@@ -27,7 +27,7 @@
   \and
   Faculty Sponsor: Dr. Phillip Chan\      \texttt{pkc@cs.fit.edu}}
   
-  \date{\today \\ v0.8}
+  \date{\today \\ v1.0}
 %%%%%%%%%%
 
 \begin{document}
@@ -44,6 +44,8 @@
 		v0.5 & \date{2/21/17} & sections 1.1 - 2.5 updated\\
 		\hline
 		v0.7 & \date{2/22/17} & section 2.6 updated\\
+		\hline
+		v1.0 & \date{2/22/17} & Revised document after client meeting\\
 		\hline
 	\end{tabularx}
 	\pagebreak
@@ -106,46 +108,146 @@
 	A variety of tools are being researched for these purposes. Details can be located in the progress report documentation. Some packages hint that java may be required. If it becomes a requirement in the future the specific requirements may further be classified based on languages being used. 
 	\pagebreak
 	\section{Specific Requirements} \label{reqs}
-	\begin{enumerate}[itemsep=-1mm]
-		\item [3.1] Functional Requirements
-		\begin{enumerate}[itemsep=-1mm]
-			\item[3.1.1] Shall be able to read data from syllabus for use with data mining for behaviours
-			\begin{enumerate}[itemsep=-1mm]
-				\item[3.1.1.1] Shall be able determine assignments and due dates and store for further use
-				\item[3.1.1.2] Shall be able to determine Test Dates and store for further use
-				\item[3.1.1.3] TBD \dots
+	\begin{enumerate}[label = 3.\arabic*,itemsep=-1mm]
+		\item Preliminary Requirements \footnote{Not system requirements but requirements for the system}
+		\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+			\item Examine given syllabus and extract information and record it manually
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] \label{syl}
+				\item Extract assignment due dates
+				\item Extract test dates
+				\item Extract quiz dates
+				\item Extract assigned readings with date assigned
+				\item TBD \dots
 			\end{enumerate}
-			\item[3.1.2] Shall have atleast 6 behaviors conceptualized and models to extract these from the data set
-			\begin{enumerate}[itemsep=-1mm]
-				\item[3.1.2.1] Determine the models that can be used on current input data
-				\item[3.1.2.2] Depending on the fields obtained from the syllabus deploy appropriate data mining models to extract behaviour for each student
-				\item[3.1.2.3] Shall Prepare the information for different tasks
-				\begin{enumerate}[itemsep=-1mm]
-					\item[3.1.2.3.1] Shall prepare human readable report for behaviours identified for query student
-					\item[3.1.2.3.2] Shall prepare and organize data to be used for correlation purposes
-				\end{enumerate}
-			\end{enumerate}
-			\item[3.1.3] Shall correlate Behaviours modelled with grades
-			\begin{enumerate}[itemsep=-1mm]
-				\item[3.1.3.1] Identify behaviours that show correlation to good grades (top 10\%)
-				\item[3.1.3.2] Identify behaviours that show correlation to bad grades (bottom 10\%)
-				\item[3.1.3.3] Identify and handle outliers
-				\item[3.1.3.4] Shall Prepare the information
-				\begin{enumerate}[itemsep=-1mm]
-					\item[3.1.3.4.1] Prepare and organize information to be used by reccomendation syste
-					\item[3.1.3.4.2] Shall Prepare information when needed for any query student in a human readable format for identified behaviours and achieved grade
-				\end{enumerate}
-			\end{enumerate}
-			\item[3.1.4] Shall provide recommendation report for query student
-			\begin{enumerate}[itemsep=-1mm]
-				\item[3.1.4.1] Shall display a report in human readable format
-				\begin{enumerate}[itemsep=-1mm]
-					\item[3.1.4.1.1] Shall provide grade information and a statistical analysis of grade compared to the class
-					\item[3.1.4.1.2] Shall provide list of behaviours that correlate to better grades for query student
-					\item[3.1.4.1.3] Shall provide list of current behaviours to avoid for query student
-					\item[3.1.4.1.4] Shall provide list of current behaviours that correlate to a good grade
-					\end{enumerate}
+			\item Use information available from syllabus and common sense to conceptualize behaviours that can be extracted from the log file
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+				\item Concenptualize at least 10 behaviours that can be modelled from the log file
 			\end{enumerate}
 		\end{enumerate}
+		\item Functional Requirements
+		\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+			\item Shall extract information about behaviours of each student from log file using data mining \label{aa}
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+				\item Shall attempt to extract each conceptualized behavious from each student
+				\item Shall be able to present the output in form of a report
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+					\item Human readable report for any query student listing all the behaviours identified
+				\end{enumerate}
+				\item Shall organize output to be used for correlation with grades
+			\end{enumerate}
+			\item Shall extract performance from grade files \label{bb}
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+				\item Shall provide a statistical analysis of grade
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]  \label{ttt}
+					\item Shall provide class rank
+					\item Shall provide whether student is above or below average
+				\end{enumerate}
+				\item Shall present output as a report
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm] 
+					\item Shall provide report that consists of data from \ref{ttt}, well formatted.
+				\end{enumerate}
+				\item Shall prepare data for correlation
+			\end{enumerate}
+			\item Shall correlate behaviors (\ref{aa}) to performances (\ref{bb})
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+				\item Shall use data mining to determine what behaviours lead to a good grade for the particular course
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+					\item TBD \dots
+				\end{enumerate}
+				\item Shall present output as a report
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+					\item Shall contain information about behaviours that have strong correlation with good grades
+				\end{enumerate}
+				\item Shall prepare information for recommender system
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+					\item Shall provide information about performance for every student
+					\item Shall provide information about the correlations formed between grades and behaviors
+					\item Shall provide information about the behaviors exhibited by each student
+				\end{enumerate}
+			\end{enumerate}
+			\item Shall be able to list recommendations for query students
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+				\item Shall provide information about performance and student standing in class
+				\item Shall provide recommendations by suggesting behaviours that are missing in the query student
+				\item Shall provide overall report of recommendations if using the instructor interface
+			\end{enumerate}
 		\end{enumerate}
+		\item Non-Functional Requirements
+		\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+			\item Graphical User Interface	
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+				\item Splash Welcome screen
+				\item Login screen
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+					\item Shall ask to choose between student and teacher interface
+					\item Shall authenticate based on username and password
+				\end{enumerate}
+				\item Teacher interface
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+					\item Shall provide interface for manually inputting data from syllabus
+					\item Shall provide interface to upload log file and grade file
+					\item Button to extract behaviors from log file
+					\item Shall present behaviour report (\ref{aa}) for query student
+					\item Button to extract performance from grade file
+					\item Shall present performance report (\ref{bb}) for query student
+					\item Button to correlate behaviors and performance
+					\item Shall present a report of the correlations found in behaviors and performance for the class
+					\item Shall present information showing successful behavior for a query student
+				\end{enumerate}
+				\item Student interface
+				\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+					\item Shall be able to access recommendations
+					\item Recommendations will provide performance information and behaviors that are recommended to be altered in order to gain higher grades.
+				\end{enumerate}
+			\end{enumerate}
+			\item Security Requirements
+			\begin{enumerate}[label* = .\arabic*, itemsep=-1mm]
+				\item System shall isolate log file from public networks
+				\item System shall isolate grade file from public networks
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
 	\end{document}
+%%%%%%%%%requirements v0.8%%%%%
+	%	\begin{enumerate}[itemsep=-1mm]
+%		\item [3.1] Functional Requirements
+%		\begin{enumerate}[itemsep=-1mm]
+%			\item[3.1.1] Shall be able to read data from syllabus for use with data mining for behaviours
+%			\begin{enumerate}[itemsep=-1mm]
+%				\item[3.1.1.1] Shall be able determine assignments and due dates and store for further use
+%				\item[3.1.1.2] Shall be able to determine Test Dates and store for further use
+%				\item[3.1.1.3] TBD \dots
+%			\end{enumerate}
+%			\item[3.1.2] Shall have atleast 6 behaviors conceptualized and models to extract these from the data set
+%			\begin{enumerate}[itemsep=-1mm]
+%				\item[3.1.2.1] Determine the models that can be used on current input data
+%				\item[3.1.2.2] Depending on the fields obtained from the syllabus deploy appropriate data mining models to extract behaviour for each student
+%				\item[3.1.2.3] Shall Prepare the information for different tasks
+%				\begin{enumerate}[itemsep=-1mm]
+%					\item[3.1.2.3.1] Shall prepare human readable report for behaviours identified for query student
+%					\item[3.1.2.3.2] Shall prepare and organize data to be used for correlation purposes
+%				\end{enumerate}
+%			\end{enumerate}
+%			\item[3.1.3] Shall correlate Behaviours modelled with grades
+%			\begin{enumerate}[itemsep=-1mm]
+%				\item[3.1.3.1] Identify behaviours that show correlation to good grades (top 10\%)
+%				\item[3.1.3.2] Identify behaviours that show correlation to bad grades (bottom 10\%)
+%				\item[3.1.3.3] Identify and handle outliers
+%				\item[3.1.3.4] Shall Prepare the information
+%				\begin{enumerate}[itemsep=-1mm]
+%					\item[3.1.3.4.1] Prepare and organize information to be used by reccomendation syste
+%					\item[3.1.3.4.2] Shall Prepare information when needed for any query student in a human readable format for identified behaviours and achieved grade
+%				\end{enumerate}
+%			\end{enumerate}
+%			\item[3.1.4] Shall provide recommendation report for query student
+%			\begin{enumerate}[itemsep=-1mm]
+%				\item[3.1.4.1] Shall display a report in human readable format
+%				\begin{enumerate}[itemsep=-1mm]
+%					\item[3.1.4.1.1] Shall provide grade information and a statistical analysis of grade compared to the class
+%					\item[3.1.4.1.2] Shall provide list of behaviours that correlate to better grades for query student
+%					\item[3.1.4.1.3] Shall provide list of current behaviours to avoid for query student
+%					\item[3.1.4.1.4] Shall provide list of current behaviours that correlate to a good grade
+%					\end{enumerate}
+%			\end{enumerate}
+%		\end{enumerate}
+%		\end{enumerate}
