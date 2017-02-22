@@ -44,6 +44,8 @@
 		\item Log files - Excel files containing raw data i.e. 'clicks' from student over the course of the semester
 		\item Syllabus - Document entailing details about a certain course. This includes test dates, assignment due dates etc.
 		\item Grades - Lettered grade ranging from A - F where A is the best grade.
+		\item CS - computer science (field of study)
+		\item SWE - software engineering (field of study)
 	\end{itemize}
 	\subsection{References} \label{refs}
 		\begin{enumerate}
@@ -55,10 +57,38 @@
 	The entirety of this document is formatted and authored using the IEEE standards guide as well as the Requirements specified by the Instructor (See \ref{refs}). The remainder of the document contains a detailed description of the project (See \ref{desc}) and requirements (See \ref{reqs}) categorized by functional and non-functional. 
 	\section{Overall Description} \label{desc}
 	\subsection{Product Perspective}
+	The product is standalone and is the entirety of the clients proposed system. The goal is for it to work with any kind of inputs that are of the same semantic and syntactical nature as the input provided by the client. 
+	\subsubsection{System interfaces}
+	There are no anticipated special interfaces to be needed for the product to execute and the aim is to make it compatible with UNIX based and windows systems.
+	\subsubsection{User Interfaces}
+	\begin{enumerate}
+		\item A web browser for the GUI front end of the recommender system will be required
+		\item Capabilities to run and install python libraries
+	\end{enumerate}
+
 	\subsection{Product functions}
+	The functions can be elaborated as follows:
+	\begin{enumerate}
+		\item Product will have a set of behaviours and methods to extract them given the required input
+		\item Product will be able to provide a report of behaviours identified for each student based on the data from log files and syllabi
+		\item The information as mentioned in the previous point will be correlated to the grades forming the idea of X behaviour correlates to a Good/Bad grade.
+		\item Provide a user interface that enables user to process the data, and use the information in the recommendation system
+		\item Recommender system will use the correlated data to compute the missing behaviours for any query student
+	\end{enumerate}
 	\subsection{User characteristics}
+	There are various aspects that would influence as to who the end user is. Fundamentally the product is aimed at a single client that has very specific and unconventional raw data. The product could be useful for someone that uses the supporting documentation to prepare the input to be used with the product. \\
+	In summary any user apart from the intended client would have to have at least preliminary knowledge in the fields of CS or SWE. \\ 
+	Section \ref{reqs} describe very relaxed requirements about the input which is due to the fact that the input that needs to be worked on is limited to files that will be organized in a set way that will be known as preliminary knowledge.
 	\subsection{Constraints}
+	The data is highly sensitive as it contains private data including grades and browser history. A strict privacy policy with the client eliminates the instance of having the files made available on any network. \\
+	With regards to the availability of said data, This kind of data cannot be obtained from a secondary source which limits the existence of any standards that may make the code more reusable.
 	\subsection{Assumptions and dependencies}
+	The code will be designed to work on conventional windows and unix based systems including MAC os. This is contingent on the fact that the computer has capabilities to install packages or have the required packages/tools pre installed. \\
+	makefiles and shell scripts will be designed to accommodate all platforms listed in 2.1.
+	\subsection{Apportioning of requirements}
+	This document will be revised significantly to include precise names of packages/tools used. The specifications have now been v 2.0 (Scheduled now for milestone 2) of the document because there are preliminary steps that need to be taken in order to make the choice for the optimal resources to be used for it.\\ 
+	The specific requirements in v 2.0 will further be classified by each behaviour. v 2.0 will also introduce detailed specification of the UI since that is delayed till later development stages. \\
+	A variety of tools are being researched for these purposes. Details can be located in the progress report documentation. Some packages hint that java may be required. If it becomes a requirement in the future the specific requirements may further be classified based on languages being used. 
 	\section{Specific Requirements} \label{reqs}
 	
 	\end{document}
