@@ -3,6 +3,7 @@
 
 %%Packages
 \usepackage{color}
+\usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{authblk}
@@ -26,12 +27,26 @@
   \and
   Faculty Sponsor: Dr. Phillip Chan\      \texttt{pkc@cs.fit.edu}}
   
-  \date{\today \\ v1.0}
+  \date{\today \\ v0.8}
 %%%%%%%%%%
 
 \begin{document}
 	\singlespacing
-	\maketitle \pagebreak \tableofcontents \pagebreak
+	\maketitle \pagebreak \tableofcontents
+	\hfill \break \hfil \break 
+	\subsection*{Revision history}
+	\begin{tabularx}{\linewidth}{|c|c|X|}
+		\hline
+		\textbf{Version} & \textbf{Date} & \textbf{Notes} \\
+		\hline
+		v0.1 & \date{2/20/17} & Format Skeleton\\
+		\hline
+		v0.5 & \date{2/21/17} & sections 1.1 - 2.5 updated\\
+		\hline
+		v0.7 & \date{2/22/17} & section 2.6 updated\\
+		\hline
+	\end{tabularx}
+	\pagebreak
 	\section{Introduction}
 	\subsection{Purpose} \label{purpose}
 	The purpose of this document is to highlight the requirements in terms of features and functions that are expected from the final deliverable that will be a recommender system. 
@@ -89,6 +104,48 @@
 	This document will be revised significantly to include precise names of packages/tools used. The specifications have now been v 2.0 (Scheduled now for milestone 2) of the document because there are preliminary steps that need to be taken in order to make the choice for the optimal resources to be used for it.\\ 
 	The specific requirements in v 2.0 will further be classified by each behaviour. v 2.0 will also introduce detailed specification of the UI since that is delayed till later development stages. \\
 	A variety of tools are being researched for these purposes. Details can be located in the progress report documentation. Some packages hint that java may be required. If it becomes a requirement in the future the specific requirements may further be classified based on languages being used. 
+	\pagebreak
 	\section{Specific Requirements} \label{reqs}
-	
+	\begin{enumerate}[itemsep=-1mm]
+		\item [3.1] Functional Requirements
+		\begin{enumerate}[itemsep=-1mm]
+			\item[3.1.1] Shall be able to read data from syllabus for use with data mining for behaviours
+			\begin{enumerate}[itemsep=-1mm]
+				\item[3.1.1.1] Shall be able determine assignments and due dates and store for further use
+				\item[3.1.1.2] Shall be able to determine Test Dates and store for further use
+				\item[3.1.1.3] TBD \dots
+			\end{enumerate}
+			\item[3.1.2] Shall have atleast 6 behaviors conceptualized and models to extract these from the data set
+			\begin{enumerate}[itemsep=-1mm]
+				\item[3.1.2.1] Determine the models that can be used on current input data
+				\item[3.1.2.2] Depending on the fields obtained from the syllabus deploy appropriate data mining models to extract behaviour for each student
+				\item[3.1.2.3] Shall Prepare the information for different tasks
+				\begin{enumerate}[itemsep=-1mm]
+					\item[3.1.2.3.1] Shall prepare human readable report for behaviours identified for query student
+					\item[3.1.2.3.2] Shall prepare and organize data to be used for correlation purposes
+				\end{enumerate}
+			\end{enumerate}
+			\item[3.1.3] Shall correlate Behaviours modelled with grades
+			\begin{enumerate}[itemsep=-1mm]
+				\item[3.1.3.1] Identify behaviours that show correlation to good grades (top 10\%)
+				\item[3.1.3.2] Identify behaviours that show correlation to bad grades (bottom 10\%)
+				\item[3.1.3.3] Identify and handle outliers
+				\item[3.1.3.4] Shall Prepare the information
+				\begin{enumerate}[itemsep=-1mm]
+					\item[3.1.3.4.1] Prepare and organize information to be used by reccomendation syste
+					\item[3.1.3.4.2] Shall Prepare information when needed for any query student in a human readable format for identified behaviours and achieved grade
+				\end{enumerate}
+			\end{enumerate}
+			\item[3.1.4] Shall provide recommendation report for query student
+			\begin{enumerate}[itemsep=-1mm]
+				\item[3.1.4.1] Shall display a report in human readable format
+				\begin{enumerate}[itemsep=-1mm]
+					\item[3.1.4.1.1] Shall provide grade information and a statistical analysis of grade compared to the class
+					\item[3.1.4.1.2] Shall provide list of behaviours that correlate to better grades for query student
+					\item[3.1.4.1.3] Shall provide list of current behaviours to avoid for query student
+					\item[3.1.4.1.4] Shall provide list of current behaviours that correlate to a good grade
+					\end{enumerate}
+			\end{enumerate}
+		\end{enumerate}
+		\end{enumerate}
 	\end{document}
