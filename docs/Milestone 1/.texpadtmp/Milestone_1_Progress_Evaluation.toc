@@ -7,12 +7,19 @@
 \contentsline {subsubsection}{\numberline {1.1.5}GIT test push and Python Hello World}{4}{subsubsection.1.1.5}
 \contentsline {subsection}{\numberline {1.2}Discussion of team member contribution}{4}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}Shreyas}{4}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Shiru}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2}Shiru}{5}{subsubsection.1.2.2}
 \contentsline {subsubsection}{\numberline {1.2.3}Yaqeen}{5}{subsubsection.1.2.3}
 \contentsline {subsubsection}{\numberline {1.2.4}Mohammed}{5}{subsubsection.1.2.4}
 \contentsline {section}{\numberline {2}Plan for the next milestone}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Discussion of each task}{5}{subsection.2.1}
 \contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{5}{section.3}
 \contentsline {section}{\numberline {4}Appendices}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Yaqeen's tool research report}{6}{subsection.4.1}
-\contentsline {section}{\numberline {5}Sponsor Evaluation}{8}{section.5}
+\contentsline {subsection}{\numberline {4.1}Shreyas' Tool research report}{6}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Advanced Miner}{6}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Ghost Miner}{6}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Shiru's Tool research report}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Mohammed's tool research report}{6}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}ESTARD}{6}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}WEKA}{7}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}Yaqeen's tool research report}{7}{subsection.4.4}
+\contentsline {section}{\numberline {5}Sponsor Evaluation}{9}{section.5}

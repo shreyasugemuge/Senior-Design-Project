@@ -71,14 +71,14 @@
 	\begin{tabularx}{\textwidth}{|X|X|X|X|}
 	\hline
 	\textbf{Technology} & \textbf{Notes} & \textbf{Pros} & \textbf{Cons} \\ \hline
-	Advanced Miner &&& \\ \hline
-	Ghost Miner &&& \\ \hline
-	GNOME &&&  \\ \hline
-	SPAD &&&  \\ \hline
-	ESTARD &&& \\ \hline
-	Statistica &&& \\ \hline
-	Tanagra & see 4.1 & see 4.1 & see 4.1 \\ \hline
-	Rapid Miner & see 4.1 & see 4.1 & see 4.1 \\ \hline
+	Advanced Miner & see \ref{adv}&see \ref{adv}& see \ref{adv}\\ \hline
+	Ghost Miner & see \ref{ghstm} &  see \ref{ghstm}& see \ref{ghstm} \\ \hline
+	GNOME & see \ref{app_shi} & see \ref{app_shi} & see \ref{app_shi}  \\ \hline
+	SPAD & see \ref{app_shi} & see \ref{app_shi} & see \ref{app_shi}  \\ \hline
+	ESTARD & see \ref{est} & see \ref{est} & see \ref{est}\\ \hline
+	Statistica & Not freeware, Changed to WEKA (see \ref{app_mo}) & see \ref{wek} & see \ref{wek} \\ \hline
+	Tanagra & see \ref{app_yaq} & see \ref{app_yaq} & see \ref{app_yaq} \\ \hline
+	Rapid Miner & see \ref{app_yaq} & see \ref{app_yaq} & see \ref{app_yaq} \\ \hline
 	\end{tabularx}
 
 	\subsubsection{Familiarize with required technologies}
@@ -89,7 +89,7 @@
 	The corresponding files were pushed on to the repository.
 	\subsection{Discussion of team member contribution}
 	\subsubsection{Shreyas}
-	Created GIT repository and project website and set up Slack team communication. Researched and provided brief report on AdvancedMiner and GhostMiner. Authored to the progress evaluation document and contributed to Requirements, Design and Test Plan document and presentation.
+	Created GIT repository and project website and set up Slack team communication. Researched and provided brief report on AdvancedMiner and GhostMiner. Authored the progress evaluation and the Requirements document contributed to Design and Test Plan document and presentation.
 	\subsubsection{Shiru}
 	Set up calendar and todo list plugin for slack. Researched and provided report on GNOME and SPAD. Contributed to all 4 documents and presentation. Explored new technologies including GIT. 
 	\subsubsection{Yaqeen}
@@ -101,7 +101,23 @@
 	\section{Sponsor feedback on each task for current milestone}
 	\pagebreak
 	\section{Appendices}
-	\subsection{Yaqeen's tool research report}
+	\subsection{Shreyas' Tool research report} \label{app_shr}
+	\subsubsection{Advanced Miner} \label{adv}
+	Advanced miner seems to be an all in one tool that has features ranging from preparing data to creating specialized reports like risk analysis. This tool is a great resource for statistical analysis, but lacks the more lower level commands. \\
+	The language support includes java hadoop and SQL which are result of its big data specialization. The tool is also capable of creating formatted reports.\\
+	This may be a good fit for statistical aspects of the product but the community version has limited functionality in terms of memory usage thus restricting the scope which the free version can be used for. This tool may be effective in order to attain abstractions for some math pivoted data mining methods.
+	\subsubsection{Ghost Miner} \label{ghstm}
+	Developed by fujitsu Ghost Miner is a great tool that supports databases like spreadsheets as well as complex machine lerning algorithms. \\
+	The provided packages are highly flexible in terms of different data. Ghost miner also provides visualization support. Ghost miner has an intuitive GUI that facilitates ease of use.
+	\subsection{Shiru's Tool research report} \label{app_shi}
+	Gnome data-mine tools is growing collection of tools packaged to provide a freely available single collection of data mining tools. Sometimes, gone data-mine includes underlying command-line data mining applications and some other GUIs for these applications.	Gnome-data-mine-tools works on the Linux platform, and support C/Python language. Gnome-data-mine-tools is free download online. It is work on Linux platform. After we installed it. There are includes some tools that in the package. For example, Apriori Association Rules, Bayes Classifier, Decision trees. GDM Apriori Association Rules is a Gnome2 GUI for building association rules from transaction data. GDM Bayes is a Gnome2 GUI for building Bayes classifiers from data. GDM Decision Tree is a Gnome2 GUI for building decision trees from data.
+	Actually, I don’t think GNOME is a good way data mining for our project. Because there have some problems for this tool. The first one is GDM does not provide API for program to extend function, it means programmers need to read and extract the source code by themselves. It is inconvenient. The second reason is GDM only work on Linux platform, cannot work on other platforms. I think one tools that support multiple platforms is better.
+	\subsection{Mohammed's tool research report} \label{app_mo}
+	\subsubsection{ESTARD} \label{est}
+	ESTARD Data Miner is an easy to use tool that is designed for both skilled and regular users. One of the main strengths of ESTARD is predictive analysis which would be very helpful in this project, because predicting the behaviors that lead to a better grade is one of the main tasks in this project. Another strength of ESTARD is that it is able to find hidden relations in both structured and unstructured sets of data. ESTARD has many useful features that provide different types of output, some of these features include What-if statistics, decision rules, and decision trees.  There are not any significant disadvantages of using ESTARD for this project. However, more tools are necessary for better and more accurate information extracted in the project.
+	\subsubsection{WEKA} \label{wek}
+	WEKA contains machine learning algorithms written in Java for data mining tasks. This tool is fairly easy to use; it can perform many data mining tasks such as data preprocessing, visualization, clustering, regression and feature selection. Weka is widely used in several different programs such as algorithms for data analysis and predictive modeling. One disadvantage of Weka is that it does not support multi-relations data mining. Overall, this tool would be a good addition to our data mining tools selection as it is rated one of the top tools for finding data mining. 
+	\subsection{Yaqeen's tool research report} \label{app_yaq}
 	Finding ways to extract the information that we need from the data is one of the important steps toward completing the goal of this project. The two tools that I have been exploring are Tanagra and SPAD. \\
 \hfill \break
 SPAD is a mature data mining suite that provides powerful exploratory analyses and data mining tools, including PCA, MCA, clustering, interactive decision trees, discriminant analyses, text mining and more, all via user-friendly GUI. SPAD data mining approaches are Classification Discovery, Cluster Discovery, Regression Discovery, Association Discovery, Text Mining, Outlier Discovery, Data Visualization, Discovery Visualization, Social Network Analysis. Although SPAD is a powerful data mining software, it is a commercial licensed software that comes in French. These two points in SPAD will delay the process of extracting information. Also, the only website that we can download SPAD from is www.coheris.com, which is in French, too. In my opinion, SPAD is not the data mining software that we want to be using in this project. \\
