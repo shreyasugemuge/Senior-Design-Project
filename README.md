@@ -12,7 +12,7 @@ Spring 2017 <br>
 
 |Project Plan |[Plan](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Project%20Plan.pdf), [Presentation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/First%20Presentation.pdf) |
 |---|---|
-|Milestone 1|[Requirements v1.0](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Requirements.pdf), [Progress evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Milestone_1_Progress_Evaluation.pdf)|
+|Milestone 1|[Requirements v1.0](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Requirements.pdf), [Progress evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Milestone_1_Progress_Evaluation.pdf), [Test Plan](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Test%20Plan.pdf)|
 |Milestone 2| |
 
 
