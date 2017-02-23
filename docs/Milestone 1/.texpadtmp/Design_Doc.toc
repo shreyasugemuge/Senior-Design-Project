@@ -1,2 +1,7 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
-\contentsline {section}{\numberline {2}Use Case for}{3}{section.2}
+\contentsline {section}{\numberline {2}Use Case for Student Performance Analysis}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Main Success scenario (Student)}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Main success scenario (Teacher)}{3}{subsection.2.2}
+\contentsline {section}{\numberline {3}System Sequence Diagram}{3}{section.3}
+\contentsline {section}{\numberline {4}UML diagrams}{6}{section.4}
+\contentsline {section}{\numberline {5}Interface Mock ups}{7}{section.5}
