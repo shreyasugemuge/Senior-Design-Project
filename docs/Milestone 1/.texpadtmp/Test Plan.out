@@ -4,4 +4,30 @@
 \BOOKMARK [2][-]{subsection.2.2}{Extract behaviors from log files}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Extract performances from grade files}{section.2}% 5
 \BOOKMARK [2][-]{subsection.2.4}{Accepting input from the syllabus}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Display good behaviors}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.5}{Display the recommended behaviors for strong performance }{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Main page}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Recommendation Page}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Scope and Limitation of Test Plan}{}% 10
+\BOOKMARK [1][-]{section.4}{Sources of Test Data}{}% 11
+\BOOKMARK [1][-]{section.5}{Testing Strategy}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Static Testing}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Unit Testing}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Performance Testing}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.4}{User Acceptance Testing}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.5}{Automated Regression Testing}{section.5}% 17
+\BOOKMARK [1][-]{section.6}{Control Procedures}{}% 18
+\BOOKMARK [2][-]{subsection.6.1}{Problem Reporting}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.2}{Changes in project}{section.6}% 20
+\BOOKMARK [1][-]{section.7}{Features to be tested}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{Login}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.2}{Change Password}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.3}{Sign Up}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.4}{Information from syllabus}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.5}{Log File and Grade file upload}{section.7}% 26
+\BOOKMARK [2][-]{subsection.7.6}{Extracting performance from grade file}{section.7}% 27
+\BOOKMARK [2][-]{subsection.7.7}{Extracting behaviors from Grade File}{section.7}% 28
+\BOOKMARK [2][-]{subsection.7.8}{Select course}{section.7}% 29
+\BOOKMARK [2][-]{subsection.7.9}{View Recommendations Report}{section.7}% 30
+\BOOKMARK [1][-]{section.8}{Features Not Being Tested}{}% 31
+\BOOKMARK [1][-]{section.9}{Risks/Assumptions}{}% 32
+\BOOKMARK [1][-]{section.10}{Tools}{}% 33

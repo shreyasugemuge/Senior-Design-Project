@@ -4,4 +4,30 @@
 \contentsline {subsection}{\numberline {2.2}Extract behaviors from log files}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Extract performances from grade files}{3}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Accepting input from the syllabus}{3}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Display good behaviors}{3}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.5}Display the recommended behaviors for strong performance }{3}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Main page}{4}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Recommendation Page}{4}{subsection.2.7}
+\contentsline {section}{\numberline {3}Scope and Limitation of Test Plan}{4}{section.3}
+\contentsline {section}{\numberline {4}Sources of Test Data}{4}{section.4}
+\contentsline {section}{\numberline {5}Testing Strategy}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}Static Testing}{4}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Unit Testing}{5}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Performance Testing}{5}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}User Acceptance Testing}{5}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Automated Regression Testing}{6}{subsection.5.5}
+\contentsline {section}{\numberline {6}Control Procedures}{6}{section.6}
+\contentsline {subsection}{\numberline {6.1}Problem Reporting}{6}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Changes in project}{6}{subsection.6.2}
+\contentsline {section}{\numberline {7}Features to be tested}{6}{section.7}
+\contentsline {subsection}{\numberline {7.1}Login}{6}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Change Password}{6}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Sign Up}{7}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Information from syllabus}{7}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Log File and Grade file upload}{7}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Extracting performance from grade file}{7}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Extracting behaviors from Grade File}{7}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.8}Select course}{7}{subsection.7.8}
+\contentsline {subsection}{\numberline {7.9}View Recommendations Report}{7}{subsection.7.9}
+\contentsline {section}{\numberline {8}Features Not Being Tested}{8}{section.8}
+\contentsline {section}{\numberline {9}Risks/Assumptions}{8}{section.9}
+\contentsline {section}{\numberline {10}Tools}{8}{section.10}

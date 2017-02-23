@@ -60,6 +60,169 @@ Input: the ability of the software to read and sort the information entered from
 	\item Quizzes due dates
 \end{itemize}
 
-\subsection{Display good behaviors}
-The ability to the 
+\subsection{Display the recommended behaviors for strong performance }
+Output:  the ability of the software to display all the recommendations after extracting the behaviors from different documents. 
+
+\subsection{Main page}
+The software behavior in the main page:
+\begin{itemize}
+	\item Choose course button
+	\item help button
+\end{itemize}
+
+\subsection{Recommendation Page}
+The software behavior in the recommendation page:
+\begin{itemize}
+	\item Reccomendation List
+	\item Performance Report
+\end{itemize}
+
+\section{Scope and Limitation of Test Plan}
+This document is a specification of features to be tested in the ABRS. Features from (2.2 - 2.7) will be tested in how they function and their integration with each other. Since testing take a great amount of time, some features may not have further testing (e.g., 2.5 )
+
+\section{Sources of Test Data}
+The sources of test data are the syllabus, log files, grade files, and the codes of the software. The test data, syllabus, log files, and grade files, are given by Dr. Chan. The other test data, codes, will come from  the codes that our team is going to write. The amount  of effort that will be necessary to acquire all the data, given that we are working in a team, will be  basic. Since we are using GITHUB for all sort of documentation. Also, we will be using copies of the software and database, since it is most cost effective from testing perspective and easiest from a data preparation perspective to use copies of the software and database. 
+\section{Testing Strategy}
+The software will be tested in several different ways which will ensure that the features groups are adequately tested. 
+\subsection{Static Testing}
+This will test the conducted part of the software. The main objectives to be static tested are from (2.4-2.7). Which will show the performance of the software. 
+\subsection{Unit Testing}
+\begin{itemize}
+	\item The objectives will be tested using White Box testing techniques since we have all the source code and the executable code. The objectives 2.2-2.6 will need to be unit tested formally by going through each function in the written codes.The testing will also include testing documentation including the requirements, data design, interface design, database structure design, and platform design of the project.  This test will be done with maximum degree of comprehensiveness. Some additional criteria to be tested are the errors and warnings frequencies. As this will be the most important part of testing the codes and their executions, we will be using several techniques to trace the requirements for example: inspection review, walkthrough, and final checking. 
+	\item Since each team member will be writing different part of the codes from this software, each team member will be testing the other member's work, as another member will be providing the test script for the unit testing. 
+\end{itemize}
+\subsection{Performance Testing}
+\begin{itemize}
+	\item The performance testing will test how the software will perform. As this matter, we will test objectives 2.6 and 2.7
+	\item For objective 2.7, we will test the main page when the user is the teacher and when the user is the student. 
+	\begin{itemize}
+		\item Teacher
+		\begin{itemize}
+		\item input : entering information from syllabus. 
+		\item input from : uploading log files
+		\item input from file : uploading grade files
+		\end{itemize}
+		\item Student: Input: choose course
+		\item For objective 2.7, we will test the output for the user who in this case will be the student.
+		\begin{itemize}
+		\item output: reccomendation report
+		\item output: Performance report
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsection{User Acceptance Testing}
+\begin{itemize}
+	\item This test will be conducted by asking a group of student to use the software and see how it is working and then collect reviews
+	\item This test will help developing the software performance and correct some objectives ( 2.6 and 2.7)
+\end{itemize}
+
+\subsection{Automated Regression Testing}
+We will be retesting objectives (2.2-2.5) after each process to check for any error in executable code or running time output error
+
+\section{Control Procedures}
+\subsection{Problem Reporting}
+We will be documenting the procedures to follow when an incident is encountered during the testing process.
+\begin{itemize}
+	\item Opening Application
+	\item Login / sign up
+	\item Choosing course
+	\item Displaying reports
+	\item input data from given fies
+\end{itemize}
+
+\subsection{Changes in project}
+We will be documenting the process of modifications to the software. Dr. Chan will be signing off on the changes. The changes will be specified under the criteria that includes them. If the changes will affect existing objectives, they will be identified. 
+
+\section{Features to be tested}
+\subsection{Login}
+\begin{itemize}
+	\item Usual test case: Enters valid credentials.\\
+Expected output: Logs in successfully.
+\item Unusual test case:  Enters information for an old account that has been deleted.\\
+		Expected output: failure to login.
+\end{itemize}
+\subsection{Change Password}
+\begin{itemize}
+	\item Usual test case: Enters valid new password. \\
+Expected output: password is changed.
+\item Unusual test case:  Enters a password that is too weak.
+\end{itemize}
+\subsection{Sign Up}
+\begin{itemize}
+	\item Usual test case: Enters valid information. \\ Expected output: Account created.
+	\item Unusual test case: Enters information about an account that already exists.
+		\\ Expected output: failure to create account.
+\end{itemize}
+\subsection{Information from syllabus}
+\begin{itemize}
+	\item Usual test case: teacher inputs all syllabus information correctly.\\
+		Expected output: Information processed correctly.
+	\item Unusual test case: input is missing some information. \\
+		Expected output: cannot proceed to generate report.
+\end{itemize}
+\subsection{Log File and Grade file upload}
+\begin{itemize}
+	\item Usual test case: the files uploaded are complete and in the right format. \\
+		Expected output: accepts files to be processed.
+	\item Unusual test case: upload files in an unsupported format.\\
+		Expected output: display an error message and attempt to take a different file
+\end{itemize}
+
+\subsection{Extracting performance from grade file}
+\begin{itemize}
+	\item Usual test case: click the “correlate behaviors and performance” button after correctly uploading all files.
+	\item Expected output: displays report.
+\end{itemize}
+
+\subsection{Extracting behaviors from Grade File}
+\begin{itemize}
+	\item Usual test case: click the button after correctly uploading all files. \\
+		Expected output: displays behavioral report.
+\end{itemize}
+
+\subsection{Select course}
+\begin{itemize}
+\item Usual test case: User enters a correct course name. \\
+		Expected output: proceed to view recommendations.
+		\item Unusual test case: Enters a course name that does not exist. \\
+		Expected output: cannot proceed to recommendations page
+\end{itemize}
+
+\subsection{View Recommendations Report}
+\begin{itemize}
+	\item Usual test case: User clicks on “view recommendations” after choosing a course.\\
+		Expected output: correct report is generated.
+\end{itemize}
+
+\section{Features Not Being Tested}
+Some features in our system will not be tested as we are not likely to benefit from testing these feature:
+\begin{itemize}
+	\item Testing whether or not the syllabus information inputted is consistent with the syllabus.
+	\item Testing if the grade file and log file are records of the same students.
+\end{itemize}
+
+\section{Risks/Assumptions}
+\begin{itemize}
+	\item Identify the high-risk assumptions of the test plan. We will specify contingency plan for any risks. For example:
+	\begin{itemize}
+	Delay in completions of a test item might require increase night scheduling to meet the delivery date.
+	\end{itemize}
+\end{itemize}
+
+\section{Tools}
+\begin{itemize}
+	\item Python/Java
+	\item Github
+	\item one of more for:
+	\begin{itemize}
+		\item Advanced Miner
+		\item Ghost Miner
+		\item GNOME
+		\item ESTARD
+		\item TANAGRA
+		\item SPAD
+		\item WEKA
+	\end{itemize}
+\end{itemize}
 \end{document}
