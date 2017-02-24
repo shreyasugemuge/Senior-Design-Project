@@ -1,4 +1,4 @@
-filename=MAIN_LATEX_FILE_NAME_WITHOUT_.tex
+filename=*.tex
 
 pdf: ps
 ps2pdf .ps
