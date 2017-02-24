@@ -63,19 +63,6 @@ Input: the ability of the software to read and sort the information entered from
 \subsection{Display the recommended behaviors for strong performance }
 Output:  the ability of the software to display all the recommendations after extracting the behaviors from different documents. 
 
-\subsection{Main page}
-The software behavior in the main page:
-\begin{itemize}
-	\item Choose course button
-	\item help button
-\end{itemize}
-
-\subsection{Recommendation Page}
-The software behavior in the recommendation page:
-\begin{itemize}
-	\item Reccomendation List
-	\item Performance Report
-\end{itemize}
 
 \section{Scope and Limitation of Test Plan}
 This document is a specification of features to be tested in the ABRS. Features from (2.2 - 2.7) will be tested in how they function and their integration with each other. Since testing take a great amount of time, some features may not have further testing (e.g., 2.5 )
@@ -169,17 +156,28 @@ Expected output: password is changed.
 		Expected output: display an error message and attempt to take a different file
 \end{itemize}
 
-\subsection{Extracting performance from grade file}
+\subsection{Extracting performance from Grade file}
 \begin{itemize}
-	\item Usual test case: click the “correlate behaviors and performance” button after correctly uploading all files.
+	\item Usual test case: click the "extract performance" button after correctly uploading all files.
 	\item Expected output: displays report.
 \end{itemize}
 
-\subsection{Extracting behaviors from Grade File}
+\subsection{Extracting behaviors from Log File}
 \begin{itemize}
-	\item Usual test case: click the button after correctly uploading all files. \\
+	\item Usual test case: click the "extract behavior" button after correctly uploading all files. \\
 		Expected output: displays behavioral report.
 \end{itemize}
+
+\subsection{Correlate behaviors to performance}
+\begin{itemize}
+\item Usual test case: data mining extract output from performance and behaviors. \\
+		Expected output: displays correlations report.
+		\item Usual test case: data mining prepares information for recommender system \\
+		Expected output: \begin{itemize} \item displays information about performance for every student.\\
+		display information about the behavior exhibited by each student.
+		\end{itemize}
+\end{itemize}
+
 
 \subsection{Select course}
 \begin{itemize}
@@ -212,17 +210,6 @@ Some features in our system will not be tested as we are not likely to benefit f
 
 \section{Tools}
 \begin{itemize}
-	\item Python/Java
-	\item Github
-	\item one of more for:
-	\begin{itemize}
-		\item Advanced Miner
-		\item Ghost Miner
-		\item GNOME
-		\item ESTARD
-		\item TANAGRA
-		\item SPAD
-		\item WEKA
-	\end{itemize}
+	\item TBD..
 \end{itemize}
 \end{document}
