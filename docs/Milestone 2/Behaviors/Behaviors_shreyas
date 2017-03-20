@@ -1,0 +1,9 @@
+1: How often to do they login before each test/submission
+	Note: This metric will be invalid if the student downloads
+			the corresponding file, instead of returning to it each time.
+	Implementation: Naive Bayes' (See: src)
+
+2: The first time relevant maetrial is accessed for a certain exam/submission
+	Note: 
+	Implementation: 
+
