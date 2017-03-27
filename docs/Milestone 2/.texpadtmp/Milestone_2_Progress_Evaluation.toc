@@ -2,18 +2,21 @@
 \contentsline {subsection}{\numberline {1.1}Discussion of each task}{4}{subsection.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1}Finalize Conceptualizing 8 behaviors}{4}{subsubsection.1.1.1}
 \contentsline {subsubsection}{\numberline {1.1.2}Finalize packages, languages and tools}{4}{subsubsection.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.3}Implement and test framework to get input from syllabus}{4}{subsubsection.1.1.3}
-\contentsline {subsubsection}{\numberline {1.1.4}Select data mining techniques for each behavior}{4}{subsubsection.1.1.4}
-\contentsline {subsubsection}{\numberline {1.1.5}Provide report explaining behaviors and corresponding data mining methods}{4}{subsubsection.1.1.5}
-\contentsline {subsubsection}{\numberline {1.1.6}Implement and extract data for 2 behaviors}{4}{subsubsection.1.1.6}
-\contentsline {subsubsection}{\numberline {1.1.7}Update Requirements and test document}{4}{subsubsection.1.1.7}
-\contentsline {subsection}{\numberline {1.2}Discussion of team member contribution}{4}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Shreyas}{4}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Shiru}{4}{subsubsection.1.2.2}
-\contentsline {subsubsection}{\numberline {1.2.3}Yaqeen}{4}{subsubsection.1.2.3}
-\contentsline {subsubsection}{\numberline {1.2.4}Mohammed}{4}{subsubsection.1.2.4}
-\contentsline {section}{\numberline {2}Plan for the next milestone}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Discussion of each task}{4}{subsection.2.1}
-\contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{5}{section.3}
-\contentsline {section}{\numberline {4}Appendices}{6}{section.4}
-\contentsline {section}{\numberline {5}Sponsor Evaluation}{7}{section.5}
+\contentsline {subsubsection}{\numberline {1.1.3}Implement and test framework to get input from syllabus}{5}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Select data mining techniques for each behavior}{5}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Clean and prepare data}{5}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}Implement and extract data for 2 behaviors}{5}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}Update documents}{6}{subsubsection.1.1.7}
+\contentsline {subsection}{\numberline {1.2}Discussion of team member contribution}{6}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Shreyas}{6}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Shiru}{6}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Yaqeen}{6}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Mohammed}{6}{subsubsection.1.2.4}
+\contentsline {section}{\numberline {2}Plan for the next milestone}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Discussion of each task}{7}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Finish extracting information using the behaviors}{7}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Begin Correletion of behavior information with grades}{7}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Present information}{7}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Design and Implement GUI}{8}{subsubsection.2.1.4}
+\contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{9}{section.3}
+\contentsline {section}{\numberline {4}Sponsor Evaluation}{10}{section.4}
