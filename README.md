@@ -13,7 +13,4 @@ Spring 2017 <br>
 |Project Plan |[Plan](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Project%20Plan.pdf), [Presentation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/First%20Presentation.pdf) |
 |---|---|
 |Milestone 1|[Requirements](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Requirements.pdf), [Progress evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Milestone_1_Progress_Evaluation.pdf), [Test Plan](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Test%20Plan.pdf), [Design Document](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%201/Design_Doc.pdf), [Presentation](https://docs.google.com/a/my.fit.edu/presentation/d/1bD1MBvAztn5Nz756nvrcNEW2qAy6nEy9ZBYnAebSab8/edit?usp=sharing)|
-|Milestone 2|[Progress Evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%202/Milestone_2_Progress_Evaluation.pdf)[Presentation](https://github.com/shreyasugemuge/Senior-Design-Project/blob/master/docs/Milestone%202/Milestone_2_Progress_Evaluation.pdf)|
-
-
-
+|Milestone 2|[Progress Evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%202/Milestone_2_Progress_Evaluation.pdf), [Presentation](https://docs.google.com/a/my.fit.edu/presentation/d/1CEcaKCH-8ASfQZxPiGl1QXYu1iE-KPVSPqJf49pU-ko/edit?usp=sharing)|
