@@ -1,0 +1,16 @@
+Shiru Hou:
+1. Time between when unit was available and ASR submission
+2. study guide video or podcast
+
+Yaqeen:
+1. How many ASRs submitted
+2. Number of optional assignments
+
+Mohammed:
+
+Shreyas:
+1. Number of days with 0 activities
+2. Average activites per login session
+3. Total number of logins
+
+
