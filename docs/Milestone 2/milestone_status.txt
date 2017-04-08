@@ -1,8 +1,0 @@
-finalize behaviors - over 8 done, beyond target!
-finalize packages, tools - WIP, sklearn/python seems to be working
-implement test framework for syllabus input - WIP
-Data mining technique for each behavior - 3 out 12 determined. 1 implementing
-Provide report - WIP
-extract 2 behaviors - 1 almost finished, will most likely do 3
-req and test doc - WIP
-progress eval - started
