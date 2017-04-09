@@ -1,6 +1,7 @@
 Shiru Hou:
 1. Time between when unit was available and ASR submission
-2. study guide video or podcast
+2. study guide video or podcast and guide materials
+3. Total number of each students reviewed actives
 
 Yaqeen:
 1. How many ASRs submitted
