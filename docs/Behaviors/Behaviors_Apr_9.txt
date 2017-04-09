@@ -5,6 +5,8 @@ Shiru Hou:
 Yaqeen:
 1. How many ASRs submitted
 2. Number of optional assignments
+3. Number of tests submited
+4. Number of tests B submited
 
 Mohammed:
 
