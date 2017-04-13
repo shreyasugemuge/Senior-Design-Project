@@ -1,8 +1,9 @@
 #!/bin/bash
 echo "Making sure folders required exist.."
-mkdir docs
+mkdir docs/shreyas
 mkdir private/clean
 ./sh_helpers/CleanDataset.sh
-echo "Success.."
+echo $?
 ./sh_helpers/Behaviour1.sh
-echo "Success. Result located in docs/"
+echo -n $?
+echo " Result located in docs/shreyas"
