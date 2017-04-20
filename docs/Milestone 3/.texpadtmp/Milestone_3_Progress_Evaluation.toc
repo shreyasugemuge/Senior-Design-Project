@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Progress of current Milestone}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Discussion of each task}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Discussion of team member contribution}{3}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Shreyas}{3}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Shiru}{3}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Yaqeen}{3}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Mohammed}{3}{subsubsection.1.2.4}
+\contentsline {section}{\numberline {2}Plan for the next milestone}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Discussion of each task}{3}{subsection.2.1}
+\contentsline {section}{\numberline {3}Sponsor feedback on each task for current milestone}{4}{section.3}
+\contentsline {section}{\numberline {4}Sponsor Evaluation}{5}{section.4}
