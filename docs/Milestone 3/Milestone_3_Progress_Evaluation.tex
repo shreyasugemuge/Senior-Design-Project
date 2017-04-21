@@ -44,26 +44,98 @@
 	\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|X|}
 	\hline
 		\textbf{Task} & \textbf{Completed} &\textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} & \textbf{Remarks}  \\ \hline
+		Finish Extracting Behaviors &100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
+		Program to Merge and Format Data for Data mining & 95\% & 100\% & - & - & - & File names are inconsistent and are hardcoded at this point. Need to write a shell script to run program. \\ \hline
+		Compile Information & 100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
+		Change Behavior Exrtaction to weekly & 25\% & 25\% & - & - & - & This task is to be finished over this and the next milestone \\ \hline
+		Progress Evaluation and Presentation & 100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
 	\end{tabularx}
 %	\end{adjustbox}
 	\subsection{Discussion of each task}
-		
+	\subsubsection{Finish Extracting Behaviors}
+	When each different item (like quizzes and tests) are considered separately the team implemented 25+ behaviors. However, for the sake of simplicity and to get a better understanding of how much data was extracted several behaviors will be grouped within this document. For instance, seperate behaviors like time taken for test 1 and time taken for test 7 will be grouped as time taken for tests. 
+	Here are all the behaviors that have been implemented
+	\begin{enumerate}
+		\item Total number of Logins
+		\item Average activity per session
+		\item Number of days where student did not login
+		\item Time taken for each test and average time taken to do each test
+		\item Number of study Guide materials accessed
+		\item Number of ASRs submitted
+		\item Number of Procedure quizzes submitted
+		\item Number of Cyberrat assignments submitted
+		\item Number of surveys done
+		\item Activity count for reviewed material
+		\item Number of online meetings attended
+		\item Number of optional assignments submitted
+		\item Number of activities for accessing supplemental material
+		\item Average Number of activities before each test
+		\item Number of tests A and Tests B submitted
+		\item Days between when the material was available and when it was submitted
+	\end{enumerate}
+	
+	\subsubsection{Program to merge and format data}
+	Program was used to merge all the csv files, using java and openCSV. The program uses the ID as a primary key and merges data over multiple csv files into src/merged.csv. The limitation is that the filenames have to be hardcoded and there is only one kind of output format. \\
+	A solution to tell the program of the expected format has to be implemented. 
+	
+	\subsubsection{Compile Information}
+	the grades.csv and all behaviors located in src/docs/ are used to create a final compiled file Behaviors\_merged.csv .
+	
+	\subsubsection{Change behavior extraction with the number of weeks as parameter}
+	4 of the behaviors have been modified to include this functionality. The same program was moved from python to java because pandas library abstracts much of functionality and doesn't provide a way to iteratively go over the table.
 	\subsection{Discussion of team member contribution}
 	\subsubsection{Shreyas}
+	Reimplemented 4 behaviors in java instead of python. Decided format for individual csv files. Wrote merge program. Modified bahaviors to extract weekly information.
+	
+	\begin{itemize}
+		\item Total number of logins counted the amount of times the student logged in over given weeks. Abandoned sessions. i.e. sessions with a login but no logout were handled
+		\item Average activity per session. A session is time between two logins or between a login and a logout, where each row in the log entry is an activity.
+		\item Time taken for each test. The start time is marked by the 'delivered' activity and the end time is marked by 'submitted'. The result is output in minutes as this was the most readable metric for the available significant figures.
+		\item Number of days where the student did not login. 
+	\end{itemize}
 	
 	\subsubsection{Shiru}
+	Finished 4 implementations:
+	\begin{itemize}
+		\item Time between when unit was available and ASR submissionCalculate how many days of each student submitted the ASR after each unit materials were available. Use Python pandas and numpy library to extract data from csv file and calculate it. Then write the result to a new csv file.
+		\item Study guide video or podcast and guide materialsCalculate how many activities of each student accessed to study guide video or podcast and guide materials. G1, G2... means how many activities of student access each guide materials.
+		\item Total number of each student reviewed activitiesUse the search key “Reviewed” in the raw data from student’s log file, calculate how many activities of each student do reviewed actives include the reviewed assignments and quiz after they are graded.
+		\item Total number of each student study supplemental materials activities
+	\end{itemize}
 
 	\subsubsection{Yaqeen}
+	\begin{itemize}
+		\item Implemented and Extracted 3 behaviors: 
+		\begin{itemize}
+			\item Number of ASR Unit Assignments Each Student Submitted: Located all ASR Units in the log files and counted the number of submissions for each one. 
+			\item Number of Optional CyberRat Assignment Submitted:
+Followed the same concept from the first behavior to extract the OCA. In this behavior, the only difficulty was that only about \%5 of all the students acutely attempted to do the OCA. Where many of them didn’t even click it.
+\item Number of Tests B Submitted:
+Located all tests B that the students submitted and counted them.
+%\item Number of Late ASR Unit Assignments Submission: 
+%After locating all ASR Units, I located the date each of them was submitted.  I compared the submission date of each ASR Unit with the deadline for each Unit, which was the last day the Unit Tests were available (checked manually). I, then, calculated the total number of ASR Units submitted after the deadline. 
 
+		\end{itemize}
+	\end{itemize}
 	\subsubsection{Mohammed}
-
+Conceptualized 7 new behaviors, implemented and extracted 5 of them. Used Java as main language for the behavior implementation. Used opencsv library to read and extract the information from the students’ log files, and write csv output for each behavior separately. Assigned to contribute in implementing the GUI. Contributed in the progress evaluation document.
+Behaviors Implemented:
+\begin{itemize}
+\item Online meetings attended: \\We can see from the syllabus that attending online meetings is a mandatory part of the course. From the students’ log files, the program goes through the row of the activities description and simply calculate the number of “Online Meeting” boxes and writes the results. Following are some screenshots of the activity description and output.
+\item Number of procedure quizzes: \\This is one of the optional activities for bonus points in this course. The program reads the log files, and calculates how many optional procedures quiz submitted and outputs the extraction to a csv file for all students.
+\item Number of surveys: \\This is another optional activity for bonus points in this course. The program reads the log files, and calculates how many optional surveys submitted and outputs the extraction to a csv file for all students.
+\item Number of CyberRat Assignments \\
+\item Average activities for each test: \\Here the program calculates the total number of activities before each test, and then calculates the average for the 7 tests in this course, then it outputs the extraction to a csv file for all students. This helps us know how much did the student access the materials for exams, as exams are worth most portion of the final scores.Here is another optional activity for bonus points in this course. The program reads the log files, and calculates how many optional CyberRat assignments submitted and outputs the extraction to a csv file for all students.
+\end{itemize}
 	\section{Plan for the next milestone}
 	\begin{tabularx}{\linewidth}{|X|X|X|X|X|}
-	\hline
-	\textbf{Task} & \textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} \\ \hline
+	\hline	\textbf{Task} & \textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} \\ \hline
+	Make All behavior extraction weekly & - & 33 & 33 & 33 \\ \hline
+	Use decided data mining tools and packages to correlate behaviors with grades & 25 & 25 & 25 & 25 \\ \hline
+	Design and Implement GUI & - & 50 & - & 50 \\ \hline
+	Test correlations using the Train/Test Model, dividing the semester into 2 parts. & 25 & 25&25&25\\ \hline
 	\end{tabularx}
 
-	\subsection{Discussion of each task}
 
 	\pagebreak
 	\section{Sponsor feedback on each task for current milestone}
