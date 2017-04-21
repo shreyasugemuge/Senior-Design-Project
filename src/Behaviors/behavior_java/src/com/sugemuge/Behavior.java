@@ -3,6 +3,7 @@ package com.sugemuge;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,7 +24,8 @@ public class Behavior {
             "Average Activities Per Session", "Total Number of Logins", "Time Test #1 A", "Time Test #1 B",
             "Time Test #2 Part #1 A", "Time Test #2 Part #1 B", "Time Test #2 Part #2 A", "Time Test #2 Part #2 B",
             "Time Test #3 A", "Time Test #3 B", "Time Test #4 A", "Time Test #4 B", "Time Test #5 A", "Time Test #5 B",
-            "Time Test #6 A", "Time Test #6 B", "Time Test #7 A", "Time Test #7 B" };
+            "Time Test #6 A", "Time Test #6 B", "Time Test #7 A", "Time Test #7 B",
+            "Average time taking tests in minutes" };
 
     public static void main (String[] args) throws ParseException, IOException {
         int weeks = (args.length == 0 ? MAX_WEEKS : Integer.parseInt(args[0]));
@@ -33,12 +35,57 @@ public class Behavior {
         for (int i = 1; i <= 111; i++) {
             String filename = LOG_DIR + "log_" + i + ".csv";
             String[] outRow = { Integer.toString(i), Integer.toString(days0Activities(filename, weeks)),
-                    Double.toString(AvgActivity(filename, weeks)), Integer.toString(totalLogin(filename, weeks)) };
+                    Double.toString(AvgActivity(filename, weeks)), Integer.toString(totalLogin(filename, weeks)),
+                    testTime(1, 0, 'A', filename, weeks), testTime(1, 0, 'B', filename, weeks),
+                    testTime(2, 1, 'A', filename, weeks), testTime(2, 1, 'B', filename, weeks),
+                    testTime(2, 2, 'A', filename, weeks), testTime(2, 2, 'B', filename, weeks),
+                    testTime(3, 0, 'A', filename, weeks), testTime(3, 0, 'B', filename, weeks),
+                    testTime(4, 0, 'A', filename, weeks), testTime(4, 0, 'B', filename, weeks),
+                    testTime(5, 0, 'A', filename, weeks), testTime(5, 0, 'B', filename, weeks),
+                    testTime(6, 0, 'A', filename, weeks), testTime(6, 0, 'B', filename, weeks),
+                    testTime(7, 0, 'A', filename, weeks), testTime(7, 0, 'B', filename, weeks), "" };
+            double sum = 0.0, count = 0.0;
+            for (int j = 4; j < outRow.length - 1; j++) {
+                if (outRow[j] != null && !outRow[j].equals("-")) {
+                    sum += Double.parseDouble(outRow[j]);
+                    count++;
+                }
+            }
+            outRow[outRow.length - 1] = Double.toString(sum / count);
             out.writeNext(outRow);
         }
+        // System.out.println(testTime(1, 0, 'A', LOG_DIR + "log_1.csv", 10));
         out.flush();
         out.close();
 
+    }
+
+    public static String testTime (int num, int part, char seq, String filename, int weeks)
+            throws IOException, ParseException {
+        String testString = "Test #" + num + (part == 0 ? " " : (" Part #" + part + " ")) + seq;
+        java.sql.Time timeStart = null, timeEnd = null;
+        boolean endMode = false;
+        CSVReader in = new CSVReader(new FileReader(filename));
+        String[] col;
+        in.readNext();
+        while ((col = in.readNext()) != null) {
+            if (!endMode && col[7].contains(testString) && col[5].contains("Delivered")) {
+                endMode = true;
+                timeStart = new Time(FORMAT_TIME.parse(col[4]).getTime());
+            }
+
+            if (endMode && col[7].contains(testString) && col[5].contains("Submitted")) {
+                timeEnd = new Time(FORMAT_TIME.parse(col[4]).getTime());
+                break;
+            }
+        }
+        // System.out.println("Start " + timeStart.toString() + " End " +
+        // timeEnd.toString() + " "
+        // + (timeEnd.getTime() - timeStart.getTime()));
+        if (timeEnd == null || timeStart == null)
+            return "-";
+        else
+            return Double.toString(Math.abs(timeEnd.getTime() - timeStart.getTime()) / 60000.0);
     }
 
     public static int days0Activities (String filename, int weeks) throws IOException {
@@ -82,7 +129,7 @@ public class Behavior {
                 seen.add(curDate);
                 if (!(col[2].equals("") || col[2].equals(null)))
                     sum += Double.parseDouble(col[2]);
-                System.out.println(sum + " \\| " + count);
+                // System.out.println(sum + " \\| " + count);
                 count++;
             }
 
