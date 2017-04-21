@@ -1,10 +1,12 @@
 package merge;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
 
 public class PrepareData {
     public final static double AVG_GRADE = 899.0;
@@ -14,11 +16,19 @@ public class PrepareData {
         String[] gradeCol = getGrades("../private/Grades.csv");
         String[] idCol = prepIDs(gradeCol.length);
         String[] avgCol = aboveAvg(gradeCol);
-        ArrayList<String[]> behCol = behaviorsFromFile("BEH_SGM.csv");
-        for (int i = 0; i < behCol.size(); i++)
-            for (int j = 0; j < behCol.get(i).length; j++)
-                System.out.println(behCol.get(i)[j]);
+        ArrayList<String[]> behCol = new ArrayList<>();
+        behCol.add(gradeCol);
+        behCol.add(avgCol);
+        toFile(gradeCol, avgCol);
+    }
 
+    public static void toFile (String[] a, String[] b) throws IOException {
+        CSVWriter out = new CSVWriter(new FileWriter("../GradeHelp.csv"));
+        for (int i = 0; i < a.length; i++) {
+            String[] row = { a[i], b[i] };
+            out.writeNext(row);
+        }
+        out.close();
     }
 
     public static ArrayList<String[]> behaviorsFromFile (String filename) throws IOException {
