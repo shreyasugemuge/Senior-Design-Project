@@ -1,4 +1,4 @@
-# Academic Behavior Recommadation System
+# Academic Behavior Recommendation System
 
 * [Shreyas Ugemuge](https://shreyasugemuge.github.io) <sugemuge2014@my.fit.edu>
 * Shiru Hou <shou2015@my.fit.edu>
