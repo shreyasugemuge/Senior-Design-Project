@@ -69,6 +69,8 @@ public class Behavior {
         String[] col;
         in.readNext();
         while ((col = in.readNext()) != null) {
+            if (col[1].equals(lastDate(weeks)))
+                return "-";
             if (!endMode && col[7].contains(testString) && col[5].contains("Delivered")) {
                 endMode = true;
                 timeStart = new Time(FORMAT_TIME.parse(col[4]).getTime());
