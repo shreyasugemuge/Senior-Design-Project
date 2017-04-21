@@ -31,5 +31,5 @@ for args in sys.argv[1:]:
     g = g1+g2+g3+g4+g5+g6+g7
 
 
-    print(str(count) + ',' + str(g) + ',' + str(g1) + ',' + str(g2) + ',' + str(g3) + ',' + str(g4) + ',' + str(g5) + ',' + str(g6)  + ',' + str(g7) + '\n')
+    print(str(count) + ',' + str(g) + ',' + str(g1) + ',' + str(g2) + ',' + str(g3) + ',' + str(g4) + ',' + str(g5) + ',' + str(g6)  + ',' + str(g7))
     count = count + 1
