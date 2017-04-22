@@ -1,0 +1,3 @@
+Filenames Explained:
+
+Each file name is the number of weeks that was used as a parameter for the behavior extraction, in simpler terms the file 2.csv contains behaviors for 2 weeks, 4.csv has it for 4 weeks and so on....
