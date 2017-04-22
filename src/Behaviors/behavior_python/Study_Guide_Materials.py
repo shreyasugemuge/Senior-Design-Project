@@ -3,7 +3,7 @@ import numpy as np
 import sys
 
 count = 1
-print('ID, Num_of_activities of Study Guide Materials, G1, G2, G3, G4, G5, G6, G7 \n')
+print('ID, Num_of_activities of Study Guide Materials, G1, G2, G3, G4, G5, G6, G7')
 for args in sys.argv[1:]:
     df = pd.read_csv(args)
     g=0

@@ -4,7 +4,7 @@ import sys
 
 count = 1
 Unit_Release_Date = '3/1/2013'
-print('ID, Unit Materials Available Date, Student Submit ASR Date, Dates Difference\n')
+print('ID, Unit Materials Available Date, Student Submit ASR Date, Dates Difference')
 for args in sys.argv[1:]:
     df = pd.read_csv(args)
     Submit_ASR_Date = df[df["Object_Title"] == "Submit ASR Unit #5"]["Date"].values.any()
@@ -17,5 +17,5 @@ for args in sys.argv[1:]:
         Submit_ASR_Date = 'Unfinished'
         D = "None"
 
-    print(str(count) + ',' + Unit_Release_Date + ',' + Submit_ASR_Date + ',' + D + '\n')
+    print(str(count) + ',' + Unit_Release_Date + ',' + Submit_ASR_Date + ',' + D)
     count = count + 1
