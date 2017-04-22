@@ -5,10 +5,20 @@ Shiru Hou:
 4. Total number of each students study supplemental materials activities
 
 Yaqeen:
-1. How many ASRs submitted
-2. Number of optional assignments
-3. Number of tests submited
-4. Number of tests B submited
+1. Number of ASRs submitted
+2. Number of tests B submitted 
+3. Number of optional assignments submitted
+4. Time between when unit was available and Tests A submission in days (HowEarly)
+5. Time between when unit was available and Tests B submission in days (HowEarly)
+6. Time between when unit was available and Surveys submission in days (HowEarly)
+7. Duration of time for each Test A
+8. Duration of time for each Test B
+9. Duration of time for each ASRs 
+10.Duration of time for each survey
+11.Number of late ASRs submitted
+12.Weekly average LOGIN time
+
+
 
 Mohammed:
 1. Online meetings attended
