@@ -21,7 +21,7 @@ public class Behaviors {
             String[] strings = new String[2];
             for (int i = 0; i < 110; i++) {
                 strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(onlineMeetings("clean/log_" + (i + 1) + ".csv"));
+                strings[1] = Integer.toString(onlineMeetings("../private/clean/log_" + (i + 1) + ".csv"));
                 csvWriter.writeNext(strings);
             }
             csvWriter.close();
@@ -38,7 +38,7 @@ public class Behaviors {
             String[] strings = new String[2];
             for (int i = 0; i < 110; i++) {
                 strings[0] = Integer.toString(i + 1);
-                strings[1] = Double.toString(averageAct("clean/log_" + (i + 1) + ".csv"));
+                strings[1] = Double.toString(averageAct("../private/clean/log_" + (i + 1) + ".csv"));
                 csvWriter.writeNext(strings);
             }
             csvWriter.close();
@@ -55,7 +55,7 @@ public class Behaviors {
             String[] strings = new String[4];
             for (int i = 0; i < 110; i++) {
 
-                int[] data = bonusActivities("clean/log_" + (i + 1) + ".csv");
+                int[] data = bonusActivities("../private/clean/log_" + (i + 1) + ".csv");
                 strings[0] = Integer.toString(i + 1);
                 strings[1] = Integer.toString(data[0]);
                 strings[2] = Integer.toString(data[1]);
