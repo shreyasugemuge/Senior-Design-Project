@@ -11,12 +11,10 @@ Yaqeen:
 4. Time between when unit was available and Tests A submission in days (HowEarly)
 5. Time between when unit was available and Tests B submission in days (HowEarly)
 6. Time between when unit was available and Surveys submission in days (HowEarly)
-7. Duration of time for each Test A
-8. Duration of time for each Test B
-9. Duration of time for each ASRs 
-10.Duration of time for each survey
-11.Number of late ASRs submitted
-12.Weekly average LOGIN time
+7. Duration of time for each ASRs 
+8. Duration of time for each survey
+9. Number of late ASRs submitted
+10.Weekly average LOGIN time
 
 
 
