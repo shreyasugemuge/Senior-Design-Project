@@ -1,4 +1,4 @@
-package behaviors;
+package com.alkathi;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
@@ -33,7 +33,7 @@ public class Behaviors {
             String[] strings = new String[2];
 		for (int i = 0; i < NumberofStudnet; i++) {
 	            strings[0] = Integer.toString(i+1);
-                    strings[1] = Integer.toString(NumberofTestB("clean/log_" + (i+1) + ".csv"));
+                    strings[1] = Integer.toString(NumberofTestB("../private/clean/log_" + (i+1) + ".csv"));
 	            
 	            csvWriter.writeNext(strings);
 	        }
@@ -55,7 +55,7 @@ public class Behaviors {
             String[] strings = new String[2];
 		for (int i = 0; i < NumberofStudnet; i++) {
 	            strings[0] = Integer.toString(i+1);
-                    strings[1] = Integer.toString(NumberofASR("clean/log_" + (i+1) + ".csv"));
+                    strings[1] = Integer.toString(NumberofASR("../private/clean/log_" + (i+1) + ".csv"));
 	            
 	            csvWriter.writeNext(strings);
 	        }
@@ -78,7 +78,7 @@ public class Behaviors {
             String[] strings = new String[2];
 		for (int i = 0; i < NumberofStudnet; i++) {
 	            strings[0] = Integer.toString(i+1);
-                    strings[1] = Integer.toString(NumberofAssignment("clean/log_" + (i+1) + ".csv"));
+                    strings[1] = Integer.toString(NumberofAssignment("../private/clean/log_" + (i+1) + ".csv"));
 	            
 	            csvWriter.writeNext(strings);
 	        }
@@ -108,7 +108,7 @@ public class Behaviors {
                     strings[0] = Integer.toString(i+1);
                     for(int j = 0; j < Items.length; j ++)
                     {    
-                        strings[j + 1] = Integer.toString((int)HowEarly("clean/log_" + (i+1) + ".csv", Items[j] ));
+                        strings[j + 1] = Integer.toString((int)HowEarly("../private/clean/log_" + (i+1) + ".csv", Items[j] ));
                         
                     }
                     csvWriter.writeNext(strings);
@@ -138,7 +138,7 @@ public class Behaviors {
                     strings[0] = Integer.toString(i+1);
                     for(int j = 0; j < Items.length; j ++)
                     {    
-                        strings[j + 1] = Integer.toString((int)DurationTime("clean/log_" + (i+1) + ".csv", Items[j] ));
+                        strings[j + 1] = Integer.toString((int)DurationTime("../private/clean/log_" + (i+1) + ".csv", Items[j] ));
                         
                     }
                     csvWriter.writeNext(strings);
@@ -170,7 +170,7 @@ public class Behaviors {
                     strings[0] = Integer.toString(i+1);
                     for(int j = 0; j < Items.length; j ++)
                     {    
-                        strings[j + 1] = Double.toString(DurationTime("clean/log_" + (i+1) + ".csv", Items[j] ));
+                        strings[j + 1] = Double.toString(DurationTime("../private/clean/log_" + (i+1) + ".csv", Items[j] ));
                         
                     }
                     csvWriter.writeNext(strings);
@@ -203,7 +203,7 @@ public class Behaviors {
                     strings[0] = Integer.toString(i+1);
                     for(int j = 0; j < Items.length; j ++)
                     {    
-                        strings[j + 1] = Integer.toString((int)DurationTime("clean/log_" + (i+1) + ".csv", Items[j] ));
+                        strings[j + 1] = Integer.toString((int)DurationTime("../private/clean/log_" + (i+1) + ".csv", Items[j] ));
                         
                     }
                     csvWriter.writeNext(strings);
@@ -235,7 +235,7 @@ public class Behaviors {
                     strings[0] = Integer.toString(i+1);
                     for(int j = 0; j < Items.length; j ++)
                     {    
-                        strings[j + 1] = Integer.toString((int)DurationTime("clean/log_" + (i+1) + ".csv", Items[j] ));
+                        strings[j + 1] = Integer.toString((int)DurationTime("../private/clean/log_" + (i+1) + ".csv", Items[j] ));
                         
                     }
                     csvWriter.writeNext(strings);
@@ -258,7 +258,7 @@ public class Behaviors {
             String[] strings = new String[2];
 		for (int i = 0; i < NumberofStudnet; i++) {
 	            strings[0] = Integer.toString(i+1);
-                    strings[1] = Integer.toString(NumberofLateARS("clean/log_" + (i+1) + ".csv"));
+                    strings[1] = Integer.toString(NumberofLateARS("../private/clean/log_" + (i+1) + ".csv"));
 	            
 	            csvWriter.writeNext(strings);
 	        }
