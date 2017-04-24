@@ -70,36 +70,33 @@ public class Behaviors {
         } catch (Exception ee) {
             ee.printStackTrace();
         }
-        
-        try
-		{
-    		CSVWriter csvWriter = new CSVWriter(new FileWriter("testsTakenDates.csv"));
 
-    		String[] row = new String[]{"ID","days between test 1 available and submission", "days between test 2 available and submission"
-    				, "days between test 3 available and submission", "days between test 4 available and submission"
-    				, "days between test 5 available and submission", "days between test 6 available and submission"
-    				, "days between test 7 available and submission"};
-			csvWriter.writeNext(row);
-			
-			String[] strings = new String[8];
-			for (int i = 0; i < 110; i++) {
-	              strings[0] = Integer.toString(i+1);
-	              strings[1] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 1, 25));
-	              strings[2] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 2, 1));
-	              strings[3] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 3, 15));
-	              strings[4] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 4, 1));
-	              strings[5] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 5, 8));
-	              strings[6] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 6, 15));
-	              strings[7] = Integer.toString(testDateTimely("../private/clean/log_" + (i+1) + ".csv", 7, 22));
-	              csvWriter.writeNext(strings);
-	        }
+        try {
+            CSVWriter csvWriter = new CSVWriter(new FileWriter("testsTakenDates.csv"));
+
+            String[] row = new String[] { "ID", "days between test 1 available and submission",
+                    "days between test 2 available and submission", "days between test 3 available and submission",
+                    "days between test 4 available and submission", "days between test 5 available and submission",
+                    "days between test 6 available and submission", "days between test 7 available and submission" };
+            csvWriter.writeNext(row);
+
+            String[] strings = new String[8];
+            for (int i = 0; i < 110; i++) {
+                strings[0] = Integer.toString(i + 1);
+                strings[1] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 1, 25));
+                strings[2] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 2, 1));
+                strings[3] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 3, 15));
+                strings[4] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 4, 1));
+                strings[5] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 5, 8));
+                strings[6] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 6, 15));
+                strings[7] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 7, 22));
+                csvWriter.writeNext(strings);
+            }
             csvWriter.close();
-		}
-		catch(Exception ee)
-		{
-			ee.printStackTrace();
-		}
-        
+        } catch (Exception ee) {
+            ee.printStackTrace();
+        }
+
     }
 
     public static int onlineMeetings (String FILE_NAME) {
@@ -241,92 +238,91 @@ public class Behaviors {
         }
         return average;
     }
-    
-    public static int testDateTimely(String FILE_NAME, int exam,  int examDate) throws ParseException {
-    	int days = 0;
-    	
-    	try {
+
+    public static int testDateTimely (String FILE_NAME, int exam, int examDate) throws ParseException {
+        int days = 0;
+
+        try {
 
             CSVReader reader = new CSVReader(new FileReader(FILE_NAME));
-            String [] nextLine;
+            String[] nextLine;
             int lineNumber = 0;
             String name1 = new String();
-            
+
             while ((nextLine = reader.readNext()) != null) {
 
-
-            	lineNumber++;
+                lineNumber++;
                 name1 = nextLine[6].toString();
-                
-                if (name1.contains("Test #1") && exam == 1){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+
+                if (name1.contains("Test #1") && exam == 1) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
-                if (name1.contains("Test #2") && exam == 2){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+                if (name1.contains("Test #2") && exam == 2) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
-                if (name1.contains("Test #3") && exam == 3){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+                if (name1.contains("Test #3") && exam == 3) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
-                if (name1.contains("Test #4") && exam == 4){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+                if (name1.contains("Test #4") && exam == 4) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
-                if (name1.contains("Test #5") && exam == 5){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+                if (name1.contains("Test #5") && exam == 5) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
-                if (name1.contains("Test #6") && exam == 6){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+                if (name1.contains("Test #6") && exam == 6) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
-                if (name1.contains("Test #7") && exam == 7){ 
-                	DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
+                if (name1.contains("Test #7") && exam == 7) {
+                    DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                     Date submitted;
                     submitted = df.parse(nextLine[1].toString());
                     String newDateString = df.format(submitted);
                     int dateSubmitted = submitted.getDate();
                     days = dateSubmitted - examDate;
-                        
-                	return days;
+
+                    return days;
                 }
 
             }
@@ -334,9 +330,9 @@ public class Behaviors {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        
+
         }
-    	return days;
-    } 
+        return days;
+    }
 
 }
