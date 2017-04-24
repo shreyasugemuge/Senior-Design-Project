@@ -16,23 +16,49 @@ public class PrepareData {
         String[] gradeCol = getGrades("../private/Grades.csv");
         String[] idCol = prepIDs(gradeCol.length);
         String[] avgCol = aboveAvg(gradeCol);
-        for (int i = 0; i < gradeCol.length; i++) {
-            System.out.println(gradeCol[i] + "\t" + idCol[i] + "\t" + avgCol[i]);
-        }
-        System.out.println(gradeCol.length + " " + idCol.length + " " + avgCol.length);
+        // for (int i = 0; i < gradeCol.length; i++) {
+        // System.out.println(gradeCol[i] + "\t" + idCol[i] + "\t" + avgCol[i]);
+        // }
+        // System.out.println(gradeCol.length + " " + idCol.length + " " +
+        // avgCol.length);
         ArrayList<String[]> cols = new ArrayList<>();
-
         cols.add(idCol);
+        for (String file : filenames)
+            cols.addAll(fileToCols(file));
         cols.add(gradeCol);
         cols.add(avgCol);
         ArrayList<String[]> rows = transposeCR(cols);
-        CSVWriter out = new CSVWriter(new FileWriter("merge_1.csv"));
+        CSVWriter out = new CSVWriter(new FileWriter("../docs/merge_1.csv"));
         out.writeAll(rows);
         out.flush();
+        System.out.println("Wrote all behaviors to src/Behaviors/docs/merge_1.csv");
         out.close();
     }
 
+    private static ArrayList<String[]> fileToCols (String filename) throws IOException {
+        CSVReader in = new CSVReader(new FileReader(filename));
+        ArrayList<String[]> cols = new ArrayList<>();
+        String[] curRow;
+        curRow = in.readNext();
+        for (int i = 1; i < curRow.length; i++) {
+            cols.add(new String[112]);
+            cols.get(i - 1)[0] = curRow[i];
+            System.out.println("Getting Column: " + curRow[i] + " From file " + filename);
+        }
+        for (int j = 1; !cols.isEmpty() && cols.get(0).length >= 0 && j < cols.get(0).length; j++) {
+            curRow = in.readNext();
+            for (int i = 1; i < curRow.length; i++) {
+                if (j == 10)
+                    j++;
+                cols.get(i - 1)[j] = curRow[i];
+            }
+        }
+        in.close();
+        return cols;
+    }
+
     private static ArrayList<String[]> transposeCR (ArrayList<String[]> cols) {
+        System.out.println("Preparing to write to file...");
         ArrayList<String[]> rows = new ArrayList<>();
         rows.add(TitleCR(cols));
         for (int j = 1; j < cols.get(0).length; j++) {
