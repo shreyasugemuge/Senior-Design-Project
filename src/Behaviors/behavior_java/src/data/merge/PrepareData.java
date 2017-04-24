@@ -1,12 +1,10 @@
-package merge;
+package data.merge;
 
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import com.opencsv.CSVReader;
-import com.opencsv.CSVWriter;
 
 public class PrepareData {
     public final static double AVG_GRADE = 899.0;
@@ -16,19 +14,10 @@ public class PrepareData {
         String[] gradeCol = getGrades("../private/Grades.csv");
         String[] idCol = prepIDs(gradeCol.length);
         String[] avgCol = aboveAvg(gradeCol);
-        ArrayList<String[]> behCol = new ArrayList<>();
-        behCol.add(gradeCol);
-        behCol.add(avgCol);
-        toFile(gradeCol, avgCol);
-    }
-
-    public static void toFile (String[] a, String[] b) throws IOException {
-        CSVWriter out = new CSVWriter(new FileWriter("../GradeHelp.csv"));
-        for (int i = 0; i < a.length; i++) {
-            String[] row = { a[i], b[i] };
-            out.writeNext(row);
+        for (int i = 0; i < gradeCol.length; i++) {
+            System.out.println(gradeCol[i] + " " + idCol[i] + " " + avgCol[i]);
         }
-        out.close();
+        ArrayList<String[]> behCol = new ArrayList<>();
     }
 
     public static ArrayList<String[]> behaviorsFromFile (String filename) throws IOException {
@@ -62,7 +51,7 @@ public class PrepareData {
     public static String[] prepIDs (int size) {
         String[] ids = new String[size];
         ids[0] = "ID";
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             ids[i] = Integer.toString(i);
         }
         return ids;
@@ -82,7 +71,7 @@ public class PrepareData {
                 gr.add(col[1]);
             }
         }
-        return gr.toArray(new String[112]);
+        return gr.toArray(new String[110]);
     }
 
     private static String[] aboveAvg (String[] grades) {
