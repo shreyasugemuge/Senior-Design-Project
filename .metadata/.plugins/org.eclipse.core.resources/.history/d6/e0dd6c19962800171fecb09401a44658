@@ -214,37 +214,6 @@ public class Behaviors {
             ee.printStackTrace();
 	}
         
-        //Behavior: Duration of final A
-        try
-    	{
-                CSVWriter csvWriter = new CSVWriter(new FileWriter("../docs/Yaqeen/beh_yaq/FinakADuration(" + weeks + " weeks).csv"));
-
-                String[] row = new String[]{"ID", "Final A Time"};
-                csvWriter.writeNext(row); 
-                
-                String[] Items = new String[] {"Remote Proctor A Final"};
-           
-                String[] strings = new String[Items.length + 1];
-                    
-                
-    		for (int i = 0; i < NumberofStudnet; i++) {
-                        
-                        strings[0] = Integer.toString(i+1);
-                        for(int j = 0; j < Items.length; j ++)
-                        {    
-                            strings[j + 1] = Integer.toString((int)DurationTime("../private/clean/log_" + (i+1) + ".csv", Items[j] ));
-                            
-                        }
-                        csvWriter.writeNext(strings);
-    	        }
-                csvWriter.close();
-    	}
-            catch(Exception ee)
-    	{
-                ee.printStackTrace();
-    	}
-        
-        
         //Behavior: Number of late ASRs submitted
         try
 	{
@@ -268,7 +237,6 @@ public class Behaviors {
 	}
     	
     }
-    
     
     
     public static int NumberofASR(String FILE_NAME) throws ParseException {
