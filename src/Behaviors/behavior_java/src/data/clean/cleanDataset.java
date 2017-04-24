@@ -15,8 +15,7 @@ public class cleanDataset {
     final static File DIR_CLEAN = new File("../private/clean/");
 
     public static void main (String[] args) throws Exception { // bad error
-                                                               // handling but
-                                                               // meh
+                                                               // handling
         String[] cur;
         System.out.print(DIR_CLEAN.mkdir() ? "Creating new folder:" + DIR_CLEAN.getPath() + '\n' : "");
         File[] files = getAllMatchingFromDir(DIR_ALLLOGS, ALLLOGS_REGEX);
