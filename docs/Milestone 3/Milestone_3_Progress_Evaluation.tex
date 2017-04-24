@@ -45,9 +45,9 @@
 	\hline
 		\textbf{Task} & \textbf{Completed} &\textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} & \textbf{Remarks}  \\ \hline
 		Finish Extracting Behaviors &100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
-		Program to Merge and Format Data for Data mining & 95\% & 100\% & - & - & - & File names are inconsistent and are hardcoded at this point. Need to write a shell script to run program. \\ \hline
+		Program to Merge and Format Data for Data mining & 95\% & 100\% & - & - & - & File names are hardcoded at this point. Need to write a shell script to run program. \\ \hline
 		Compile Information & 100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
-		Change Behavior Exrtaction to weekly & 25\% & 25\% & - & - & - & This task is to be finished over this and the next milestone \\ \hline
+		Change Behavior Exrtaction to weekly & 100\% & 25\% & 25\% & 25\% & 25\% & N/A\\ \hline
 		Progress Evaluation and Presentation & 100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
 	\end{tabularx}
 %	\end{adjustbox}
@@ -105,16 +105,21 @@
 
 	\subsubsection{Yaqeen}
 	\begin{itemize}
-		\item Implemented and Extracted 3 behaviors: 
+		\item Implemented and Extracted 7 behaviors: 
 		\begin{itemize}
 			\item Number of ASR Unit Assignments Each Student Submitted: Located all ASR Units in the log files and counted the number of submissions for each one. 
 			\item Number of Optional CyberRat Assignment Submitted:
 Followed the same concept from the first behavior to extract the OCA. In this behavior, the only difficulty was that only about \%5 of all the students acutely attempted to do the OCA. Where many of them didn’t even click it.
 \item Number of Tests B Submitted:
 Located all tests B that the students submitted and counted them.
-%\item Number of Late ASR Unit Assignments Submission: 
-%After locating all ASR Units, I located the date each of them was submitted.  I compared the submission date of each ASR Unit with the deadline for each Unit, which was the last day the Unit Tests were available (checked manually). I, then, calculated the total number of ASR Units submitted after the deadline. 
-
+\item Number of Late ASR Unit Assignments Submission: \\
+Located ASR Units and submission dates. Compared the submission dates of ASR Unit with the deadline for each Unit. Then calculated the total number of ASR Units submitted after the deadline. 
+\item Duration Time for Final A, ASR Units, and Surveys: \\
+	Calculating the time from the starting of the ASR/Survey until its submitted in minutes.\\ The start time is “Delivered” or “Resumed” depending on if the student stopped and them resumed. “Submitted” is the end time.  
+	\item Time between Tests B submissions and availability: \\ How early each student took the test after the test was available in days. \\
+Located submission date and compared it to the date when the test was available. The comparison was done by taking the difference between the submission date and the date of test availability.
+	\item Time between Surveys submissions and availability: \\
+		Followed the same concept from the above behavior to extract how early the surveys were submitted after it was available.\\
 		\end{itemize}
 	\end{itemize}
 	\subsubsection{Mohammed}
@@ -125,7 +130,9 @@ Behaviors Implemented:
 \item Number of procedure quizzes: \\This is one of the optional activities for bonus points in this course. The program reads the log files, and calculates how many optional procedures quiz submitted and outputs the extraction to a csv file for all students.
 \item Number of surveys: \\This is another optional activity for bonus points in this course. The program reads the log files, and calculates how many optional surveys submitted and outputs the extraction to a csv file for all students.
 \item Number of CyberRat Assignments \\
-\item Average activities for each test: \\Here the program calculates the total number of activities before each test, and then calculates the average for the 7 tests in this course, then it outputs the extraction to a csv file for all students. This helps us know how much did the student access the materials for exams, as exams are worth most portion of the final scores.Here is another optional activity for bonus points in this course. The program reads the log files, and calculates how many optional CyberRat assignments submitted and outputs the extraction to a csv file for all students.
+\item Average activities for each test: \\Here the program calculates the total number of activities before each test, and then calculates the average for the 7 tests in this course, then it outputs the extraction to a csv file for all students. This helps us know how much did the student access the materials for exams, as exams are worth most portion of the final scores.\item How early does the student take the exams: \\
+For each of the seven exams, the program calculates the number of days between when the exam was available and when did the student submit it.
+\item Changed behaviors for weekly extraction
 \end{itemize}
 	\section{Plan for the next milestone}
 	\begin{tabularx}{\linewidth}{|X|X|X|X|X|}
