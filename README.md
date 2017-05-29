@@ -16,5 +16,10 @@ Spring 2017 <br>
 |Milestone 2|[Progress Evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%202/Milestone_2_Progress_Evaluation.pdf), [Presentation](https://docs.google.com/a/my.fit.edu/presentation/d/1CEcaKCH-8ASfQZxPiGl1QXYu1iE-KPVSPqJf49pU-ko/edit?usp=sharing)|
 |Milestone 3|[Progress Evaluation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%203/Milestone_3_Progress_Evaluation.pdf), [Presentation](https://github.com/shreyasugemuge/Senior-Design-Project/raw/master/docs/Milestone%203/Milestone_3_Presentation.pptx)|
 
+## First Semester
+Fall 2017 <br>
 
-
+|:---|:---:|
+|Milestone 4||
+|Milestone 5||
+|Milestone 6||
