@@ -1,5 +1,6 @@
 package com.sugemuge;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -30,20 +31,25 @@ public class Behavior {
     public static void main (String[] args) throws ParseException, IOException {
         int weeks = (args.length == 0 ? MAX_WEEKS : Integer.parseInt(args[0]));
         START_DATE = FORMAT_DATE.parse("1/15/2013");
-        CSVWriter out = new CSVWriter(new FileWriter("../docs/beh_shreyas_" + weeks + "_weeks.csv"));
+        CSVWriter out = new CSVWriter(new FileWriter("../docs/Shreyas/" + weeks + ".csv"));
         out.writeNext(OUTPUT_TITLE);
         for (int i = 1; i <= 111; i++) {
             String filename = LOG_DIR + "log_" + i + ".csv";
-            String[] outRow = { Integer.toString(i), Integer.toString(days0Activities(filename, weeks)),
-                    Double.toString(AvgActivity(filename, weeks)), Integer.toString(totalLogin(filename, weeks)),
-                    testTime(1, 0, 'A', filename, weeks), testTime(1, 0, 'B', filename, weeks),
-                    testTime(2, 1, 'A', filename, weeks), testTime(2, 1, 'B', filename, weeks),
-                    testTime(2, 2, 'A', filename, weeks), testTime(2, 2, 'B', filename, weeks),
-                    testTime(3, 0, 'A', filename, weeks), testTime(3, 0, 'B', filename, weeks),
-                    testTime(4, 0, 'A', filename, weeks), testTime(4, 0, 'B', filename, weeks),
-                    testTime(5, 0, 'A', filename, weeks), testTime(5, 0, 'B', filename, weeks),
-                    testTime(6, 0, 'A', filename, weeks), testTime(6, 0, 'B', filename, weeks),
-                    testTime(7, 0, 'A', filename, weeks), testTime(7, 0, 'B', filename, weeks), "" };
+            String[] outRow;
+            try {
+                outRow = new String[] { Integer.toString(i), Integer.toString(days0Activities(filename, weeks)),
+                        Double.toString(AvgActivity(filename, weeks)), Integer.toString(totalLogin(filename, weeks)),
+                        testTime(1, 0, 'A', filename, weeks), testTime(1, 0, 'B', filename, weeks),
+                        testTime(2, 1, 'A', filename, weeks), testTime(2, 1, 'B', filename, weeks),
+                        testTime(2, 2, 'A', filename, weeks), testTime(2, 2, 'B', filename, weeks),
+                        testTime(3, 0, 'A', filename, weeks), testTime(3, 0, 'B', filename, weeks),
+                        testTime(4, 0, 'A', filename, weeks), testTime(4, 0, 'B', filename, weeks),
+                        testTime(5, 0, 'A', filename, weeks), testTime(5, 0, 'B', filename, weeks),
+                        testTime(6, 0, 'A', filename, weeks), testTime(6, 0, 'B', filename, weeks),
+                        testTime(7, 0, 'A', filename, weeks), testTime(7, 0, 'B', filename, weeks), "" };
+            } catch (FileNotFoundException e) {
+                continue;
+            }
             double sum = 0.0, count = 0.0;
             for (int j = 4; j < outRow.length - 1; j++) {
                 if (outRow[j] != null && !outRow[j].equals("-")) {
@@ -71,7 +77,7 @@ public class Behavior {
         while ((col = in.readNext()) != null) {
             if (col[1].equals(lastDate(weeks)))
                 return "-";
-            if (!endMode && col[7].contains(testString) && col[5].contains("Delivered")) {
+            if (col.length >= 7 && !endMode && col[7].contains(testString) && col[5].contains("Delivered")) {
                 endMode = true;
                 timeStart = new Time(FORMAT_TIME.parse(col[4]).getTime());
             }
@@ -106,7 +112,7 @@ public class Behavior {
             // (curDate.equals(lastDate(weeks)) ? "Y" : "N"));
             if (!seen.contains(curDate) && !curDate.equals("")) {
                 seen.add(curDate);
-                if (col[3].equals("") || col[3].equals(null)) {
+                if (col.length < 4 || col[3].equals("") || col[3].equals(null)) {
                     counter++;
                 }
             }
@@ -116,7 +122,7 @@ public class Behavior {
     }
 
     public static double AvgActivity (String filename, int weeks) throws IOException {
-        double sum = 0.0, count = 0.0;
+        Float sum = Float.valueOf(0), count = Float.valueOf(0);
         HashSet<String> seen = new HashSet<String>();
         CSVReader in = new CSVReader(new FileReader(filename));
         String[] col;
@@ -129,8 +135,12 @@ public class Behavior {
             }
             if (!seen.contains(curDate)) {
                 seen.add(curDate);
-                if (!(col[2].equals("") || col[2].equals(null)))
-                    sum += Double.parseDouble(col[2]);
+                if (col.length > 2 && !(col[2].equals("") && !col[2].equals(null)))
+                    try {
+                        sum += Float.parseFloat(col[2].trim());
+                    } catch (NumberFormatException e) {
+                        continue;
+                    }
                 // System.out.println(sum + " \\| " + count);
                 count++;
             }
@@ -146,7 +156,8 @@ public class Behavior {
         String[] col;
         in.readNext();
         while ((col = in.readNext()) != null)
-            count += (col[5].contains("LOGIN") ? 1 : 0);
+            if (col.length >= 5)
+                count += (col[5].contains("LOGIN") ? 1 : 0);
 
         in.close();
         return count;

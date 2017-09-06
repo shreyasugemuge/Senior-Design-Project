@@ -1,5 +1,0 @@
-import pandas as pd
-from sklearn import dataset
-
-df = pd.read_csv("src/Behaviors/Behaviors_merged.csv")
-print df
