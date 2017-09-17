@@ -133,6 +133,72 @@ public class Behaviors {
             ee.printStackTrace();
         }
 
+        try {
+            CSVWriter csvWriter = new CSVWriter(new FileWriter("UnitDiscussions(" + weeks + "weeks).csv"));
+
+            String[] row = new String[] { "ID", "Unit Discussions paticipation" };
+            csvWriter.writeNext(row);
+
+            String[] strings = new String[2];
+            for (int i = 0; i < 110; i++) {
+                strings[0] = Integer.toString(i + 1);
+                strings[1] = Integer.toString(unitDiscussions("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                csvWriter.writeNext(strings);
+            }
+            csvWriter.close();
+        } catch (Exception ee) {
+            ee.printStackTrace();
+        }
+        
+        try {
+            CSVWriter csvWriter = new CSVWriter(new FileWriter("FluencyDrills(" + weeks + "weeks).csv"));
+
+            String[] row = new String[] { "ID", "Fluency Drills paticipation" };
+            csvWriter.writeNext(row);
+
+            String[] strings = new String[2];
+            for (int i = 0; i < 110; i++) {
+                strings[0] = Integer.toString(i + 1);
+                strings[1] = Integer.toString(fluencyDrills("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                csvWriter.writeNext(strings);
+            }
+            csvWriter.close();
+        } catch (Exception ee) {
+            ee.printStackTrace();
+        }
+        try {
+            CSVWriter csvWriter = new CSVWriter(new FileWriter("Crosswords(" + weeks + "weeks).csv"));
+
+            String[] row = new String[] { "ID", "Crossword paticipation" };
+            csvWriter.writeNext(row);
+
+            String[] strings = new String[2];
+            for (int i = 0; i < 110; i++) {
+                strings[0] = Integer.toString(i + 1);
+                strings[1] = Integer.toString(Crosswords("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                csvWriter.writeNext(strings);
+            }
+            csvWriter.close();
+        } catch (Exception ee) {
+            ee.printStackTrace();
+        }
+        try {
+            CSVWriter csvWriter = new CSVWriter(new FileWriter("GameShows(" + weeks + "weeks).csv"));
+
+            String[] row = new String[] { "ID", "Game Shows paticipation" };
+            csvWriter.writeNext(row);
+
+            String[] strings = new String[2];
+            for (int i = 0; i < 110; i++) {
+                strings[0] = Integer.toString(i + 1);
+                strings[1] = Integer.toString(GameShows("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                csvWriter.writeNext(strings);
+            }
+            csvWriter.close();
+        } catch (Exception ee) {
+            ee.printStackTrace();
+        }
+        
     }
 
     public static int onlineMeetings (String FILE_NAME, int weeks) {
@@ -405,5 +471,156 @@ public class Behaviors {
         c.add(Calendar.DATE, (weeks * 7));
         return FORMAT_DATE.format(c.getTime());
 
+    }
+    
+    public static int unitDiscussions (String FILE_NAME, int weeks) {
+
+        int discussions = 0;
+        try {
+
+            String strFile = FILE_NAME;
+            CSVReader reader = new CSVReader(new FileReader(strFile));
+            String[] nextLine;
+            int lineNumber = 0;
+            String name1 = new String();
+
+            while ((nextLine = reader.readNext()) != null) {
+
+                String curDate;
+                if ((curDate = nextLine[1]).equals(lastDate(weeks))) {
+                    reader.close();
+                    return discussions;
+                }
+
+                lineNumber++;
+                name1 = nextLine[6].toString();
+
+                if (name1.contains("Discussion")) {
+                	discussions++;
+                }
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
+        return discussions;
+    }
+    
+    public static int fluencyDrills (String FILE_NAME, int weeks) {
+
+        int drills = 0;
+        try {
+
+            String strFile = FILE_NAME;
+            CSVReader reader = new CSVReader(new FileReader(strFile));
+            String[] nextLine;
+            int lineNumber = 0;
+            String name1 = new String();
+
+            while ((nextLine = reader.readNext()) != null) {
+
+                String curDate;
+                if ((curDate = nextLine[1]).equals(lastDate(weeks))) {
+                    reader.close();
+                    return drills;
+                }
+
+                lineNumber++;
+                name1 = nextLine[6].toString();
+
+                if (name1.contains("Fluency")) {
+                	drills++;
+                }
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
+        return drills;
+    }
+    
+    public static int Crosswords (String FILE_NAME, int weeks) {
+
+        int crosswords = 0;
+        try {
+
+            String strFile = FILE_NAME;
+            CSVReader reader = new CSVReader(new FileReader(strFile));
+            String[] nextLine;
+            int lineNumber = 0;
+            String name1 = new String();
+
+            while ((nextLine = reader.readNext()) != null) {
+
+                String curDate;
+                if ((curDate = nextLine[1]).equals(lastDate(weeks))) {
+                    reader.close();
+                    return crosswords;
+                }
+
+                lineNumber++;
+                name1 = nextLine[6].toString();
+
+                if (name1.contains("Crossword")) {
+                	crosswords++;
+                }
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
+        return crosswords;
+    }
+    public static int GameShows (String FILE_NAME, int weeks) {
+
+        int games = 0;
+        try {
+
+            String strFile = FILE_NAME;
+            CSVReader reader = new CSVReader(new FileReader(strFile));
+            String[] nextLine;
+            int lineNumber = 0;
+            String name1 = new String();
+
+            while ((nextLine = reader.readNext()) != null) {
+
+                String curDate;
+                if ((curDate = nextLine[1]).equals(lastDate(weeks))) {
+                    reader.close();
+                    return games;
+                }
+
+                lineNumber++;
+                name1 = nextLine[6].toString();
+
+                if (name1.contains("Game")) {
+                	games++;
+                }
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
+        return games;
     }
 }
