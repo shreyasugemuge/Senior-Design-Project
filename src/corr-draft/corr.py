@@ -26,7 +26,7 @@ df['Above Average?'] = df['Above Average?'].map(d)
 print df['Above Average?']
 print df['Time Test #1 A']
 
-features = list(df.columns[1:5])
+features = list(df.columns[1:3])
 
 y = df["Above Average?"]
 X = df[features]
@@ -40,12 +40,6 @@ pydotplus.graph_from_dot_data(dot_data.getvalue()).write_png("dtree2.png")
 
 clf = RandomForestClassifier(n_estimators=10)
 clf = clf.fit(X, y)
-#
 
-#
-#if clf.predict([[10,124]])==0 :
-#    print "N"
-#else :
-#    print "Y"
-###...and an unemployed 10-year veteran
+print clf.predict([[25, 2]])
 
