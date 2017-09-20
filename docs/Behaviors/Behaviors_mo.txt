@@ -1,9 +1,0 @@
-1: Number of online meetings attended
-2: Number of bonus points activities done
-3: Number of missed ASR submition
-4: Number of exams missed 
-5: Number of times a student logged in and out with no activites in between
-6: Amount of time spent taking the final exam
-7: Average number of days between form A exam taken and form B exam
-8: Number of tests that the student did not take form B (Make up) of the test
-9: How early does a student take a test (e.g. day 1, day 2 etc.) for each test
