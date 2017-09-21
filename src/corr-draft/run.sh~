@@ -1,3 +1,0 @@
-javac mainClass.java
-java mainClass 90
-python corr.py
