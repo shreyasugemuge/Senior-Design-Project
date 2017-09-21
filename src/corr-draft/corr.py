@@ -6,11 +6,12 @@ import pandas as pd
 from sklearn import tree
 from sklearn.externals.six import StringIO
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
 import pydotplus
 
 
 # load some made up data, using pandas into dataframe
-df = pd.read_csv("merge.csv", header = 0)
+df = pd.read_csv("train.csv", header = 0)
 # df.head() # display incase needed
 
 
@@ -23,13 +24,15 @@ df['Above Average?'] = df['Above Average?'].map(d)
 #df['Interned'] = df['Interned'].map(d)
 #d = {'BS': 0, 'MS': 1, 'PhD': 2}
 #df['Level of Education'] = df['Level of Education'].map(d)
-print df['Above Average?']
-print df['Time Test #1 A']
+#print df['Above Average?']
+#print df['Time Test #1 A']
 
-features = list(df.columns[1:3])
+features = list(df.columns[1:4])
 
 y = df["Above Average?"]
 X = df[features]
+
+
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(X,y)
 
@@ -38,8 +41,27 @@ tree.export_graphviz(classifier, out_file=dot_data,
                      feature_names=features)
 pydotplus.graph_from_dot_data(dot_data.getvalue()).write_png("dtree2.png")
 
-clf = RandomForestClassifier(n_estimators=10)
-clf = clf.fit(X, y)
+#classifier = RandomForestClassifier(n_estimators=30)
+#classifier = classifier.fit(X, y)
+#
+#classifier = GaussianNB()
+#classifier = classifier.fit(X,y)
 
-print clf.predict([[25, 2]])
 
+df = pd.read_csv("test.csv", header = 0)
+count = 0.0
+total = 0.0
+for index,row in df.iterrows():
+    result = classifier.predict([[row["Number of days with 0 activities"], row["Average Activities Per Session"], row["Total Number of Logins"]]])
+    s = 0
+    if row["Above Average?"] == "Y" :
+        s = 1
+    if s == result :
+        count = count + 1
+    total = total + 1
+    accuracy = count/total
+    print "ID: ",row["ID"],"Result: ",result,"Actual: ",s,"Accuracy: ",count,"/",total
+print "Total Accuracy: ", (count/total)*100
+#    print "above"
+#else :
+#    print "below"
