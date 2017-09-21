@@ -11,7 +11,7 @@ import pydotplus
 
 
 # load some made up data, using pandas into dataframe
-df = pd.read_csv("train.csv", header = 0)
+df = pd.read_csv("data/train.csv", header = 0)
 # df.head() # display incase needed
 
 
@@ -32,14 +32,15 @@ features = list(df.columns[1:4])
 y = df["Above Average?"]
 X = df[features]
 
-
-
-classifier = GaussianNB()
+classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(X,y)
+dot_data = StringIO()
+tree.export_graphviz(classifier, out_file=dot_data,
+                     feature_names=features)
+pydotplus.graph_from_dot_data(dot_data.getvalue()).write_png("dtree2.png")
 
 
-
-df = pd.read_csv("test.csv", header = 0)
+df = pd.read_csv("data/test.csv", header = 0)
 count = 0.0
 total = 0.0
 for index,row in df.iterrows():

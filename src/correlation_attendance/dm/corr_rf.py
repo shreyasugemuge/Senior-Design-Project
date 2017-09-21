@@ -11,7 +11,7 @@ import pydotplus
 
 
 # load some made up data, using pandas into dataframe
-df = pd.read_csv("train.csv", header = 0)
+df = pd.read_csv("data/train.csv", header = 0)
 # df.head() # display incase needed
 
 
@@ -37,7 +37,7 @@ classifier = RandomForestClassifier(n_estimators=30)
 classifier = classifier.fit(X, y)
 
 
-df = pd.read_csv("test.csv", header = 0)
+df = pd.read_csv("data/test.csv", header = 0)
 count = 0.0
 total = 0.0
 for index,row in df.iterrows():

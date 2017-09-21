@@ -8,12 +8,14 @@ import java.io.IOException;
 public class mainClass {
     
     public static void main (String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(new File("merge.csv")));
+        BufferedReader br = new BufferedReader(new FileReader(new File("data/merge.csv")));
         switch (Integer.parseInt(args[1])) {
             case 2:
                 toTrain2(br, Integer.parseInt(args[0]));
+                break;
             case 1:
                 toTrain(br, Integer.parseInt(args[0]));
+                break;
             default:
                 System.err.println("argument error");
                 System.exit(1);
@@ -21,7 +23,7 @@ public class mainClass {
     }
     
     private static void toTrain (BufferedReader br, int i) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("train.csv")));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/train.csv")));
         String row;
         String[] col;
         String fl[] = br.readLine().split(",");
@@ -34,7 +36,7 @@ public class mainClass {
             bw.flush();
         }
         bw.close();
-        bw = new BufferedWriter(new FileWriter(new File("test.csv")));
+        bw = new BufferedWriter(new FileWriter(new File("data/test.csv")));
         bw.write(first);
         bw.flush();
         while ((row = br.readLine()) != null) {
@@ -47,8 +49,8 @@ public class mainClass {
     }
     
     private static void toTrain2 (BufferedReader br, int i) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("train.csv")));
-        BufferedWriter bw2 = new BufferedWriter(new FileWriter(new File("test.csv")));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/train.csv")));
+        BufferedWriter bw2 = new BufferedWriter(new FileWriter(new File("data/test.csv")));
         int ys = 0, ns = 0;
         String row;
         String[] col;
