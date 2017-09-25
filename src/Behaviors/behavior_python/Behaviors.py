@@ -74,7 +74,7 @@ for args in sys.argv[1:]:
         D1_ = Submit_ASR1_Date_ - Unit1_Release_Date_
         D1 = str(D1_.days)
     else:
-        D1 = ""
+        D1 = "-1"
 
     Unit2_Release_Date = '1/25/2013'
     Submit_ASR2A_Date = df[df["Object_Title"] == "Submit ASR Unit #2A"]["Date_Active"].values.any()
@@ -86,19 +86,19 @@ for args in sys.argv[1:]:
         Date_Differ2A = Submit_ASR2A_Date_ - Unit2_Release_Date_
         D2A = str(Date_Differ2A.days)
     else:
-        D2A = ""
+        D2A = "-1"
     if type(Submit_ASR2B_Date) is str:
         Submit_ASR2B_Date_ = datetime.datetime.strptime(Submit_ASR2B_Date, '%m/%d/%Y')
         Date_Differ2B = Submit_ASR2B_Date_ - Unit2_Release_Date_
         D2B = str(Date_Differ2B.days)
     else:
-        D2B = ""
+        D2B = "-1"
     if type(Submit_ASR2C_Date) is str:
         Submit_ASR2C_Date_ = datetime.datetime.strptime(Submit_ASR2C_Date, '%m/%d/%Y')
         Date_Differ2C = Submit_ASR2C_Date_ - Unit2_Release_Date_
         D2C = str(Date_Differ2C.days)
     else:
-        D2C = ""
+        D2C = "-1"
 
     Unit3_Release_Date = '2/8/2013'
     Submit_ASR3_Date = df[df["Object_Title"] == "Submit ASR Unit #3"]["Date_Active"].values.any()
@@ -108,7 +108,7 @@ for args in sys.argv[1:]:
         Date_Differ3 = Submit_ASR3_Date_ - Unit3_Release_Date_
         D3 = str(Date_Differ3.days)
     else:
-        D3 = ""
+        D3 = "-1"
 
     Unit4_Release_Date = '2/15/2013'
     Submit_ASR4_Date = df[df["Object_Title"] == "Submit ASR Unit #4"]["Date_Active"].values.any()
@@ -118,7 +118,7 @@ for args in sys.argv[1:]:
         Date_Differ4 = Submit_ASR4_Date_ - Unit4_Release_Date_
         D4 = str(Date_Differ4.days)
     else:
-        D4 = ""
+        D4 = "-1"
 
     Unit5_Release_Date = '3/1/2013'
     Submit_ASR5_Date = df[df["Object_Title"] == "Submit ASR Unit #5"]["Date_Active"].values.any()
@@ -128,7 +128,7 @@ for args in sys.argv[1:]:
         Date_Differ = Submit_ASR5_Date_ - Unit5_Release_Date_
         D5 = str(Date_Differ.days)
     else:
-        D5 = ""
+        D5 = "-1"
 
     Unit6_Release_Date = '3/8/2013'
     Submit_ASR6_Date = df[df["Object_Title"] == "Submit ASR Unit #6"]["Date_Active"].values.any()
@@ -138,7 +138,7 @@ for args in sys.argv[1:]:
         Date_Differ6 = Submit_ASR6_Date_ - Unit6_Release_Date_
         D6 = str(Date_Differ6.days)
     else:
-        D6 = ""
+        D6 = "-1"
 
     Unit7_Release_Date = '3/15/2013'
     Submit_ASR7a_Date = df[df["Object_Title"] == "Submit ASR Unit #7A"]["Date_Active"].values.any()
@@ -151,14 +151,14 @@ for args in sys.argv[1:]:
         D7a = str(Date_Differ7a.days)
     else:
         Submit_ASR7a_Date = ""
-        D7a = ""
+        D7a = "-1"
 
     if type(Submit_ASR7b_Date) is str:
         Submit_ASR7b_Date1_ = datetime.datetime.strptime(Submit_ASR7b_Date, '%m/%d/%Y')
         Date_Differ7b = Submit_ASR7b_Date1_ - Unit7_Release_Date_
         D7b = str(Date_Differ7b.days)
     else:
-        D7b = ""
+        D7b = "-1"
 
     print(str(count) + ',' + str(num_RA) + ',' + str(num_SM) + ',' + str(g) + ',' + str(g1)
           + ',' + str(g2) + ',' + str(g3) + ',' + str(g4) + ',' + str(g5) + ',' + str(g6)
@@ -167,8 +167,8 @@ for args in sys.argv[1:]:
     count = count + 1
 
     if count == 10 :
-        print(str(count) + ',' + "" + ',' + "" + ',' + "" + ',' + ""
-              + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + ""
-              + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + ""
-              + ',' + "" + ',' + "" + ',' + "" + ',' + "")
+        print(str(count) + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1"
+              + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1"
+              + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1"
+              + ',' + "-1" + ',' + "-1" + ',' + "-1" + ',' + "-1")
         count = count + 1
