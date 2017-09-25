@@ -124,8 +124,8 @@ public class Behaviors {
 	{
             CSVWriter csvWriter = new CSVWriter(new FileWriter("../docs/Yaqeen/beh_yaq/HowEarlyTestB(" + weeks + " weeks).csv"));
 
-            String[] row = new String[]{"ID", "TestB 1", "TestB 2 Part1", "TestB 2 Part2", "TestB 3",
-                "TestB 4", "TestB 5", "TestB 6", "TestB 7"};
+            String[] row = new String[]{"ID", "TestB1", "TestB2 Part1", "TestB2 Part2", "TestB3",
+                "TestB4", "TestB5", "TestB6", "TestB7"};
             csvWriter.writeNext(row); 
             
             String[] Items = new String[] {"Test #1 B", "Test #2 Part #1 B", "Test #2 Part #2 B", "Test #3 B", "Test #4 B", "Test #5 B", "Test #6 B", "Test #7 B"};
@@ -155,8 +155,8 @@ public class Behaviors {
 	{
             CSVWriter csvWriter = new CSVWriter(new FileWriter("../docs/Yaqeen/beh_yaq/ASRDuration(" + weeks + " weeks).csv"));
 
-            String[] row = new String[]{"ID", "time of ASR 1", "time of ASR 2A" , "time of ASR 2B" , "time of ASR 2C" , "time of ASR 3" , "time of ASR 4" ,
-            "time of ASR 5" , "time of ASR 6", "time of ASR 7A" , "time of ASR 7B"};
+            String[] row = new String[]{"ID", "ASR#1 Time", "ASR#2A Time" , "ASR#2B Time" , "ASR#2C Time" , "ASR#3 Time" , "ASR#4 Time" ,
+            "ASR#5 Time" , "ASR#6 Time", "ASR#7A Time" , "ASR#7B Time"};
             csvWriter.writeNext(row); 
             
             String[] Items = new String[] {"Submit ASR Unit #1", "Submit ASR Unit #2A", "Submit ASR Unit #2B", "Submit ASR Unit #2C" ,
@@ -189,7 +189,7 @@ public class Behaviors {
 	{
             CSVWriter csvWriter = new CSVWriter(new FileWriter("../docs/Yaqeen/beh_yaq/SurveyDuration(" + weeks + " weeks).csv"));
 
-            String[] row = new String[]{"ID", "MidTerm Survey Time" , "EndTerm Survey Time" , "Information Survey Time"};
+            String[] row = new String[]{"ID", "Mid-Term Survey Time" , "End-Term Survey Time" , "Information Survey Time"};
             csvWriter.writeNext(row); 
             
             String[] Items = new String[] {"Mid-Term Student Satisfaction Survey" , "End of Term Student Satisfaction survey" , "Student Information Survey"};
@@ -245,7 +245,6 @@ public class Behaviors {
     	}
         
         //Behavior: Duration of pre course assessment
-        //add resume..
         try
     	{
                 CSVWriter csvWriter = new CSVWriter(new FileWriter("../docs/Yaqeen/beh_yaq/PreCourseAsesmentDuration(" + weeks + " weeks).csv"));
