@@ -17,7 +17,7 @@ import com.opencsv.CSVWriter;
 public class Behavior {
 
     public final static SimpleDateFormat FORMAT_DATE = new SimpleDateFormat("M/d/yyyy");
-    public final static int MAX_WEEKS = 52;
+    public final static int MAX_WEEKS = 14;
     public static Date START_DATE = new Date();
     public final static SimpleDateFormat FORMAT_TIME = new SimpleDateFormat("hh:mm:ss a");
     public final static String LOG_DIR = "../private/clean/";
@@ -31,7 +31,7 @@ public class Behavior {
     public static void main (String[] args) throws ParseException, IOException {
         // int weeks = (args.length == 0 ? MAX_WEEKS :
         // Integer.parseInt(args[0]));
-        for (int weeks = 1; weeks <= 15; weeks++) {
+        for (int weeks = 1; weeks <= MAX_WEEKS; weeks++) {
             System.out.println(weeks);
             START_DATE = FORMAT_DATE.parse("1/15/2013");
             CSVWriter out = new CSVWriter(new FileWriter("../docs/Shreyas/" + weeks + ".csv"));
