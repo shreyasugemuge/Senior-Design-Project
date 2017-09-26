@@ -29,41 +29,46 @@ public class Behavior {
             "Average time taking tests in minutes" };
 
     public static void main (String[] args) throws ParseException, IOException {
-        int weeks = (args.length == 0 ? MAX_WEEKS : Integer.parseInt(args[0]));
-        START_DATE = FORMAT_DATE.parse("1/15/2013");
-        CSVWriter out = new CSVWriter(new FileWriter("../docs/Shreyas/" + weeks + ".csv"));
-        out.writeNext(OUTPUT_TITLE);
-        for (int i = 1; i <= 111; i++) {
-            String filename = LOG_DIR + "log_" + i + ".csv";
-            String[] outRow;
-            try {
-                outRow = new String[] { Integer.toString(i), Integer.toString(days0Activities(filename, weeks)),
-                        Double.toString(AvgActivity(filename, weeks)), Integer.toString(totalLogin(filename, weeks)),
-                        testTime(1, 0, 'A', filename, weeks), testTime(1, 0, 'B', filename, weeks),
-                        testTime(2, 1, 'A', filename, weeks), testTime(2, 1, 'B', filename, weeks),
-                        testTime(2, 2, 'A', filename, weeks), testTime(2, 2, 'B', filename, weeks),
-                        testTime(3, 0, 'A', filename, weeks), testTime(3, 0, 'B', filename, weeks),
-                        testTime(4, 0, 'A', filename, weeks), testTime(4, 0, 'B', filename, weeks),
-                        testTime(5, 0, 'A', filename, weeks), testTime(5, 0, 'B', filename, weeks),
-                        testTime(6, 0, 'A', filename, weeks), testTime(6, 0, 'B', filename, weeks),
-                        testTime(7, 0, 'A', filename, weeks), testTime(7, 0, 'B', filename, weeks), "" };
-            } catch (FileNotFoundException e) {
-                continue;
-            }
-            double sum = 0.0, count = 0.0;
-            for (int j = 4; j < outRow.length - 1; j++) {
-                if (outRow[j] != null && !outRow[j].equals("-")) {
-                    sum += Double.parseDouble(outRow[j]);
-                    count++;
+        // int weeks = (args.length == 0 ? MAX_WEEKS :
+        // Integer.parseInt(args[0]));
+        for (int weeks = 1; weeks <= 15; weeks++) {
+            System.out.println(weeks);
+            START_DATE = FORMAT_DATE.parse("1/15/2013");
+            CSVWriter out = new CSVWriter(new FileWriter("../docs/Shreyas/" + weeks + ".csv"));
+            out.writeNext(OUTPUT_TITLE);
+            for (int i = 1; i <= 111; i++) {
+                String filename = LOG_DIR + "log_" + i + ".csv";
+                String[] outRow;
+                try {
+                    outRow = new String[] { Integer.toString(i), Integer.toString(days0Activities(filename, weeks)),
+                            Double.toString(AvgActivity(filename, weeks)),
+                            Integer.toString(totalLogin(filename, weeks)), testTime(1, 0, 'A', filename, weeks),
+                            testTime(1, 0, 'B', filename, weeks), testTime(2, 1, 'A', filename, weeks),
+                            testTime(2, 1, 'B', filename, weeks), testTime(2, 2, 'A', filename, weeks),
+                            testTime(2, 2, 'B', filename, weeks), testTime(3, 0, 'A', filename, weeks),
+                            testTime(3, 0, 'B', filename, weeks), testTime(4, 0, 'A', filename, weeks),
+                            testTime(4, 0, 'B', filename, weeks), testTime(5, 0, 'A', filename, weeks),
+                            testTime(5, 0, 'B', filename, weeks), testTime(6, 0, 'A', filename, weeks),
+                            testTime(6, 0, 'B', filename, weeks), testTime(7, 0, 'A', filename, weeks),
+                            testTime(7, 0, 'B', filename, weeks), "" };
+                } catch (FileNotFoundException e) {
+                    continue;
                 }
+                double sum = 0.0, count = 0.0;
+                for (int j = 4; j < outRow.length - 1; j++) {
+                    if (outRow[j] != null && !outRow[j].equals("0")) {
+                        sum += Double.parseDouble(outRow[j]);
+                        count++;
+                    }
+                }
+                outRow[outRow.length - 1] = Double.toString(sum / count);
+                out.writeNext(outRow);
             }
-            outRow[outRow.length - 1] = Double.toString(sum / count);
-            out.writeNext(outRow);
+            // System.out.println(testTime(1, 0, 'A', LOG_DIR + "log_1.csv",
+            // 10));
+            out.flush();
+            out.close();
         }
-        // System.out.println(testTime(1, 0, 'A', LOG_DIR + "log_1.csv", 10));
-        out.flush();
-        out.close();
-
     }
 
     public static String testTime (int num, int part, char seq, String filename, int weeks)
@@ -76,7 +81,7 @@ public class Behavior {
         in.readNext();
         while ((col = in.readNext()) != null) {
             if (col[1].equals(lastDate(weeks)))
-                return "-";
+                return "0";
             if (col.length >= 7 && !endMode && col[7].contains(testString) && col[5].contains("Delivered")) {
                 endMode = true;
                 timeStart = new Time(FORMAT_TIME.parse(col[4]).getTime());
@@ -91,7 +96,7 @@ public class Behavior {
         // timeEnd.toString() + " "
         // + (timeEnd.getTime() - timeStart.getTime()));
         if (timeEnd == null || timeStart == null)
-            return "-";
+            return "0";
         else
             return Double.toString(Math.abs(timeEnd.getTime() - timeStart.getTime()) / 60000.0);
     }
