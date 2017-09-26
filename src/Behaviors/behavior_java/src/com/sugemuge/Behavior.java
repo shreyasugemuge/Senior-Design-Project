@@ -22,11 +22,10 @@ public class Behavior {
     public final static SimpleDateFormat FORMAT_TIME = new SimpleDateFormat("hh:mm:ss a");
     public final static String LOG_DIR = "../private/clean/";
     public final static String[] OUTPUT_TITLE = { "ID", "Number of days with 0 activities",
-            "Average Activities Per Session", "Total Number of Logins", "Time Test #1 A", "Time Test #1 B",
-            "Time Test #2 Part #1 A", "Time Test #2 Part #1 B", "Time Test #2 Part #2 A", "Time Test #2 Part #2 B",
-            "Time Test #3 A", "Time Test #3 B", "Time Test #4 A", "Time Test #4 B", "Time Test #5 A", "Time Test #5 B",
-            "Time Test #6 A", "Time Test #6 B", "Time Test #7 A", "Time Test #7 B",
-            "Average time taking tests in minutes" };
+            "Average Activities Per Session", "Total Number of Logins", "Time Test 1A", "Time Test 1B",
+            "Time Test 2 Part 1A", "Time Test 2 Part 1B", "Time Test 2 Part 2A", "Time Test 2 Part 2B", "Time Test 3A",
+            "Time Test 3B", "Time Test 4A", "Time Test 4B", "Time Test 5A", "Time Test 5B", "Time Test 6A",
+            "Time Test 6B", "Time Test 7A", "Time Test 7B", "Average time taking tests in minutes" };
 
     public static void main (String[] args) throws ParseException, IOException {
         // int weeks = (args.length == 0 ? MAX_WEEKS :
