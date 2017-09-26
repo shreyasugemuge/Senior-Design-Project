@@ -12,17 +12,18 @@ public class PrepareData {
     public final static double AVG_GRADE = 899.0;
     public final static String BEH_PATH = "../docs/";
 
-    public static void main (String[] filenames) throws IOException {
+    public static void main (String[] args) throws IOException {
         String[] gradeCol = getGrades("../private/Grades.csv");
         String[] idCol = prepIDs(gradeCol.length);
         String[] avgCol = aboveAvg(gradeCol);
-        // for (int i = 0; i < gradeCol.length; i++) {
-        // System.out.println(gradeCol[i] + "\t" + idCol[i] + "\t" + avgCol[i]);
-        // }
-        // System.out.println(gradeCol.length + " " + idCol.length + " " +
-        // avgCol.length);
         ArrayList<String[]> cols = new ArrayList<>();
         cols.add(idCol);
+        String[] filenames = null;
+        try {
+            filenames = getFilenamesFromWeeks(Integer.parseInt(args[0]));
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.err.println("Enter number of weeks as argument");
+        }
         for (String file : filenames)
             cols.addAll(fileToCols(file));
         cols.add(gradeCol);
@@ -33,6 +34,11 @@ public class PrepareData {
         out.flush();
         System.out.println("Wrote all behaviors to src/Behaviors/docs/merge_1.csv");
         out.close();
+    }
+
+    private static String[] getFilenamesFromWeeks (int weeks) throws IOException {
+        return new String[] { "../docs/Shreyas/" + weeks + ".csv", "../docs/ShiruHou/" + weeks + ".csv",
+                "../docs/Mohammed/" + weeks + ".csv", "../docs/Yaqeen/" + weeks + ".csv" };
     }
 
     private static ArrayList<String[]> fileToCols (String filename) throws IOException {
