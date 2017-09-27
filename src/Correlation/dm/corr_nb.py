@@ -43,7 +43,7 @@ df = pd.read_csv("data/test.csv", header = 0)
 count = 0.0
 total = 0.0
 for index,row in df.iterrows():
-    result = classifier.predict([[row["Number of days with 0 activities"], row["Average Activities Per Session"], row["Total Number of Logins"]]])
+    result = classifier.predict([[row["Number of days with 0 activities"], row["Average Activities Per Session"], row["Total Number of Logins"], row["Time Test 1A"],row["Time Test 1B"]]])
     s = 0
     if row["Above Average"] == "Y" :
         s = 1
