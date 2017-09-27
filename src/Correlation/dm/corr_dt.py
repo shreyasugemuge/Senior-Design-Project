@@ -27,7 +27,7 @@ df['Above Average?'] = df['Above Average?'].map(d)
 #print df['Above Average?']
 #print df['Time Test #1 A']
 
-features = list(df.columns[1:4])
+features = list(df.columns[1:6])
 
 y = df["Above Average?"]
 X = df[features]
