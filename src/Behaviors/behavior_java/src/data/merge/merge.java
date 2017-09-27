@@ -32,9 +32,9 @@ public class merge {
             for (int i = 0; i < 111; i++) {
                 String[] temp = csv.readLine().split(",");
                 if (firstFile) {
-                    rows[i] = processArrRow(temp);
+                    rows[i] = processArrRow(temp, 0);
                 } else
-                    rows[i] += "," + processArrRow(temp);
+                    rows[i] += "," + processArrRow(temp, 1);
             }
             firstFile = false;
         }
@@ -49,9 +49,9 @@ public class merge {
         return sb.toString();
     }
 
-    private static String processArrRow (String[] arr) {
+    private static String processArrRow (String[] arr, int n) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = n; i < arr.length; i++) {
             sb.append(arr[i] + (i == arr.length - 1 ? "" : ","));
         }
         return sb.toString();
@@ -63,7 +63,7 @@ public class merge {
             return null;
         } else {
             weeks = Integer.parseInt(args[0]);
-            return new String[] { "../docs/Shreyas/" + weeks + ".csv" };
+            return new String[] { "../docs/Shreyas/" + weeks + ".csv", "../docs/gradeHelp.csv" };
             // return new String[] { "../docs/Shreyas/" + weeks + ".csv",
             // "../docs/Mohammed/" + weeks + ".csv",
             // "../docs/Yaqeen/" + weeks + ".csv", "../docs/ShiruHou/" + weeks +
