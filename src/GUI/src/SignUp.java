@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
 
 public class SignUp extends JFrame {
 
@@ -46,16 +47,16 @@ public class SignUp extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setEditable(false);
-		textArea.setWrapStyleWord(true);
-		textArea.setText("Sign Up");
-		textArea.setLineWrap(true);
-		textArea.setForeground(Color.GRAY);
-		textArea.setFont(new Font("Monospaced", Font.PLAIN, 26));
-		textArea.setBackground(Color.LIGHT_GRAY);
-		textArea.setBounds(174, 11, 116, 39);
-		contentPane.add(textArea);
+		JTextArea txtrSignUp = new JTextArea();
+		txtrSignUp.setEditable(false);
+		txtrSignUp.setWrapStyleWord(true);
+		txtrSignUp.setText("SIGN UP");
+		txtrSignUp.setLineWrap(true);
+		txtrSignUp.setForeground(UIManager.getColor("CheckBox.foreground"));
+		txtrSignUp.setFont(new Font("Monospaced", Font.BOLD, 26));
+		txtrSignUp.setBackground(UIManager.getColor("Button.background"));
+		txtrSignUp.setBounds(155, 11, 116, 39);
+		contentPane.add(txtrSignUp);
 		
 		JFormattedTextField formattedTextField = new JFormattedTextField();
 		formattedTextField.setText("First Name: ");
@@ -107,7 +108,7 @@ public class SignUp extends JFrame {
 				
 			}
 		});
-		btnBack.setBounds(262, 219, 89, 23);
+		btnBack.setBounds(233, 219, 89, 23);
 		contentPane.add(btnBack);
 	}
 }

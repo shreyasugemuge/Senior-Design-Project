@@ -12,6 +12,7 @@ import java.awt.SystemColor;
 import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
 
 public class MainPage extends JFrame {
 
@@ -48,21 +49,21 @@ public class MainPage extends JFrame {
 		textArea.setEditable(false);
 		textArea.setText("WELCOME TO ABRS");
 		textArea.setLineWrap(true);
-		textArea.setForeground(Color.RED);
-		textArea.setFont(new Font("Monospaced", Font.BOLD, 24));
-		textArea.setBackground(Color.CYAN);
-		textArea.setBounds(107, 11, 222, 49);
+		textArea.setForeground(UIManager.getColor("Button.focus"));
+		textArea.setFont(new Font("Monospaced", Font.BOLD, 26));
+		textArea.setBackground(UIManager.getColor("Button.background"));
+		textArea.setBounds(101, 29, 250, 49);
 		contentPane.add(textArea);
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setEditable(false);
-		textArea_1.setText("Note: Please choose your identity.");
-		textArea_1.setLineWrap(true);
-		textArea_1.setForeground(Color.RED);
-		textArea_1.setFont(new Font("Monospaced", Font.PLAIN, 18));
-		textArea_1.setBackground(Color.LIGHT_GRAY);
-		textArea_1.setBounds(29, 79, 395, 41);
-		contentPane.add(textArea_1);
+		JTextArea txtrPleaseChooseYour = new JTextArea();
+		txtrPleaseChooseYour.setEditable(false);
+		txtrPleaseChooseYour.setText("Please choose your identity:");
+		txtrPleaseChooseYour.setLineWrap(true);
+		txtrPleaseChooseYour.setForeground(Color.RED);
+		txtrPleaseChooseYour.setFont(new Font("Monospaced", Font.PLAIN, 18));
+		txtrPleaseChooseYour.setBackground(UIManager.getColor("Button.background"));
+		txtrPleaseChooseYour.setBounds(29, 79, 395, 41);
+		contentPane.add(txtrPleaseChooseYour);
 		
 		JButton button = new JButton("TEACHER");
 		button.addActionListener(new ActionListener() {
