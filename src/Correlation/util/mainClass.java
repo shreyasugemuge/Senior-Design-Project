@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class mainClass {
-    
+
     public static void main (String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(new File("data/merge.csv")));
         switch (Integer.parseInt(args[1])) {
@@ -21,18 +21,18 @@ public class mainClass {
                 System.exit(1);
         }
     }
-    
+
     private static void toTrain (BufferedReader br, int i) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/train.csv")));
         String row;
         String[] col;
         String fl[] = br.readLine().split(",");
-        String first = fl[0] + "," + fl[1] + "," + fl[2] + "," + fl[3] + "," + fl[fl.length - 1] + "\n";
+        String first = fl[0] + "," + fl[1] + "," + fl[2] + "," + fl[3] + "," + fl[4] + "," + fl[5] + ","+  fl[fl.length - 1] + "\n";
         bw.write(first);
         bw.flush();
         while (i-- > 1 && (row = br.readLine()) != null) {
             col = row.split(",");
-            bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+            bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + ","  + col[5] + "," +col[col.length - 1] + "\n");
             bw.flush();
         }
         bw.close();
@@ -41,13 +41,13 @@ public class mainClass {
         bw.flush();
         while ((row = br.readLine()) != null) {
             col = row.split(",");
-            bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+            bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + "," + col[5] + "," + col[col.length - 1] + "\n");
             bw.flush();
         }
         bw.close();
-        
+
     }
-    
+
     private static void toTrain2 (BufferedReader br, int i) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/train.csv")));
         BufferedWriter bw2 = new BufferedWriter(new FileWriter(new File("data/test.csv")));
@@ -55,7 +55,7 @@ public class mainClass {
         String row;
         String[] col;
         String fl[] = br.readLine().split(",");
-        String first = fl[0] + "," + fl[1] + "," + fl[2] + "," + fl[3] + "," + fl[fl.length - 1] + "\n";
+        String first = fl[0] + "," + fl[1] + "," + fl[2] + "," + fl[3] + "," + fl[4] + "," + fl[5] + ","+  fl[fl.length - 1] + "\n";
         bw.write(first);
         bw2.write(first);
         while ((row = br.readLine()) != null) {
@@ -63,22 +63,22 @@ public class mainClass {
             if (col[col.length - 1].toString().equals("Y")) {
                 ys++;
                 if (ys > i / 2) {
-                    bw2.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+                    bw2.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + "," + col[5] + "," + col[col.length - 1] + "\n");
                     bw2.flush();
                     continue;
                 } else {
-                    bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+                    bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + "," + col[5] + "," + col[col.length - 1] + "\n");
                     bw.flush();
                     continue;
                 }
             } else {
                 ns++;
                 if (ns > i / 2) {
-                    bw2.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+                    bw2.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + "," + col[5] + "," + col[col.length - 1] + "\n");
                     bw2.flush();
                     continue;
                 } else {
-                    bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+                    bw.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + "," + col[5] + "," + col[col.length - 1] + "\n");
                     bw.flush();
                     continue;
                 }
@@ -86,11 +86,11 @@ public class mainClass {
         }
         while ((row = br.readLine()) != null) {
             col = row.split(",");
-            bw2.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[col.length - 1] + "\n");
+            bw2.write(col[0] + "," + col[1] + "," + col[2] + "," + col[3] + "," + col[4] + "," + col[5] + "," + col[col.length - 1] + "\n");
         }
         System.out.println("n: " + ns + " y: " + ys);
         bw.close();
         bw2.close();
     }
-    
+
 }
