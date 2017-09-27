@@ -17,8 +17,12 @@ public class merge {
 
     private static void toCSV (String processedData, int weeks) throws IOException {
         File file = new File("../docs/merge_" + weeks + ".csv");
+        File file2 = new File("../../Correlation/data/merge.csv");
         file.createNewFile();
         PrintWriter pr = new PrintWriter(file);
+        pr.print(processedData);
+        pr.close();
+        pr = new PrintWriter(file2);
         pr.print(processedData);
         pr.close();
     }
