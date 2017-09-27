@@ -22,6 +22,7 @@ public class mainClass {
         }
     }
 
+
     private static void toTrain (BufferedReader br, int i) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/train.csv")));
         String row;
