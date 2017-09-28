@@ -44,43 +44,103 @@
 	\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|X|}
 	\hline
 		\textbf{Task} & \textbf{Completed} &\textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} & \textbf{Remarks}  \\ \hline
+		Revise Behaviours &100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
 			Decide on data mining tools to use &100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
-			Modify merge program to provide output according to the DM tools' input requirement & 95\% & 100\% & - & - & - & . \\ \hline
-		
-		Readable Output models & 100\% & 25\% & 25\% & 25\% & 25\% & N/A\\ \hline
-		Split data for training and testing & 100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
-		Complete GUI & 100\% & 25\% & 25\% & 25\% & 25\% & N/A \\ \hline
+			Modify merge program to provide output according to the DM tools' input requirement & 100\% & 100\% & - & - & - & . \\ \hline
+		Data mining to find and select Readable Output models & 100\% & 25\% & 25\% & 25\% & 25\% & N/A\\ \hline
+		Split data for training and testing & 100\% & 100\% & - & - & - & N/A \\ \hline
+		Complete GUI & 60\% & - & - & 50\% & 50 & Back end to work with reccomender system and some design changes \\ \hline
 		
 	\end{tabularx}
 %	\end{adjustbox}
 	\subsection{Discussion of each task}
+	\subsubsection{Revise Behaviors}
+	Some new behaviors were implemented including:
+	\begin{enumerate}
+		\item total number of unit discussions 
+		\item number of fluency drill activities
+		\item number of crosswords attended (terminology)
+		\item number of game shows attended (terminology)
+	\end{enumerate}
+	All behavior extraction was modified to produce only numeric values and behaviors were used in groups or one at a time to find the impact on the model.
 	\subsubsection{Decide on data mining tools to use }
-		
+		The data mining tools finalized are as follows
+		\begin{itemize}
+			\item WEKA
+			\item RapidMiner
+			\item Python sklearn library
+		\end{itemize}
 	\subsubsection{Modify merge program to provide output according to the DM tools' input requirement}
-
+	The merge program from the previous milestone was scrapped and new one was written to achieve the following goals:
+	\begin{enumerate}
+		\item Provide more flexibility for behavior extraction. The new merge program now just uses the columns from the extracted behaviors as available from csv files
+		\item Provide a more logical workflow. Each person's behavior directory now contains one file for each weeks behavior extraction with a standardized naming convention
+		\item Only numeric data is output for all columns instead of above average. This eliminates any dashes or special characters
+		\item Update column headers so that file can be used with all the DM tools listed
+		\item Above average is now determined using the median value instead of the average which previously skewed the results to about 75\% above average
+	\end{enumerate}
 	
-	\subsubsection{Readable Output models}
-
+	\subsubsection{Data mining to find and select Readable Output models}
+	Different data mining algorithms were used to model the behaviors and the grades. \\
+	The behaviors were used as the X axis for the classifiers and whether or not the grade is above average was used as the Y value \\
+	The algorithms tested are:
+	\begin{enumerate}
+		\item Decision Tree
+		\item Naive Bayes
+		\item Random Forest Classifier
+		\item k nearest neighbour
+	\end{enumerate}
+	
+	Decision tree and naive bayes have a starting accuracy of 50\% and hence had to be discarded. Random Forest Classifier has an accuracy of 86\% at 11 weeks that drops to 75\% gradually as weeks are reduced to 3.
+	
+	\subsubsection{Split data for training and testing}
+	Simple java program was written to split the merged data into a training set that is 70\% of the data and test set that is 30\% of data. This in a way resembles having two different semesters one to create a model and the second one to test it on. The program preserves the ratio of above and below average for both the training and the testing set.
 	\subsubsection{Complete GUI}
-
+	GUI preliminary design finished. Design changes are to be made as per feedback and backend needs to be written in order to work with the recommender system
 	\subsection{Discussion of team member contribution}
 	\subsubsection{Shreyas}
-	
-
+	\begin{itemize}
+		\item implemented and worked with 3 correlation algorithms using sklearn python library
+		\begin{enumerate}
+		\item Decision Tree
+		\item Naive Bayes
+		\item Random Forest Classifier
+		\end{enumerate}
+		\item Changed behavior extraction to provide only numerical values
+		\item Changed the merge program
+		\item Wrote program for train and test split
+		\item Wrote program to use classifier models and find accuracy
+		\item Compared accuracy of all 3 models over reduced weeks
+	\end{itemize}
 	\subsubsection{Shiru}
+	\begin{enumerate}
+		\item Update the behaviors file, merge all behaviors in one file that easier to use. 
+		\item Solve the students 10 information lost problem. 
+		\item Work on GUI
+	\end{enumerate}
 	
 	\subsubsection{Yaqeen}
+	Conceptualized, implemented and extracted 4 behaviors using Java as the language of implementation. Worked on and arranged the presentation for milestone 4. Explored the data mining tool: Weka, to find correlations between behaviors. Merged the behaviors in one file manually and converted it from .cvs to .arff file format to be used in Weka to learn correlations between some of the behaviors.
 	
 	\subsubsection{Mohammed}
+	\begin{enumerate}
+		\item Created and designed GUI using Java GUI builder.
+		\item Decided on using WEKA for finding correlations.
+		\item Created a new format of the data set to be compatible with the data mining tool WEKA.
+		\item Fixed errors of the previous behaviors code.
+		\item contributed in the team presentation.
+		\item cleaned up behavior extractions to fit tools.
+		\item started looking for correlations with naive bayes and k-nearest neighbors algorithms.
+	\end{enumerate}
 	
 	
 	\section{Plan for the next milestone}
 	\begin{tabularx}{\linewidth}{|X|X|X|X|X|}
 	\hline	\textbf{Task} & \textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} \\ \hline
-	Make All behavior extraction weekly & If new behavior is implemented & If new behavior is implemented & If new behavior is implemented & If new behavior is implemented \\ \hline
-	Use decided data mining tools and packages to correlate behaviors with grades & 25 & 25 & 25 & 25 \\ \hline
-	Design and Implement GUI & - & 50 & - & 50 \\ \hline
-	Test correlations using the Train/Test Model, dividing the semester into 2 parts. & 25 & 25&25&25\\ \hline
+	Use different algorithms for correlation &25\% (Neural net, MLPClassifier) & 25\% & 25\% & 25\% \\ \hline
+	Find and finalize models to use for reccomender system & 25 & 25 & 25 & 25 \\ \hline
+	Finish GUI & - & 50 & - & 50 \\ \hline
+	Start implementing reccomender system with chosen model and data & 25 & 25&25&25\\ \hline
 	\end{tabularx}
 
 

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class merge {
-    static int weeks = 13;
+    static int weeks = 1;
 
     public static void main (String[] args) throws IOException {
         String[] fileNames = parse(args);
@@ -66,7 +66,7 @@ public class merge {
             System.out.println("use 1 number to represent number of weeks as argument");
             return null;
         } else {
-            weeks = Integer.parseInt(args[0]);
+            weeks = 8;
             return new String[] { "../docs/Shreyas/" + weeks + ".csv", "../docs/gradeHelp.csv" };
             // return new String[] { "../docs/Shreyas/" + weeks + ".csv",
             // "../docs/Mohammed/" + weeks + ".csv",
