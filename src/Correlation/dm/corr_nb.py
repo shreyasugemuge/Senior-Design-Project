@@ -27,7 +27,7 @@ df['Above Average'] = df['Above Average'].map(d)
 #print df['Above Average?']
 #print df['Time Test #1 A']
 
-features = list(df.columns[1:6])
+features = list(df.columns[1:21])
 
 y = df["Above Average"]
 X = df[features]
@@ -43,7 +43,7 @@ df = pd.read_csv("data/test.csv", header = 0)
 count = 0.0
 total = 0.0
 for index,row in df.iterrows():
-    result = classifier.predict([[row["Number of days with 0 activities"], row["Average Activities Per Session"], row["Total Number of Logins"], row["Time Test 1A"],row["Time Test 1B"]]])
+    result = classifier.predict([[row["Number of days with 0 activities"], row["Average Activities Per Session"], row["Total Number of Logins"], row["Time Test 1A"],row["Time Test 1B"],row["Time Test 2 Part 1A"],row["Time Test 2 Part 1B"],row["Time Test 2 Part 2A"],row["Time Test 2 Part 2B"],row["Time Test 3A"],row["Time Test 3B"],row["Time Test 4A"],row["Time Test 4B"],row["Time Test 5A"],row["Time Test 5B"],row["Time Test 6A"],row["Time Test 6B"],row["Time Test 7A"],row["Time Test 7B"],row["Average time taking tests in minutes"]]])
     s = 0
     if row["Above Average"] == "Y" :
         s = 1
