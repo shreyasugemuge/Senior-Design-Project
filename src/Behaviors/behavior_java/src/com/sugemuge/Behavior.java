@@ -55,7 +55,7 @@ public class Behavior {
                 }
                 double sum = 0.0, count = 0.0;
                 for (int j = 4; j < outRow.length - 1; j++) {
-                    if (outRow[j] != null && !outRow[j].equals("0")) {
+                    if (outRow[j] != null) {
                         sum += Double.parseDouble(outRow[j]);
                         count++;
                     }
