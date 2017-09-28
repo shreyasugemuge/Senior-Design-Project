@@ -32,24 +32,26 @@ public class mainClass {
         for (int k = 0; k < fl.length; k++)
             first += fl[k] + (k == fl.length - 1 ? "\n" : ",");
         bw.write(first);
-        bw.flush();
+        // bw.flush();
         while (i-- > 1 && (row = br.readLine()) != null) {
             col = row.split(",");
             for (int k = 0; k < col.length; k++)
                 temp += col[k] + (k == col.length - 1 ? "\n" : ",");
             bw.write(temp);
-            bw.flush();
+            temp = "";
+            // bw.flush();
         }
         bw.close();
         bw = new BufferedWriter(new FileWriter(new File("data/test.csv")));
         bw.write(first);
-        bw.flush();
+        // bw.flush();
         while ((row = br.readLine()) != null) {
             col = row.split(",");
             for (int k = 0; k < col.length; k++)
                 temp += col[k] + (k == col.length - 1 ? "\n" : ",");
             bw.write(temp);
-            bw.flush();
+            temp = "";
+            // bw.flush();
         }
         bw.close();
 
