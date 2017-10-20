@@ -1,5 +1,3 @@
-package com.mkyong;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,8 +14,9 @@ import com.opencsv.CSVWriter;
 
 public class Behaviors {
 
+	public final static int MAX_WEEKS = 14;
+	public final static SimpleDateFormat FORMAT_DATE = new SimpleDateFormat("M/d/yyyy");
     public static Date START_DATE = new Date();
-    public final static SimpleDateFormat FORMAT_DATE = new SimpleDateFormat("M/d/yyyy");
 
     public static void main (String[] args) throws ParseException {
 
@@ -29,176 +28,75 @@ public class Behaviors {
             System.exit(0);
         }
 
-        Date START_DATE = FORMAT_DATE.parse("1/15/2013");
+        START_DATE = FORMAT_DATE.parse("1/15/2013");
 
         try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("OnlineMeetings(" + weeks + "weeks).csv"));
+            CSVWriter csvWriter = new CSVWriter(new FileWriter(weeks + ".csv"));
 
-            String[] row = new String[] { "ID", "Online meetings attended" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[2];
-            for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(onlineMeetings("../private/clean/log_" + (i + 1) + ".csv", weeks));
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("testAverageAct(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "Average number of activites accessed before each test" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[2];
-            for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Double.toString(averageAct("../private/clean/log_" + (i + 1) + ".csv", weeks));
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("bonusActivities(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "Procedures Quiz", "Surveys", "CyberRat Assignments" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[4];
-            for (int i = 0; i < 110; i++) {
-
-                int[] data = bonusActivities("../private/clean/log_" + (i + 1) + ".csv", weeks);
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(data[0]);
-                strings[2] = Integer.toString(data[1]);
-                strings[3] = Integer.toString(data[2]);
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("testsTakenDates(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "days between test 1 available and submission",
+            String[] row = new String[] { "ID", "Online meetings attended", "Average number of activites accessed before each test", 
+            		"Procedures Quiz", "Surveys", "CyberRat Assignments", "Unit Discussions paticipation", 
+            		"Fluency Drills paticipation", "Crossword paticipation", "Game Shows paticipation",
+            		"days between test 1 available and submission",
                     "days between test 2 available and submission", "days between test 3 available and submission",
                     "days between test 4 available and submission", "days between test 5 available and submission",
-                    "days between test 6 available and submission", "days between test 7 available and submission" };
+                    "days between test 6 available and submission", "days between test 7 available and submission"};
             csvWriter.writeNext(row);
 
-            String[] strings = new String[8];
+            String[] strings = new String[17];
             for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 1, 25, weeks));
+            	if (i <= 8) {
+            		strings[0] = Integer.toString(i + 1);
+            	}
+            	else {
+            		strings[0] = Integer.toString(i + 2);
+            	}
+                strings[1] = Integer.toString(onlineMeetings("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                strings[2] = Double.toString(averageAct("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                int[] data = bonusActivities("../private/clean/log_" + (i + 1) + ".csv", weeks);
+                strings[3] = Integer.toString(data[0]);
+                strings[4] = Integer.toString(data[1]);
+                strings[5] = Integer.toString(data[2]);
+                strings[6] = Integer.toString(unitDiscussions("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                strings[7] = Integer.toString(fluencyDrills("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                strings[8] = Integer.toString(Crosswords("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                strings[9] = Integer.toString(GameShows("../private/clean/log_" + (i + 1) + ".csv", weeks));
+                
+                
+                strings[10] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 1, 25, weeks));
                 if (strings[1].equals("-1")) {
                     strings[1] = "-";
                 }
-                strings[2] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 2, 1, weeks));
+                strings[11] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 2, 1, weeks));
                 if (strings[2].equals("-1")) {
                     strings[2] = "-";
                 }
-                strings[3] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 3, 15, weeks));
+                strings[12] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 3, 15, weeks));
                 if (strings[3].equals("-1")) {
                     strings[3] = "-";
                 }
-                strings[4] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 4, 1, weeks));
+                strings[13] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 4, 1, weeks));
                 if (strings[4].equals("-1")) {
                     strings[4] = "-";
                 }
-                strings[5] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 5, 8, weeks));
+                strings[14] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 5, 8, weeks));
                 if (strings[5].equals("-1")) {
                     strings[5] = "-";
                 }
-                strings[6] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 6, 15, weeks));
+                strings[15] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 6, 15, weeks));
                 if (strings[6].equals("-1")) {
                     strings[6] = "-";
                 }
-                strings[7] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 7, 22, weeks));
+                strings[16] = Integer.toString(testDateTimely("../private/clean/log_" + (i + 1) + ".csv", 7, 22, weeks));
                 if (strings[7].equals("-1")) {
                     strings[7] = "-";
                 }
+                
                 csvWriter.writeNext(strings);
             }
             csvWriter.close();
         } catch (Exception ee) {
             ee.printStackTrace();
         }
-
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("UnitDiscussions(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "Unit Discussions paticipation" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[2];
-            for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(unitDiscussions("../private/clean/log_" + (i + 1) + ".csv", weeks));
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-        
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("FluencyDrills(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "Fluency Drills paticipation" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[2];
-            for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(fluencyDrills("../private/clean/log_" + (i + 1) + ".csv", weeks));
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("Crosswords(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "Crossword paticipation" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[2];
-            for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(Crosswords("../private/clean/log_" + (i + 1) + ".csv", weeks));
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter("GameShows(" + weeks + "weeks).csv"));
-
-            String[] row = new String[] { "ID", "Game Shows paticipation" };
-            csvWriter.writeNext(row);
-
-            String[] strings = new String[2];
-            for (int i = 0; i < 110; i++) {
-                strings[0] = Integer.toString(i + 1);
-                strings[1] = Integer.toString(GameShows("../private/clean/log_" + (i + 1) + ".csv", weeks));
-                csvWriter.writeNext(strings);
-            }
-            csvWriter.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
-        
     }
 
     public static int onlineMeetings (String FILE_NAME, int weeks) {
@@ -472,7 +370,6 @@ public class Behaviors {
         return FORMAT_DATE.format(c.getTime());
 
     }
-    
     public static int unitDiscussions (String FILE_NAME, int weeks) {
 
         int discussions = 0;
@@ -623,4 +520,5 @@ public class Behaviors {
 
         return games;
     }
+    
 }

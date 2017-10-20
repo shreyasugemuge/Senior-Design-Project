@@ -33,11 +33,11 @@ public class Behaviors {
         
         START_DATE = FORMAT_DATE.parse("1/15/2013");
         
-        System.out.println("Enter number of weeks (from 0 to 12):");
+        System.out.println("Enter number of weeks (from 0 to 13):");
         Scanner wk_num = new Scanner(System.in);
         int weeks = wk_num.nextInt();
         if (weeks < 0 || weeks > 52){ //maybe change to only 12 weeks! 
-        	System.out.println("Invalid. Please choose between 0 and 12");
+        	System.out.println("Invalid. Please choose between 0 and 13");
         	System.exit(0);
         }
         
