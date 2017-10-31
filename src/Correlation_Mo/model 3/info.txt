@@ -1,0 +1,37 @@
+model fits: weka
+
+Attributes:
+Number of days with 0 activities
+Average Activities Per Session
+Total Number of Logins
+class
+
+Algorithm: K-NeireastNeighbors (KNN)
+
+K: 3
+
+accuracy: 73%
+
+=== Summary ===
+
+Correctly Classified Instances          81               73.6364 %
+Incorrectly Classified Instances        29               26.3636 %
+Kappa statistic                          0.4727
+Mean absolute error                      0.3434
+Root mean squared error                  0.4156
+Relative absolute error                 68.6747 %
+Root relative squared error             83.1173 %
+Total Number of Instances              110     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.764    0.291    0.724      0.764    0.743      0.473    0.801     0.771     Y
+                 0.709    0.236    0.750      0.709    0.729      0.473    0.801     0.742     N
+Weighted Avg.    0.736    0.264    0.737      0.736    0.736      0.473    0.801     0.756     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 42 13 |  a = Y
+ 16 39 |  b = N

@@ -1,0 +1,42 @@
+model fits: weka
+
+Attributes:  (Tests B's)
+TestB 1
+TestB 2 Part1
+TestB 2 Part2
+TestB 3
+TestB 4
+TestB 5
+TestB 6
+TestB 7
+class
+
+Algorithm: K-NeireastNeighbors (KNN)
+
+K: 5
+
+accuracy: 80%
+
+=== Summary ===
+
+Correctly Classified Instances          88               80      %
+Incorrectly Classified Instances        22               20      %
+Kappa statistic                          0.6   
+Mean absolute error                      0.3275
+Root mean squared error                  0.3943
+Relative absolute error                 65.4991 %
+Root relative squared error             78.8668 %
+Total Number of Instances              110     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.909    0.309    0.746      0.909    0.820      0.615    0.857     0.821     Y
+                 0.691    0.091    0.884      0.691    0.776      0.615    0.857     0.839     N
+Weighted Avg.    0.800    0.200    0.815      0.800    0.798      0.615    0.857     0.830     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 50  5 |  a = Y
+ 17 38 |  b = N
