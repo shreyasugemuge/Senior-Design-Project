@@ -1,0 +1,65 @@
+id:82
+
+Performance: Below Median
+
+
+avg_due:
+current:1.214285714
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:9.206349373
+suggested:9.712698411249999
+
+
+avg_time_test:
+current:21.65714286
+suggested:51.1938728045
+
+
+Unit Discussions paticipation:
+current:4.0
+suggested:11.9
+
+
+Average number of activites accessed before each test:
+current:62.0
+suggested:74.75
+
+
+Surveys:
+current:2.0
+suggested:4.55
+
+
+ ReviewedActivities:
+current:21.0
+suggested:33.35
+
+
+Crossword paticipation:
+current:0.0
+suggested:2.2
+
+
+Fluency Drills paticipation:
+current:1.0
+suggested:6.45
+
+
+CyberRat Assignments:
+current:3.0
+suggested:4.5
+
+
+num_online_meetings:
+current:3.0
+suggested:4.65
+
+
+num_logins:
+current:73.0
+suggested:89.6
+
+

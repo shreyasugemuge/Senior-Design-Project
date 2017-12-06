@@ -1,0 +1,60 @@
+id:105
+
+Performance: Below Median
+
+
+avg_due:
+current:0.0
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:1.285714269
+suggested:9.712698411249999
+
+
+avg_time_test:
+current:0.0
+suggested:51.1938728045
+
+
+ StudyingSupplementalMaterialActivities:
+current:2.0
+suggested:28.85
+
+
+Unit Discussions paticipation:
+current:11.0
+suggested:11.9
+
+
+Surveys:
+current:3.0
+suggested:4.55
+
+
+ ReviewedActivities:
+current:28.0
+suggested:33.35
+
+
+Procedures Quiz:
+current:2.0
+suggested:2.9
+
+
+CyberRat Assignments:
+current:3.0
+suggested:4.5
+
+
+num_online_meetings:
+current:0.0
+suggested:4.65
+
+
+num_logins:
+current:0.0
+suggested:89.6
+
+

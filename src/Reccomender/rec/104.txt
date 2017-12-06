@@ -1,0 +1,35 @@
+id:104
+
+Performance: Below Median
+
+
+days_no_activities:
+current:19.0
+suggested:21.6
+
+
+avg_due:
+current:0.642857143
+suggested:1.9099747475000002
+
+
+ StudyingSupplementalMaterialActivities:
+current:4.0
+suggested:28.85
+
+
+ ReviewedActivities:
+current:28.0
+suggested:33.35
+
+
+Fluency Drills paticipation:
+current:6.0
+suggested:6.45
+
+
+CyberRat Assignments:
+current:2.0
+suggested:4.5
+
+

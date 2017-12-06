@@ -1,5 +1,4 @@
 # Shreyas Ugemuge
-# Example
 
 import numpy as np
 import pandas as pd
@@ -7,6 +6,7 @@ from sklearn import tree
 from sklearn.externals.six import StringIO
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
+import matplotlib.pyplot as plt
 import pydotplus
 
 
@@ -27,21 +27,37 @@ df['Above Average'] = df['Above Average'].map(d)
 #print df['Above Average']
 #print df['Time Test #1 A']
 
-features = list(df.columns[1:21])
+features = list(df.columns[1:17])
 
 y = df["Above Average"]
 X = df[features]
 
 
-classifier = RandomForestClassifier(n_estimators=30)
+
+classifier = RandomForestClassifier(n_estimators=5)
 classifier = classifier.fit(X, y)
 
+# importances = classifier.feature_importances_
+# indices = np.argsort(importances)
+# features = df.columns[1:17]
+#
+# plt.figure(1)
+# plt.title('Feature Importances')
+# plt.barh(range(len(indices)), importances[indices], color='b', align='center')
+# plt.yticks(range(len(indices)), features[indices])
+# plt.xlabel('Relative Importance')
+# plt.show()
+
+dda = pd.DataFrame({'features': df.columns[1:17], 'imp': importances})
+dda = dda.sort_values(by='imp',ascending=False)
+dda.to_csv("data/priority.csv")
 
 df = pd.read_csv("data/test.csv", header = 0)
 count = 0.0
 total = 0.0
 for index,row in df.iterrows():
-    result = classifier.predict([[row["Number of days with 0 activities"], row["Average Activities Per Session"], row["Total Number of Logins"], row["Time Test 1A"],row["Time Test 1B"],row["Time Test 2 Part 1A"],row["Time Test 2 Part 1B"],row["Time Test 2 Part 2A"],row["Time Test 2 Part 2B"],row["Time Test 3A"],row["Time Test 3B"],row["Time Test 4A"],row["Time Test 4B"],row["Time Test 5A"],row["Time Test 5B"],row["Time Test 6A"],row["Time Test 6B"],row["Time Test 7A"],row["Time Test 7B"],row["Average time taking tests in minutes"]]])
+
+    result = classifier.predict(row[1:17].reshape(1,-1))
     s = 0
     if row["Above Average"] == "Y" :
         s = 1
@@ -49,8 +65,7 @@ for index,row in df.iterrows():
         count = count + 1
     total = total + 1
     accuracy = count/total
-    print "ID: ",row["ID"],"Result: ",result,"Actual: ",s,"Accuracy: ",count,"/",total
-print "Total Accuracy: ", (count/total)*100
+print "Model Accuracy: ", (count/total)*100
 #    print "above"
-#else :
+# else :
 #    print "below"

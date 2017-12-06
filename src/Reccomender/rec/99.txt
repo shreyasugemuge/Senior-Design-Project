@@ -1,0 +1,55 @@
+id:99
+
+Performance: Below Median
+
+
+avg_due:
+current:1.636363636
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:6.238095284
+suggested:9.712698411249999
+
+
+avg_time_test:
+current:34.33787879
+suggested:51.1938728045
+
+
+ StudyingSupplementalMaterialActivities:
+current:7.0
+suggested:28.85
+
+
+ ReviewedActivities:
+current:31.0
+suggested:33.35
+
+
+Procedures Quiz:
+current:2.0
+suggested:2.9
+
+
+Fluency Drills paticipation:
+current:2.0
+suggested:6.45
+
+
+ TotalStudyGuideMaterials:
+current:39.0
+suggested:66.8
+
+
+num_online_meetings:
+current:1.0
+suggested:4.65
+
+
+num_logins:
+current:48.0
+suggested:89.6
+
+

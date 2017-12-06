@@ -1,0 +1,50 @@
+id:109
+
+Performance: Below Median
+
+
+avg_due:
+current:-0.3
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:7.730158806
+suggested:9.712698411249999
+
+
+ StudyingSupplementalMaterialActivities:
+current:2.0
+suggested:28.85
+
+
+Unit Discussions paticipation:
+current:7.0
+suggested:11.9
+
+
+ ReviewedActivities:
+current:23.0
+suggested:33.35
+
+
+Crossword paticipation:
+current:2.0
+suggested:2.2
+
+
+Fluency Drills paticipation:
+current:4.0
+suggested:6.45
+
+
+CyberRat Assignments:
+current:0.0
+suggested:4.5
+
+
+num_logins:
+current:74.0
+suggested:89.6
+
+

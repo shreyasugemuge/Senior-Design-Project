@@ -1,0 +1,50 @@
+id:108
+
+Performance: Below Median
+
+
+avg_due:
+current:0.0
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:3.238095284
+suggested:9.712698411249999
+
+
+avg_time_test:
+current:0.0
+suggested:51.1938728045
+
+
+ StudyingSupplementalMaterialActivities:
+current:7.0
+suggested:28.85
+
+
+Surveys:
+current:4.0
+suggested:4.55
+
+
+ ReviewedActivities:
+current:30.0
+suggested:33.35
+
+
+Procedures Quiz:
+current:2.0
+suggested:2.9
+
+
+ TotalStudyGuideMaterials:
+current:60.0
+suggested:66.8
+
+
+num_logins:
+current:33.0
+suggested:89.6
+
+

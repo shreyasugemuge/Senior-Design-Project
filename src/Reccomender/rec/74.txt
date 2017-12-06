@@ -1,0 +1,45 @@
+id:74
+
+Performance: Below Median
+
+
+avg_due:
+current:0.416666667
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:6.365079403
+suggested:9.712698411249999
+
+
+avg_time_test:
+current:30.09861111
+suggested:51.1938728045
+
+
+Unit Discussions paticipation:
+current:7.0
+suggested:11.9
+
+
+Crossword paticipation:
+current:0.0
+suggested:2.2
+
+
+Procedures Quiz:
+current:1.0
+suggested:2.9
+
+
+CyberRat Assignments:
+current:3.0
+suggested:4.5
+
+
+num_logins:
+current:54.0
+suggested:89.6
+
+

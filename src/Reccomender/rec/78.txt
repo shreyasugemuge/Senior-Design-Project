@@ -1,0 +1,50 @@
+id:78
+
+Performance: Below Median
+
+
+avg_due:
+current:-3.857142857
+suggested:1.9099747475000002
+
+
+act_per_day:
+current:5.031745911
+suggested:9.712698411249999
+
+
+avg_time_test:
+current:32.84722222
+suggested:51.1938728045
+
+
+Surveys:
+current:3.0
+suggested:4.55
+
+
+Crossword paticipation:
+current:2.0
+suggested:2.2
+
+
+Procedures Quiz:
+current:2.0
+suggested:2.9
+
+
+Fluency Drills paticipation:
+current:0.0
+suggested:6.45
+
+
+num_online_meetings:
+current:0.0
+suggested:4.65
+
+
+num_logins:
+current:48.0
+suggested:89.6
+
+
