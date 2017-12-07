@@ -1,0 +1,43 @@
+Behaviour Number,Behaviour,Recommendation,Category
+1,online meeting attendance,Keep up the attendance,1
+2,online meeting attendance,Attend more online meeting,2
+3,ReviewedActivities,Keep up review the assignments and tests frequently,1
+4,ReviewedActivities,Spend more time on reviewing the assignments and tests,2
+5,guide,"Keep up study the unit guide matrials, videos and podcastes frequently",1
+6,guide,"Try to spend more time on studying the unit guide materials, videos and podcasts",2
+7,SubmitASR,Try to submit ASR early,3
+8,SubmitASR,Keep up submit ASR in time,1
+9,SubmitASR,Try to spend more time on working ASR,2
+10,study supplemental materials,Try to spend more time on studying supplemental materials,2
+11,study supplemental materials,Keep up spend enough time on studying supplemental materials,1
+12,cyberRat assignments,Keep up finsh CyberRat assignments in time,1
+13,cyberRat assignments,Try to finish more CyberRat assignments,2
+14,cyberRat assignments,Spend more time on working the CyberRat assignments,2
+15,unit discussions participation,Try to spend more time on participating on unit discussions,2
+16,unit discussions participation,Try to finish more unit discussions,2
+17,unit discussions participation,Keep up finsh the every unit discussion in time,1
+18,days between test available and submission,Try to take the test as soon as possible,3
+19,days between test available and submission,Try to spend more time on preparing the test,2
+20,days between test available and submission,Keep up take the test in time,1
+21,Average number of activites accessed before each test,Keep up do many works for preparing the test,1
+22,Average number of activites accessed before each test,Try to spend more time on preparing the test,2
+23,PreCourse Assesment Duration,Keep up finish the precourse assignments in time,1
+24,PreCourse Assesment Duration,Try to spend more time on precourse assignment,2
+25,Time of test,Spend more time on test,2
+26,Time of test,Keep up spend enough time on test,1
+27,Number of days with 0 activities,Keep up study and review every day,1
+28,Number of days with 0 activities,Try to study and review every day,3
+29,Number of late ASR,Keep up submit ASR in time,1
+30,Number of late ASR,Try to submit ASR in time or early,3
+31,Final A time,Try to spend enough time on final test,2
+32,Final pratice time,Try to spend time to do the final pratice questions,2
+33,Test B,Try to spend more time on finish test B,2
+34,Test B,Keep up finish the test B,1
+35,Procedures Quiz,Try to finish more procedures quiz,2
+36,Procedures Quiz,Keep up finish every procedures quiz,1
+37,time of ASR,Keep up submit ASR in time,1
+38,time of ASR,Try to submit ASR early,3
+39,Survey,Keep up finish each survey,1
+40,Survey,Try to finish every survey,2
+41,Survey Time,Keep up finish the survey in time,1
+42,Survey Time,Try to finish the survey as soon as possible,3

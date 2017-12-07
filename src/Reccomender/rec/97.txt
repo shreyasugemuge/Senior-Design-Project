@@ -3,48 +3,43 @@ id:97
 Performance: Below Median
 
 
+ TotalStudyGuideMaterials:
+current:71.0
+suggested:71.15789473684211
+
+
 avg_due:
 current:-0.916666667
-suggested:1.9099747475000002
+suggested:1.991360978263158
 
 
  StudyingSupplementalMaterialActivities:
 current:2.0
-suggested:28.85
-
-
-Unit Discussions paticipation:
-current:8.0
-suggested:11.9
-
-
- ReviewedActivities:
-current:17.0
-suggested:33.35
-
-
-Crossword paticipation:
-current:2.0
-suggested:2.2
-
-
-Procedures Quiz:
-current:2.0
-suggested:2.9
+suggested:27.94736842105263
 
 
 Fluency Drills paticipation:
 current:3.0
-suggested:6.45
+suggested:4.631578947368421
 
 
-CyberRat Assignments:
-current:2.0
-suggested:4.5
+ ReviewedActivities:
+current:17.0
+suggested:31.526315789473685
 
 
 num_online_meetings:
 current:2.0
-suggested:4.65
+suggested:3.9473684210526314
+
+
+CyberRat Assignments:
+current:2.0
+suggested:2.8421052631578947
+
+
+Procedures Quiz:
+current:2.0
+suggested:3.0526315789473686
 
 

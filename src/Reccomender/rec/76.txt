@@ -1,0 +1,35 @@
+id:76
+
+Performance: above Median
+
+
+avg_due:
+current:3.714285714
+ideal:1.991360978263158
+
+
+ StudyingSupplementalMaterialActivities:
+current:124.0
+ideal:27.94736842105263
+
+
+ ReviewedActivities:
+current:69.0
+ideal:31.526315789473685
+
+
+num_online_meetings:
+current:11.0
+ideal:3.9473684210526314
+
+
+Surveys:
+current:6.0
+ideal:4.157894736842105
+
+
+days_no_activities:
+current:23.0
+ideal:21.36842105263158
+
+

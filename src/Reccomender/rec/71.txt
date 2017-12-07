@@ -1,0 +1,50 @@
+id:71
+
+Performance: above Median
+
+
+ TotalStudyGuideMaterials:
+current:122.0
+ideal:71.15789473684211
+
+
+act_per_day:
+current:13.74603176
+ideal:9.747702548000001
+
+
+ StudyingSupplementalMaterialActivities:
+current:40.0
+ideal:27.94736842105263
+
+
+Average number of activites accessed before each test:
+current:93.0
+ideal:68.52631578947368
+
+
+Fluency Drills paticipation:
+current:7.0
+ideal:4.631578947368421
+
+
+num_logins:
+current:153.0
+ideal:89.0
+
+
+ ReviewedActivities:
+current:37.0
+ideal:31.526315789473685
+
+
+Unit Discussions paticipation:
+current:11.0
+ideal:6.631578947368421
+
+
+Procedures Quiz:
+current:5.0
+ideal:3.0526315789473686
+
+

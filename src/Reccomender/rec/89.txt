@@ -1,0 +1,40 @@
+id:89
+
+Performance: above Median
+
+
+ TotalStudyGuideMaterials:
+current:75.0
+ideal:71.15789473684211
+
+
+Average number of activites accessed before each test:
+current:72.0
+ideal:68.52631578947368
+
+
+num_online_meetings:
+current:4.0
+ideal:3.9473684210526314
+
+
+Surveys:
+current:6.0
+ideal:4.157894736842105
+
+
+Unit Discussions paticipation:
+current:12.0
+ideal:6.631578947368421
+
+
+CyberRat Assignments:
+current:12.0
+ideal:2.8421052631578947
+
+
+Procedures Quiz:
+current:7.0
+ideal:3.0526315789473686
+
+

@@ -1,0 +1,40 @@
+id:75
+
+Performance: above Median
+
+
+act_per_day:
+current:9.920635223
+ideal:9.747702548000001
+
+
+ StudyingSupplementalMaterialActivities:
+current:30.0
+ideal:27.94736842105263
+
+
+Average number of activites accessed before each test:
+current:75.0
+ideal:68.52631578947368
+
+
+Fluency Drills paticipation:
+current:5.0
+ideal:4.631578947368421
+
+
+Surveys:
+current:5.0
+ideal:4.157894736842105
+
+
+days_no_activities:
+current:24.0
+ideal:21.36842105263158
+
+
+CyberRat Assignments:
+current:6.0
+ideal:2.8421052631578947
+
+

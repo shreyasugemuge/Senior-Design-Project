@@ -1,0 +1,30 @@
+id:101
+
+Performance: above Median
+
+
+act_per_day:
+current:9.984127045
+ideal:9.747702548000001
+
+
+avg_due:
+current:3.285714286
+ideal:1.991360978263158
+
+
+Average number of activites accessed before each test:
+current:72.0
+ideal:68.52631578947368
+
+
+num_logins:
+current:91.0
+ideal:89.0
+
+
+num_online_meetings:
+current:9.0
+ideal:3.9473684210526314
+
+

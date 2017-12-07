@@ -1,0 +1,25 @@
+id:106
+
+Performance: above Median
+
+
+act_per_day:
+current:10.98412704
+ideal:9.747702548000001
+
+
+avg_due:
+current:3.357142857
+ideal:1.991360978263158
+
+
+num_logins:
+current:93.0
+ideal:89.0
+
+
+num_online_meetings:
+current:15.0
+ideal:3.9473684210526314
+
+

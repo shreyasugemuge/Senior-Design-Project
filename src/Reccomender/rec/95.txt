@@ -3,48 +3,43 @@ id:95
 Performance: Below Median
 
 
-avg_due:
-current:0.5
-suggested:1.9099747475000002
+avg_time_test:
+current:24.40595238
+suggested:51.50889170526316
 
 
 act_per_day:
 current:9.174603462
-suggested:9.712698411249999
+suggested:9.747702548000001
 
 
-avg_time_test:
-current:24.40595238
-suggested:51.1938728045
+avg_due:
+current:0.5
+suggested:1.991360978263158
 
 
  StudyingSupplementalMaterialActivities:
 current:22.0
-suggested:28.85
-
-
- ReviewedActivities:
-current:28.0
-suggested:33.35
-
-
-Procedures Quiz:
-current:2.0
-suggested:2.9
+suggested:27.94736842105263
 
 
 Fluency Drills paticipation:
 current:4.0
-suggested:6.45
-
-
-num_online_meetings:
-current:4.0
-suggested:4.65
+suggested:4.631578947368421
 
 
 num_logins:
 current:58.0
-suggested:89.6
+suggested:89.0
+
+
+ ReviewedActivities:
+current:28.0
+suggested:31.526315789473685
+
+
+Procedures Quiz:
+current:2.0
+suggested:3.0526315789473686
 
 

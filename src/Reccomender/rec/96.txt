@@ -1,15 +1,15 @@
-id:104
+id:96
 
 Performance: Below Median
 
 
  TotalStudyGuideMaterials:
-current:68.0
+current:55.0
 suggested:71.15789473684211
 
 
 avg_due:
-current:0.642857143
+current:1.181818182
 suggested:1.991360978263158
 
 
@@ -19,17 +19,17 @@ suggested:27.94736842105263
 
 
  ReviewedActivities:
-current:28.0
+current:30.0
 suggested:31.526315789473685
 
 
 days_no_activities:
-current:19.0
+current:4.0
 suggested:21.36842105263158
 
 
-CyberRat Assignments:
+Procedures Quiz:
 current:2.0
-suggested:2.8421052631578947
+suggested:3.0526315789473686
 
 

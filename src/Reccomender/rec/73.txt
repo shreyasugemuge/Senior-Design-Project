@@ -3,63 +3,43 @@ id:73
 Performance: Below Median
 
 
-days_no_activities:
-current:15.0
-suggested:21.6
-
-
-avg_due:
-current:-7.333333333
-suggested:1.9099747475000002
-
-
-act_per_day:
-current:8.793650627
-suggested:9.712698411249999
-
-
 avg_time_test:
 current:32.83
-suggested:51.1938728045
-
-
- StudyingSupplementalMaterialActivities:
-current:14.0
-suggested:28.85
-
-
-Unit Discussions paticipation:
-current:7.0
-suggested:11.9
-
-
-Crossword paticipation:
-current:1.0
-suggested:2.2
-
-
-Fluency Drills paticipation:
-current:6.0
-suggested:6.45
+suggested:51.50889170526316
 
 
  TotalStudyGuideMaterials:
 current:49.0
-suggested:66.8
+suggested:71.15789473684211
+
+
+act_per_day:
+current:8.793650627
+suggested:9.747702548000001
+
+
+avg_due:
+current:-7.333333333
+suggested:1.991360978263158
+
+
+ StudyingSupplementalMaterialActivities:
+current:14.0
+suggested:27.94736842105263
+
+
+Crossword paticipation:
+current:1.0
+suggested:1.3157894736842106
+
+
+days_no_activities:
+current:15.0
+suggested:21.36842105263158
 
 
 CyberRat Assignments:
 current:1.0
-suggested:4.5
-
-
-num_online_meetings:
-current:4.0
-suggested:4.65
-
-
-num_logins:
-current:89.0
-suggested:89.6
+suggested:2.8421052631578947
 
 

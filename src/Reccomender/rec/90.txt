@@ -1,46 +1,41 @@
-id:77
+id:90
 
 Performance: Below Median
 
 
+avg_time_test:
+current:23.45185185
+suggested:51.50889170526316
+
+
  TotalStudyGuideMaterials:
-current:60.0
+current:48.0
 suggested:71.15789473684211
 
 
 act_per_day:
-current:6.809523582
+current:6.174602985
 suggested:9.747702548000001
 
 
 avg_due:
-current:-5.285714286
+current:1.0
 suggested:1.991360978263158
 
 
- StudyingSupplementalMaterialActivities:
-current:6.0
-suggested:27.94736842105263
-
-
 Average number of activites accessed before each test:
-current:63.0
+current:43.0
 suggested:68.52631578947368
 
 
 Fluency Drills paticipation:
-current:2.0
+current:1.0
 suggested:4.631578947368421
 
 
- ReviewedActivities:
-current:27.0
-suggested:31.526315789473685
-
-
-num_online_meetings:
-current:3.0
-suggested:3.9473684210526314
+num_logins:
+current:51.0
+suggested:89.0
 
 
 Crossword paticipation:
@@ -49,22 +44,12 @@ suggested:1.3157894736842106
 
 
 Surveys:
-current:3.0
+current:4.0
 suggested:4.157894736842105
-
-
-Unit Discussions paticipation:
-current:2.0
-suggested:6.631578947368421
 
 
 CyberRat Assignments:
 current:0.0
 suggested:2.8421052631578947
-
-
-Procedures Quiz:
-current:3.0
-suggested:3.0526315789473686
 
 

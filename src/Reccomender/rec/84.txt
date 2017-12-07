@@ -1,0 +1,25 @@
+id:84
+
+Performance: above Median
+
+
+act_per_day:
+current:10.23809528
+ideal:9.747702548000001
+
+
+Fluency Drills paticipation:
+current:9.0
+ideal:4.631578947368421
+
+
+num_logins:
+current:94.0
+ideal:89.0
+
+
+Crossword paticipation:
+current:2.0
+ideal:1.3157894736842106
+
+

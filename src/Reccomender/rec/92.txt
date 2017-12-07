@@ -3,68 +3,68 @@ id:92
 Performance: Below Median
 
 
-avg_due:
-current:-0.8
-suggested:1.9099747475000002
-
-
 avg_time_test:
 current:47.85625
-suggested:51.1938728045
-
-
- StudyingSupplementalMaterialActivities:
-current:2.0
-suggested:28.85
-
-
-Unit Discussions paticipation:
-current:0.0
-suggested:11.9
-
-
-Average number of activites accessed before each test:
-current:53.0
-suggested:74.75
-
-
-Surveys:
-current:2.0
-suggested:4.55
-
-
- ReviewedActivities:
-current:20.0
-suggested:33.35
-
-
-Crossword paticipation:
-current:0.0
-suggested:2.2
-
-
-Procedures Quiz:
-current:2.0
-suggested:2.9
-
-
-Fluency Drills paticipation:
-current:0.0
-suggested:6.45
+suggested:51.50889170526316
 
 
  TotalStudyGuideMaterials:
 current:20.0
-suggested:66.8
+suggested:71.15789473684211
 
 
-CyberRat Assignments:
-current:1.0
-suggested:4.5
+avg_due:
+current:-0.8
+suggested:1.991360978263158
+
+
+ StudyingSupplementalMaterialActivities:
+current:2.0
+suggested:27.94736842105263
+
+
+Average number of activites accessed before each test:
+current:53.0
+suggested:68.52631578947368
+
+
+Fluency Drills paticipation:
+current:0.0
+suggested:4.631578947368421
+
+
+ ReviewedActivities:
+current:20.0
+suggested:31.526315789473685
 
 
 num_online_meetings:
 current:2.0
-suggested:4.65
+suggested:3.9473684210526314
+
+
+Crossword paticipation:
+current:0.0
+suggested:1.3157894736842106
+
+
+Surveys:
+current:2.0
+suggested:4.157894736842105
+
+
+Unit Discussions paticipation:
+current:0.0
+suggested:6.631578947368421
+
+
+CyberRat Assignments:
+current:1.0
+suggested:2.8421052631578947
+
+
+Procedures Quiz:
+current:2.0
+suggested:3.0526315789473686
 
 

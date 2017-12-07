@@ -39,9 +39,10 @@ public class mainClass {
         n.write(first);
         while ((row = br.readLine()) != null) {
             col = row.split(",");
-            for (int k = 0; k < col.length; k++)
-                temp += col[k] + (k == col.length - 1 ? "\n" : ",");
-            if (col[col.length - 1].equals("Y")) {
+            for (int k = 0; k < col.length - 1; k++)
+                temp += col[k] + ",";
+            temp += m.get(Integer.parseInt(col[0])) + "\n";
+            if (m.get(Integer.parseInt(col[0])).equals("Y")) {
                 for (int i = 1; i < col.length - 1; i++) {
                     sumcoly[i - 1] += Double.parseDouble(col[i]);
                 }

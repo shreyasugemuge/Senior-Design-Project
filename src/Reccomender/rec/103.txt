@@ -1,50 +1,55 @@
-id:105
+id:103
 
 Performance: Below Median
 
 
 avg_time_test:
-current:0.0
+current:20.41388889
 suggested:51.50889170526316
 
 
+ TotalStudyGuideMaterials:
+current:41.0
+suggested:71.15789473684211
+
+
 act_per_day:
-current:1.285714269
+current:7.285714149
 suggested:9.747702548000001
 
 
 avg_due:
-current:0.0
+current:0.142857143
 suggested:1.991360978263158
 
 
  StudyingSupplementalMaterialActivities:
-current:2.0
+current:0.0
 suggested:27.94736842105263
 
 
 num_logins:
-current:0.0
+current:79.0
 suggested:89.0
 
 
  ReviewedActivities:
-current:28.0
+current:22.0
 suggested:31.526315789473685
 
 
-num_online_meetings:
-current:0.0
-suggested:3.9473684210526314
+Crossword paticipation:
+current:1.0
+suggested:1.3157894736842106
 
 
 Surveys:
-current:3.0
+current:4.0
 suggested:4.157894736842105
 
 
 Procedures Quiz:
-current:2.0
+current:3.0
 suggested:3.0526315789473686
 
 

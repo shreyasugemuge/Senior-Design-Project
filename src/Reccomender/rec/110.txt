@@ -1,0 +1,60 @@
+id:110
+
+Performance: above Median
+
+
+avg_time_test:
+current:62.97575758
+ideal:51.50889170526316
+
+
+ TotalStudyGuideMaterials:
+current:86.0
+ideal:71.15789473684211
+
+
+act_per_day:
+current:12.22222233
+ideal:9.747702548000001
+
+
+avg_due:
+current:2.0
+ideal:1.991360978263158
+
+
+Average number of activites accessed before each test:
+current:80.0
+ideal:68.52631578947368
+
+
+Fluency Drills paticipation:
+current:17.0
+ideal:4.631578947368421
+
+
+num_logins:
+current:127.0
+ideal:89.0
+
+
+num_online_meetings:
+current:8.0
+ideal:3.9473684210526314
+
+
+Crossword paticipation:
+current:4.0
+ideal:1.3157894736842106
+
+
+Surveys:
+current:5.0
+ideal:4.157894736842105
+
+
+CyberRat Assignments:
+current:6.0
+ideal:2.8421052631578947
+
+

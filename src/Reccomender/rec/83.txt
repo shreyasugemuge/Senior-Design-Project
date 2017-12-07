@@ -1,0 +1,40 @@
+id:83
+
+Performance: above Median
+
+
+avg_time_test:
+current:318.7952381
+ideal:51.50889170526316
+
+
+ TotalStudyGuideMaterials:
+current:109.0
+ideal:71.15789473684211
+
+
+avg_due:
+current:2.142857143
+ideal:1.991360978263158
+
+
+Average number of activites accessed before each test:
+current:72.0
+ideal:68.52631578947368
+
+
+Fluency Drills paticipation:
+current:6.0
+ideal:4.631578947368421
+
+
+Crossword paticipation:
+current:4.0
+ideal:1.3157894736842106
+
+
+days_no_activities:
+current:23.0
+ideal:21.36842105263158
+
+

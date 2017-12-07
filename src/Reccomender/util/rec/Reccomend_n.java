@@ -12,6 +12,7 @@ public class Reccomend_n {
     public static void main (String[] args) throws IOException {
         StringBuilder sb = new StringBuilder();
         HashMap<String, Double[]> m = new HashMap<String, Double[]>();
+        BufferedReader by = new BufferedReader(new FileReader("data/misc/y.csv"));
         BufferedReader br = new BufferedReader(new FileReader("data/misc/n.csv"));
         BufferedReader bs = new BufferedReader(new FileReader("data/misc/summary.csv"));
         BufferedReader ba = new BufferedReader(new FileReader("data/priority.csv"));
@@ -33,6 +34,26 @@ public class Reccomend_n {
                 Double[] cur = m.get(s);
                 if (cur[0] < cur[1])
                     sb.append(s + ":\ncurrent:" + cur[0] + "\nsuggested:" + cur[1] + "\n\n\n");
+            }
+            BufferedWriter bw = new BufferedWriter(new FileWriter("rec/" + col[0] + ".txt"));
+            bw.write(sb.toString());
+            sb = new StringBuilder();
+            bw.flush();
+        }
+
+        by.readLine();
+        while ((temp = by.readLine()) != null) {
+            col = temp.split(",");
+            sb.append("id:" + col[0] + "\n\n");
+            sb.append("Performance: above Median\n\n\n");
+            for (int i = 0; i < n.length; i++) {
+                Double[] a = { Double.parseDouble(col[i + 1]), Double.parseDouble(n[i]) };
+                m.put(ft[i], a);
+            }
+            for (String s : pr) {
+                Double[] cur = m.get(s);
+                if (cur[0] >= cur[1])
+                    sb.append(s + ":\ncurrent:" + cur[0] + "\nideal:" + cur[1] + "\n\n\n");
             }
             BufferedWriter bw = new BufferedWriter(new FileWriter("rec/" + col[0] + ".txt"));
             bw.write(sb.toString());

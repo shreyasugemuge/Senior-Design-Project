@@ -1,0 +1,40 @@
+id:93
+
+Performance: above Median
+
+
+act_per_day:
+current:10.77777767
+ideal:9.747702548000001
+
+
+avg_due:
+current:2.888888889
+ideal:1.991360978263158
+
+
+Average number of activites accessed before each test:
+current:82.0
+ideal:68.52631578947368
+
+
+num_logins:
+current:94.0
+ideal:89.0
+
+
+Crossword paticipation:
+current:2.0
+ideal:1.3157894736842106
+
+
+Unit Discussions paticipation:
+current:9.0
+ideal:6.631578947368421
+
+
+CyberRat Assignments:
+current:6.0
+ideal:2.8421052631578947
+
+
