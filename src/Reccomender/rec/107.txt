@@ -3,48 +3,48 @@ id:107
 Performance: above Median
 
 
-avg_due:
-current:2.285714286
-ideal:1.991360978263158
-
-
- StudyingSupplementalMaterialActivities:
-current:75.0
-ideal:27.94736842105263
-
-
 Average number of activites accessed before each test:
-current:85.0
-ideal:68.52631578947368
+current:69.0
+ideal:67.61904761904762
 
 
-Fluency Drills paticipation:
-current:8.0
-ideal:4.631578947368421
+avg_due:
+current:2.333333333
+ideal:1.5332079297142858
 
 
  ReviewedActivities:
-current:46.0
-ideal:31.526315789473685
+current:40.0
+ideal:28.142857142857142
 
 
-Surveys:
-current:5.0
-ideal:4.157894736842105
+Fluency Drills paticipation:
+current:6.0
+ideal:4.285714285714286
 
 
-Unit Discussions paticipation:
-current:8.0
-ideal:6.631578947368421
+ TotalStudyGuideMaterials:
+current:62.0
+ideal:53.285714285714285
+
+
+ StudyingSupplementalMaterialActivities:
+current:67.0
+ideal:21.523809523809526
 
 
 days_no_activities:
-current:40.0
-ideal:21.36842105263158
+current:37.0
+ideal:20.61904761904762
 
 
 CyberRat Assignments:
 current:9.0
-ideal:2.8421052631578947
+ideal:2.9523809523809526
+
+
+Surveys:
+current:5.0
+ideal:4.761904761904762
 
 

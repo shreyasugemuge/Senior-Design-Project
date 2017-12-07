@@ -5,3 +5,5 @@ python dm/corr_rf.py
 javac -d bin/ util/rec/Reccomend_n.java
 java -cp bin rec.Reccomend_n
 echo "results in rec/"
+javac -d bin/ util/GUI.java
+java -cp bin GUI

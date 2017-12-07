@@ -1,17 +1,17 @@
 ,features,imp
-5,avg_time_test,0.133718612004
-8, TotalStudyGuideMaterials,0.119775303015
-2,act_per_day,0.0996567128653
-4,avg_due,0.0791324965216
-7, StudyingSupplementalMaterialActivities,0.0693605240076
-9,Average number of activites accessed before each test,0.0684466124774
-14,Fluency Drills paticipation,0.0627809051817
-0,num_logins,0.0615126168675
-6, ReviewedActivities,0.0588128165952
-3,num_online_meetings,0.0515451260959
-15,Crossword paticipation,0.0500993321759
-11,Surveys,0.0384108244696
-13,Unit Discussions paticipation,0.0334199881455
-1,days_no_activities,0.0329297820823
-12,CyberRat Assignments,0.0325350996326
-10,Procedures Quiz,0.00786324786325
+9,Average number of activites accessed before each test,0.141497840559
+0,num_logins,0.126971915813
+2,act_per_day,0.114911104907
+4,avg_due,0.0875314686161
+13,Unit Discussions paticipation,0.0764613985465
+6, ReviewedActivities,0.0638078084023
+10,Procedures Quiz,0.0619269464922
+14,Fluency Drills paticipation,0.0606820183854
+8, TotalStudyGuideMaterials,0.0530507376639
+3,num_online_meetings,0.0522446547099
+7, StudyingSupplementalMaterialActivities,0.0422413165147
+5,avg_time_test,0.0386054284121
+1,days_no_activities,0.0350582019623
+12,CyberRat Assignments,0.0180191934967
+11,Surveys,0.0145202020202
+15,Crossword paticipation,0.0124697634992

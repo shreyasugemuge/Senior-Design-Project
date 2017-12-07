@@ -3,38 +3,43 @@ id:87
 Performance: above Median
 
 
-avg_time_test:
-current:173.4685185
-ideal:51.50889170526316
+num_logins:
+current:79.0
+ideal:75.47619047619048
 
 
- TotalStudyGuideMaterials:
-current:105.0
-ideal:71.15789473684211
-
-
-num_online_meetings:
-current:4.0
-ideal:3.9473684210526314
-
-
-Crossword paticipation:
-current:2.0
-ideal:1.3157894736842106
-
-
-Surveys:
-current:8.0
-ideal:4.157894736842105
-
-
-Unit Discussions paticipation:
-current:10.0
-ideal:6.631578947368421
+avg_due:
+current:1.75
+ideal:1.5332079297142858
 
 
 Procedures Quiz:
 current:7.0
-ideal:3.0526315789473686
+ideal:2.857142857142857
+
+
+ TotalStudyGuideMaterials:
+current:89.0
+ideal:53.285714285714285
+
+
+num_online_meetings:
+current:4.0
+ideal:3.8095238095238093
+
+
+ StudyingSupplementalMaterialActivities:
+current:22.0
+ideal:21.523809523809526
+
+
+Surveys:
+current:8.0
+ideal:4.761904761904762
+
+
+Crossword paticipation:
+current:2.0
+ideal:1.8571428571428572
 
 

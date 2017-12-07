@@ -3,78 +3,83 @@ id:72
 Performance: Below Median
 
 
-avg_time_test:
-current:28.58333333
-suggested:51.50889170526316
+Average number of activites accessed before each test:
+current:57.0
+suggested:67.61904761904762
 
 
- TotalStudyGuideMaterials:
-current:54.0
-suggested:71.15789473684211
+num_logins:
+current:70.0
+suggested:75.47619047619048
 
 
 act_per_day:
-current:6.682539463
-suggested:9.747702548000001
+current:7.017857075
+suggested:9.310374214476193
 
 
 avg_due:
 current:1.0
-suggested:1.991360978263158
-
-
- StudyingSupplementalMaterialActivities:
-current:16.0
-suggested:27.94736842105263
-
-
-Fluency Drills paticipation:
-current:1.0
-suggested:4.631578947368421
-
-
-num_logins:
-current:73.0
-suggested:89.0
-
-
- ReviewedActivities:
-current:25.0
-suggested:31.526315789473685
-
-
-num_online_meetings:
-current:0.0
-suggested:3.9473684210526314
-
-
-Crossword paticipation:
-current:0.0
-suggested:1.3157894736842106
-
-
-Surveys:
-current:3.0
-suggested:4.157894736842105
+suggested:1.5332079297142858
 
 
 Unit Discussions paticipation:
 current:0.0
-suggested:6.631578947368421
+suggested:10.142857142857142
 
 
-days_no_activities:
-current:20.0
-suggested:21.36842105263158
-
-
-CyberRat Assignments:
-current:0.0
-suggested:2.8421052631578947
+ ReviewedActivities:
+current:23.0
+suggested:28.142857142857142
 
 
 Procedures Quiz:
 current:2.0
-suggested:3.0526315789473686
+suggested:2.857142857142857
+
+
+Fluency Drills paticipation:
+current:1.0
+suggested:4.285714285714286
+
+
+ TotalStudyGuideMaterials:
+current:49.0
+suggested:53.285714285714285
+
+
+num_online_meetings:
+current:0.0
+suggested:3.8095238095238093
+
+
+ StudyingSupplementalMaterialActivities:
+current:16.0
+suggested:21.523809523809526
+
+
+avg_time_test:
+current:28.90555556
+suggested:51.1920113552381
+
+
+days_no_activities:
+current:17.0
+suggested:20.61904761904762
+
+
+CyberRat Assignments:
+current:0.0
+suggested:2.9523809523809526
+
+
+Surveys:
+current:3.0
+suggested:4.761904761904762
+
+
+Crossword paticipation:
+current:0.0
+suggested:1.8571428571428572
 
 

@@ -3,43 +3,43 @@ id:78
 Performance: Below Median
 
 
-avg_time_test:
-current:32.84722222
-suggested:51.50889170526316
+num_logins:
+current:41.0
+suggested:75.47619047619048
 
 
 act_per_day:
-current:5.031745911
-suggested:9.747702548000001
+current:4.821428776
+suggested:9.310374214476193
 
 
 avg_due:
-current:-3.857142857
-suggested:1.991360978263158
-
-
-Fluency Drills paticipation:
-current:0.0
-suggested:4.631578947368421
-
-
-num_logins:
-current:48.0
-suggested:89.0
-
-
-num_online_meetings:
-current:0.0
-suggested:3.9473684210526314
-
-
-Surveys:
-current:3.0
-suggested:4.157894736842105
+current:-4.5
+suggested:1.5332079297142858
 
 
 Procedures Quiz:
 current:2.0
-suggested:3.0526315789473686
+suggested:2.857142857142857
+
+
+Fluency Drills paticipation:
+current:0.0
+suggested:4.285714285714286
+
+
+num_online_meetings:
+current:0.0
+suggested:3.8095238095238093
+
+
+avg_time_test:
+current:33.98333333
+suggested:51.1920113552381
+
+
+Surveys:
+current:3.0
+suggested:4.761904761904762
 
 

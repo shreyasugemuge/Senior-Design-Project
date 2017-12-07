@@ -3,48 +3,48 @@ id:79
 Performance: above Median
 
 
- TotalStudyGuideMaterials:
-current:73.0
-ideal:71.15789473684211
-
-
- StudyingSupplementalMaterialActivities:
-current:31.0
-ideal:27.94736842105263
-
-
 Average number of activites accessed before each test:
-current:85.0
-ideal:68.52631578947368
+current:75.0
+ideal:67.61904761904762
+
+
+avg_due:
+current:1.666666667
+ideal:1.5332079297142858
+
+
+ TotalStudyGuideMaterials:
+current:60.0
+ideal:53.285714285714285
 
 
 num_online_meetings:
 current:5.0
-ideal:3.9473684210526314
+ideal:3.8095238095238093
 
 
-Crossword paticipation:
-current:2.0
-ideal:1.3157894736842106
-
-
-Surveys:
-current:6.0
-ideal:4.157894736842105
-
-
-Unit Discussions paticipation:
-current:9.0
-ideal:6.631578947368421
+ StudyingSupplementalMaterialActivities:
+current:30.0
+ideal:21.523809523809526
 
 
 days_no_activities:
-current:26.0
-ideal:21.36842105263158
+current:23.0
+ideal:20.61904761904762
 
 
 CyberRat Assignments:
 current:7.0
-ideal:2.8421052631578947
+ideal:2.9523809523809526
+
+
+Surveys:
+current:6.0
+ideal:4.761904761904762
+
+
+Crossword paticipation:
+current:2.0
+ideal:1.8571428571428572
 
 

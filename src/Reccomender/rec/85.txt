@@ -3,38 +3,38 @@ id:85
 Performance: Below Median
 
 
- TotalStudyGuideMaterials:
-current:45.0
-suggested:71.15789473684211
-
-
 avg_due:
-current:-4.636363636
-suggested:1.991360978263158
-
-
- StudyingSupplementalMaterialActivities:
-current:4.0
-suggested:27.94736842105263
+current:-4.125
+suggested:1.5332079297142858
 
 
  ReviewedActivities:
-current:23.0
-suggested:31.526315789473685
-
-
-days_no_activities:
-current:16.0
-suggested:21.36842105263158
-
-
-CyberRat Assignments:
-current:0.0
-suggested:2.8421052631578947
+current:22.0
+suggested:28.142857142857142
 
 
 Procedures Quiz:
 current:2.0
-suggested:3.0526315789473686
+suggested:2.857142857142857
+
+
+ TotalStudyGuideMaterials:
+current:42.0
+suggested:53.285714285714285
+
+
+ StudyingSupplementalMaterialActivities:
+current:4.0
+suggested:21.523809523809526
+
+
+days_no_activities:
+current:15.0
+suggested:20.61904761904762
+
+
+CyberRat Assignments:
+current:0.0
+suggested:2.9523809523809526
 
 

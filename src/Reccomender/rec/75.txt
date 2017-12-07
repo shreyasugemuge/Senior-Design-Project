@@ -3,38 +3,43 @@ id:75
 Performance: above Median
 
 
+num_logins:
+current:79.0
+ideal:75.47619047619048
+
+
 act_per_day:
-current:9.920635223
-ideal:9.747702548000001
+current:10.25
+ideal:9.310374214476193
 
 
- StudyingSupplementalMaterialActivities:
-current:30.0
-ideal:27.94736842105263
-
-
-Average number of activites accessed before each test:
-current:75.0
-ideal:68.52631578947368
+avg_due:
+current:1.625
+ideal:1.5332079297142858
 
 
 Fluency Drills paticipation:
 current:5.0
-ideal:4.631578947368421
+ideal:4.285714285714286
 
 
-Surveys:
-current:5.0
-ideal:4.157894736842105
+ StudyingSupplementalMaterialActivities:
+current:28.0
+ideal:21.523809523809526
 
 
 days_no_activities:
-current:24.0
-ideal:21.36842105263158
+current:21.0
+ideal:20.61904761904762
 
 
 CyberRat Assignments:
 current:6.0
-ideal:2.8421052631578947
+ideal:2.9523809523809526
+
+
+Surveys:
+current:5.0
+ideal:4.761904761904762
 
 

@@ -3,33 +3,33 @@ id:96
 Performance: Below Median
 
 
- TotalStudyGuideMaterials:
-current:55.0
-suggested:71.15789473684211
-
-
 avg_due:
-current:1.181818182
-suggested:1.991360978263158
-
-
- StudyingSupplementalMaterialActivities:
-current:4.0
-suggested:27.94736842105263
+current:1.0
+suggested:1.5332079297142858
 
 
  ReviewedActivities:
-current:30.0
-suggested:31.526315789473685
-
-
-days_no_activities:
-current:4.0
-suggested:21.36842105263158
+current:27.0
+suggested:28.142857142857142
 
 
 Procedures Quiz:
 current:2.0
-suggested:3.0526315789473686
+suggested:2.857142857142857
+
+
+ TotalStudyGuideMaterials:
+current:48.0
+suggested:53.285714285714285
+
+
+ StudyingSupplementalMaterialActivities:
+current:4.0
+suggested:21.523809523809526
+
+
+days_no_activities:
+current:3.0
+suggested:20.61904761904762
 
 

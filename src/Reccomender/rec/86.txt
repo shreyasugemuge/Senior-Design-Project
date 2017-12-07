@@ -3,18 +3,18 @@ id:86
 Performance: above Median
 
 
-Average number of activites accessed before each test:
-current:72.0
-ideal:68.52631578947368
+avg_due:
+current:2.0
+ideal:1.5332079297142858
 
 
-Fluency Drills paticipation:
-current:5.0
-ideal:4.631578947368421
+Procedures Quiz:
+current:3.0
+ideal:2.857142857142857
 
 
 days_no_activities:
-current:28.0
-ideal:21.36842105263158
+current:27.0
+ideal:20.61904761904762
 
 

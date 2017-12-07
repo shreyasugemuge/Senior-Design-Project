@@ -3,23 +3,28 @@ id:98
 Performance: above Median
 
 
-avg_due:
-current:3.571428571
-ideal:1.991360978263158
-
-
 Average number of activites accessed before each test:
-current:76.0
-ideal:68.52631578947368
+current:68.0
+ideal:67.61904761904762
+
+
+act_per_day:
+current:9.339285851
+ideal:9.310374214476193
+
+
+avg_due:
+current:3.5
+ideal:1.5332079297142858
 
 
 Unit Discussions paticipation:
-current:30.0
-ideal:6.631578947368421
+current:26.0
+ideal:10.142857142857142
 
 
 days_no_activities:
-current:29.0
-ideal:21.36842105263158
+current:25.0
+ideal:20.61904761904762
 
 

@@ -1,25 +1,60 @@
 id:80
 
-Performance: above Median
+Performance: Below Median
 
 
- TotalStudyGuideMaterials:
-current:76.0
-ideal:71.15789473684211
+Average number of activites accessed before each test:
+current:57.0
+suggested:67.61904761904762
 
 
-act_per_day:
-current:12.53968239
-ideal:9.747702548000001
+avg_due:
+current:0.363636364
+suggested:1.5332079297142858
 
 
-num_logins:
-current:121.0
-ideal:89.0
+Unit Discussions paticipation:
+current:1.0
+suggested:10.142857142857142
 
 
- ReviewedActivities:
-current:36.0
-ideal:31.526315789473685
+Fluency Drills paticipation:
+current:0.0
+suggested:4.285714285714286
+
+
+num_online_meetings:
+current:2.0
+suggested:3.8095238095238093
+
+
+ StudyingSupplementalMaterialActivities:
+current:16.0
+suggested:21.523809523809526
+
+
+avg_time_test:
+current:43.92575758
+suggested:51.1920113552381
+
+
+days_no_activities:
+current:16.0
+suggested:20.61904761904762
+
+
+CyberRat Assignments:
+current:0.0
+suggested:2.9523809523809526
+
+
+Surveys:
+current:4.0
+suggested:4.761904761904762
+
+
+Crossword paticipation:
+current:0.0
+suggested:1.8571428571428572
 
 

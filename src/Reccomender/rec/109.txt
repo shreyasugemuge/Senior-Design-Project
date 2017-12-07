@@ -3,48 +3,43 @@ id:109
 Performance: Below Median
 
 
- TotalStudyGuideMaterials:
-current:67.0
-suggested:71.15789473684211
+num_logins:
+current:62.0
+suggested:75.47619047619048
 
 
 act_per_day:
-current:7.730158806
-suggested:9.747702548000001
+current:7.607142925
+suggested:9.310374214476193
 
 
 avg_due:
-current:-0.3
-suggested:1.991360978263158
+current:-0.333333333
+suggested:1.5332079297142858
 
 
- StudyingSupplementalMaterialActivities:
-current:2.0
-suggested:27.94736842105263
+Unit Discussions paticipation:
+current:7.0
+suggested:10.142857142857142
+
+
+ ReviewedActivities:
+current:19.0
+suggested:28.142857142857142
 
 
 Fluency Drills paticipation:
 current:4.0
-suggested:4.631578947368421
+suggested:4.285714285714286
 
 
-num_logins:
-current:74.0
-suggested:89.0
-
-
- ReviewedActivities:
-current:23.0
-suggested:31.526315789473685
+ StudyingSupplementalMaterialActivities:
+current:2.0
+suggested:21.523809523809526
 
 
 CyberRat Assignments:
 current:0.0
-suggested:2.8421052631578947
-
-
-Procedures Quiz:
-current:3.0
-suggested:3.0526315789473686
+suggested:2.9523809523809526
 
 
