@@ -61,7 +61,7 @@ for index,row in df.iterrows():
         count = count + 1
     total = total + 1
     accuracy = count/total
-print "Model Accuracy: ", (count/total)*100
+# print "Model Accuracy: ", (count/total)*100
 f = {1: 'Y', 0: 'N'}
 lll = pd.DataFrame({'ID': IDs,'prediction':list(map(int,results))})
 lll['prediction'] = lll['prediction'].map(f)

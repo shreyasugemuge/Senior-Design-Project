@@ -24,8 +24,7 @@ public class Reccomend_n {
         String col[];
         while ((temp = br.readLine()) != null) {
             col = temp.split(",");
-            sb.append("id:" + col[0] + "\n\n");
-            sb.append("Performance: Below Median\n\n\n");
+            sb.append("below,current,suggested,delta\n");
             for (int i = 0; i < n.length; i++) {
                 Double[] a = { Double.parseDouble(col[i + 1]), Double.parseDouble(n[i]) };
                 m.put(ft[i], a);
@@ -33,9 +32,9 @@ public class Reccomend_n {
             for (String s : pr) {
                 Double[] cur = m.get(s);
                 if (cur[0] < cur[1])
-                    sb.append(s + ":\ncurrent:" + cur[0] + "\nsuggested:" + cur[1] + "\n\n\n");
+                    sb.append(s + "," + cur[0] + "," + cur[1] + "," + Math.abs(cur[1] - cur[0]) + "\n");
             }
-            BufferedWriter bw = new BufferedWriter(new FileWriter("rec/" + col[0] + ".txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("rec/" + col[0] + ".csv"));
             bw.write(sb.toString());
             sb = new StringBuilder();
             bw.flush();
@@ -44,8 +43,7 @@ public class Reccomend_n {
         by.readLine();
         while ((temp = by.readLine()) != null) {
             col = temp.split(",");
-            sb.append("id:" + col[0] + "\n\n");
-            sb.append("Performance: above Median\n\n\n");
+            sb.append("above,current,suggested,delta\n");
             for (int i = 0; i < n.length; i++) {
                 Double[] a = { Double.parseDouble(col[i + 1]), Double.parseDouble(n[i]) };
                 m.put(ft[i], a);
@@ -53,9 +51,9 @@ public class Reccomend_n {
             for (String s : pr) {
                 Double[] cur = m.get(s);
                 if (cur[0] >= cur[1])
-                    sb.append(s + ":\ncurrent:" + cur[0] + "\nideal:" + cur[1] + "\n\n\n");
+                    sb.append(s + "," + cur[0] + "," + cur[1] + "," + Math.abs(cur[1] - cur[0]) + "\n");
             }
-            BufferedWriter bw = new BufferedWriter(new FileWriter("rec/" + col[0] + ".txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("rec/" + col[0] + ".csv"));
             bw.write(sb.toString());
             sb = new StringBuilder();
             bw.flush();

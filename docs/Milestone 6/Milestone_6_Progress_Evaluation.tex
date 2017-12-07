@@ -46,23 +46,67 @@
 		\textbf{Task} & \textbf{Completed} &\textbf{Shreyas} & \textbf{Yaqeen} & \textbf{Shiru} & \textbf{Mohammed} & \textbf{Remarks}  \\ \hline
 			Finalize Feature Set &100\% & 100\% & - & - & - & N/A \\ \hline
 			Finalize Model & 100\% & 100\% & - & - & - & N/A \\ \hline
-			Finish Recommender System & 100\% & 90\% & - & 10\% & - & - \\ \hline
-			Complete GUI & 70\% & 50\% & - & - & 50\% & N/A \\ \hline
+			Finish Recommender System & 100\% & 75\% & - & 25\% & - & - \\ \hline
+			Complete GUI & 60\% & 50\% & - & - & 50\% & N/A \\ \hline
 			Showcase Poster & 100\% & - & - & - & 100\% & N/A \\ \hline
 		
 	\end{tabularx}
 %	\end{adjustbox}
 	\subsection{Discussion of each task}
-	
+	\subsubsection{Finalize Feature Set}
+	16 Behaviors were finalized. The behaviors are:
+	\begin{enumerate}
+		\item Total number of logins
+		\item Number of days with 0 activity
+		\item Average number of activities per day
+		\item Number of online meetings attended
+		\item Average number of days between test submission and the due date
+		\item Average time spent doing test
+		\item Number of activities reviewing material
+		\item Number of activities studying supplemental materials
+		\item Number of activities: study guide
+		\item Average number of activities accessed 2 weeks before each test
+		\item Number of activities: Procedures Quiz
+		\item Number of Surveys	
+		\item Number of activities: CyberRat Assignments	
+		\item Number of activities: Unit Discussions
+		\item Number of activities: Fluency Drills
+		\item Number of activities: Crossword participation
+	\end{enumerate}
+	There were three main conditions to do a preliminary filter for the behaviors. To further refine this the power set of the 20 behaviors was run on the model to find the best set of features
+	\begin{enumerate}
+		\item Each individual feature is obtainable from data with accuracy. For instance Podcasts data show cannot be obtained since some of these were also available through itunes also a behavior extraction on this feature yields results that are not consistent with the grade files.
+		\item Exhibits strong correlation with grade.
+		\item Can be used to frame a recommendation. ASR submission time, since these are randomly given out while the students watch the video, a recommendation to do it early is not practical.
+	\end{enumerate}
+
+	The model used for the recommender system is the random forest classifier. The implementation used for the same is from the python sklearn package. Here is a graph showing the accuracy for the model\\
+	\includegraphics{1.png}
+		\subsubsection{Finish Recommender System}
+	The algorithm is run multiple times and the model with the highest accuracy is selected and saved using the pickle package. \\
+	This model is then executed on the test dataset to predict the grades of each of the students. These predictions are saved in a file predictions.csv. \\
+	Relative Importance can be computed based on occurrence of a feature in a forest and the depth of the node in each tree. even Though the absolute value of the relative importance is not important can be used to determine what behavior to recommend. this is stored in a csv file.\\
+	A java program that acts as the recommendation engine, then computes the average value for each behavior as exhibited by above median students. Then a delta value is calculated which is the absolute difference between the z-scores of each feature. \\
+	A list of behaviors sorted by priority with a delta value each are generated in a file. \\
+	The GUI program will read this file 
+
 	\subsection{Discussion of team member contribution}
 	\subsubsection{Shreyas}
-	\subsubsection{Shiru}
-	\subsubsection{Yaqeen}
+	\begin{enumerate}
+		\item Implemented correlation model
+		\item Implemented Recommender System
+		\item Worked on GUI
+		\item Made the Presentation and progress evaluation
+		\item Assisted with showcase Preparation
+	\end{enumerate}
+	 
 	\subsubsection{Mohammed}
-	
-
-
-
+	\begin{enumerate}
+		\item updated the look and design of the GUI.
+\item made the poster of showcase.
+\item  Contributed in the presentation and showcase tasks.
+Add Comment
+	\end{enumerate}
 	\pagebreak
 	\section{Sponsor feedback on each task for current milestone}
 	\pagebreak
